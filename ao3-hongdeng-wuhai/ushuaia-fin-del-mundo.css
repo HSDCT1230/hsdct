@@ -58,6 +58,11 @@ html.javascript,
   padding: 0 0.65em 1.55em 0.65em;
   border: none;
   box-shadow: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: rgba(21, 37, 56, 0.35);
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  box-sizing: border-box;
 }
 
 #header,
@@ -105,9 +110,9 @@ a:focus {
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0.45em;
-  border: 1px solid rgba(184, 202, 217, 0.28);
+  border: none;
   border-bottom: 1px solid rgba(184, 202, 217, 0.22);
-  border-radius: 12px 12px 0 0;
+  border-radius: 0;
   box-shadow: none;
 }
 
@@ -123,8 +128,11 @@ a:focus {
   background-color: rgba(8, 14, 24, 0.72);
   background-image: none;
   border-top: 1px solid rgba(184, 202, 217, 0.2);
-  border-radius: 6px;
+  border-radius: 8px;
   margin-top: 0.55em;
+  margin-left: 0.45em;
+  margin-right: 0.45em;
+  margin-bottom: 0.35em;
   text-align: center;
 }
 
@@ -169,8 +177,7 @@ a:focus {
 #dashboard.own {
   background-color: rgba(21, 37, 56, 0.75);
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.32);
-  border-top: 1px solid rgba(184, 202, 217, 0.22);
+  border: none;
   border-bottom: 1px solid rgba(184, 202, 217, 0.22);
   border-radius: 0;
   box-shadow: none;
@@ -195,9 +202,8 @@ a:focus {
 #main {
   background-color: rgba(21, 37, 56, 0.82);
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.25);
-  border-top: none;
-  border-radius: 0 0 12px 12px;
+  border: none;
+  border-radius: 0;
   box-shadow: none;
   padding: 1.2em 1.1em 1.55em 1.1em;
   margin: 0 0 0.65em 0;
@@ -412,16 +418,37 @@ select option {
   background-color: rgba(8, 14, 24, 0.88);
   color: #f0f4f7;
   border: 1px solid #a64b3f;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 0.85em 1em;
-  margin: 0.5em 0 0.65em 0;
+  margin: 0;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#inner > .flash,
+#inner > .notice,
+#inner > .caution,
+#header + .flash,
+#dashboard + .flash,
+#header + .notice,
+#dashboard + .notice {
+  border-radius: 0;
+}
+
+#outer #search form,
+#header #search {
+  margin-left: 0.45em;
+  margin-right: 0.45em;
+  margin-bottom: 0.4em;
 }
 
 #footer {
   background-color: rgba(21, 37, 56, 0.78);
   color: #d8e2ea;
   border: 1px solid rgba(184, 202, 217, 0.35);
-  border-radius: 16px;
+  border-radius: 12px;
   margin-top: 0.65em;
   padding: 1em 1.25em;
 }
