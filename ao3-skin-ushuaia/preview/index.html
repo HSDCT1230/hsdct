@@ -3,44 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AO3 皮肤预览 · 南极灯塔</title>
+  <title>AO3 皮肤预览 · 连贯画幅</title>
   <link rel="stylesheet" href="/ushuaia-fin-del-mundo.css" />
   <style>
-    :root {
-      --ushuaia-bg-image: url("/assets/les-eclaireurs-bg.jpg");
-    }
+    :root { --ushuaia-bg-image: url("/assets/les-eclaireurs-bg.jpg"); }
     @media (max-width: 640px) {
-      #inner.wrapper { padding: 0 0.55em 2em 0.55em; }
-      #header { min-height: 5.5em; }
+      #inner.wrapper { padding: 0 0.5em 1.5em; }
     }
     .preview-banner {
-      background: var(--ushuaia-deep);
-      color: var(--ushuaia-ice);
       text-align: center;
-      padding: 0.45em;
+      padding: 0.4em;
       font-size: 0.85em;
-      letter-spacing: 0.12em;
+      color: var(--ushuaia-ice);
+      letter-spacing: 0.1em;
     }
     .mock-ao3 { min-height: 100vh; }
-    .preview-feed-title {
-      color: #e8eef3;
-      text-align: center;
-      font-size: 0.9em;
-      letter-spacing: 0.15em;
-      margin: 0.5em 0 1em;
-      text-shadow: 0 1px 3px rgba(21, 37, 56, 0.9);
-    }
   </style>
 </head>
 <body class="logged-in">
-  <div class="preview-banner">卡片流 · 顶栏横幅 · 侧景固定海图</div>
+  <div class="preview-banner">顶栏 + 主栏一体 · 区内细线分节</div>
   <div id="outer" class="wrapper mock-ao3">
     <div id="inner" class="wrapper">
       <header id="header" class="region">
         <h1 class="heading"><a href="#">Archive of Our Own <sup>beta</sup></a></h1>
-        <ul class="menu actions">
-          <li id="greeting">Hi, Reader!</li>
-        </ul>
+        <ul class="menu actions"><li id="greeting">Hi, Reader!</li></ul>
         <nav>
           <ul class="primary actions">
             <li><a href="#">Fandoms</a></li>
@@ -51,11 +37,8 @@
         </nav>
       </header>
 
-      <p class="preview-feed-title">作品页（分卡）</p>
-
       <main id="main" class="works-show region">
-        <h2 class="heading" style="color:#e8eef3;text-shadow:0 1px 3px rgba(21,37,56,0.85);margin:0 0 1em 0.25em;">红灯在雾海尽头</h2>
-
+        <h2 class="heading">红灯在雾海尽头</h2>
         <div class="work meta group">
           <h3 class="landmark heading">Metadata</h3>
           <dl class="meta">
@@ -67,37 +50,20 @@
             <li><a class="tag" href="#">灯塔</a></li>
           </ul>
         </div>
-
         <div class="preface group">
           <h3 class="landmark heading">Summary</h3>
           <blockquote class="userstuff">
-            <p>海图在两侧摊开，正文落在圆角卡片里——照片参与页眉与留白，而不是只垫底。</p>
+            <p>三区在同一张画幅里，海图只在左右露出，页面不再「碎成许多卡片」。</p>
           </blockquote>
         </div>
-
         <div id="chapters" class="userstuff">
           <h3 class="landmark heading">Chapter Text</h3>
-          <p>顶栏裁切云海，固定背景让浪潮留在水槽两侧；像 Tumblr 的窄栏，也像小红书的笔记卡片。</p>
-          <p>元数据、简介、正文分成三张卡片，层与层之间露出你的灯塔与雪山。字号与行距仍按中文长文习惯设置。</p>
+          <p>标题、元数据、摘要与正文字体层级仍在，但共享同一底色与外轮廓。</p>
+          <p>检索列表页同样是：顶栏接上整块列表区，条目之间用浅灰线分隔，而不是每条再包一层框。</p>
         </div>
       </main>
 
-      <p class="preview-feed-title">检索流（分条卡片）</p>
-
-      <ol class="work index group">
-        <li class="blurb work blurb group">
-          <h4 class="heading"><a href="#">另一篇 · 甲板上的灰光</a></h4>
-          <p class="userstuff">短摘要演示列表页：每条作品独立圆角卡片，悬浮时可强调灯塔红描边。</p>
-        </li>
-        <li class="blurb work blurb group">
-          <h4 class="heading"><a href="#">笔记体 · 世界尽头的气象局</a></h4>
-          <p class="userstuff">卡片间距统一，背景图在缝间连续可见。</p>
-        </li>
-      </ol>
-
-      <footer id="footer" class="region">
-        <p>Customize · Default · Revert skin</p>
-      </footer>
+      <footer id="footer" class="region"><p>Customize · Default</p></footer>
     </div>
   </div>
 </body>

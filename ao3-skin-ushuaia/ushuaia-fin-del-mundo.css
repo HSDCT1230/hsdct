@@ -1,11 +1,7 @@
 /*
  * AO3 Site Skin: Les Éclaireurs · 南极灯塔
- * 版式参考：星夜 Archive 光晕描边 / 水彩阅读的版心留白 / 社交卡片流
- * 中文阅读：页边距、行距 1.875、黑宋分层
- * AO3 皮肤无 @media
- *
- * 背景图：
- * https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg
+ * 整体一块画幅：顶栏与主区衔接，区内用细分隔线而非碎卡片
+ * 中文阅读：行距 1.875、黑宋分层 · AO3 无 @media
  */
 
 :root {
@@ -14,9 +10,7 @@
   --ushuaia-frost: #f0f4f7;
   --ushuaia-ice: #b8cad9;
   --ushuaia-mist: #4a4e52;
-  --ushuaia-panel-bg: rgba(21, 37, 56, 0.88);
-  --ushuaia-panel-light: rgba(240, 244, 247, 0.98);
-  --ushuaia-card-bg: rgba(252, 253, 254, 0.97);
+  --ushuaia-panel-bg: rgba(21, 37, 56, 0.9);
   --ushuaia-text: #e8eef3;
   --ushuaia-text-soft: #8a9aab;
   --ushuaia-text-dark: #2f3640;
@@ -28,12 +22,11 @@
   --ushuaia-border-light: #b8cad9;
   --ushuaia-link: #2d5f7a;
   --ushuaia-link-hover: #a64b3f;
-  --ushuaia-hero-tint: rgba(21, 37, 56, 0.5);
-  --ushuaia-card-radius: 14px;
-  --ushuaia-card-gap: 1.15em;
-  --ushuaia-paper: rgba(248, 251, 253, 0.96);
-  --ushuaia-glow-ice: 0 0 8px rgba(184, 202, 217, 0.5);
-  --ushuaia-glow-red: 0 0 10px rgba(166, 75, 63, 0.4);
+  --ushuaia-hero-tint: rgba(21, 37, 56, 0.52);
+  --ushuaia-sheet: rgba(250, 252, 254, 0.97);
+  --ushuaia-line: rgba(184, 202, 217, 0.55);
+  --ushuaia-shell-radius: 16px;
+  --ushuaia-shell-shadow: 0 12px 32px rgba(15, 38, 56, 0.22);
   --ushuaia-bg-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
 }
 
@@ -47,11 +40,10 @@ body,
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
   font-size: 16px;
   line-height: 1.75;
-  font-weight: normal;
   color: var(--ushuaia-text);
 }
 
-/* ── 正文排版 ── */
+/* ── 正文 ── */
 
 .userstuff,
 .userstuff p,
@@ -61,7 +53,7 @@ body,
 .preface .notes,
 .preface blockquote,
 .notes blockquote.userstuff {
-  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
   font-size: 1.125em;
   line-height: 1.875;
   letter-spacing: 0.04em;
@@ -77,9 +69,9 @@ body,
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: normal;
   line-height: 1.6;
-  margin-top: 1.6em;
-  margin-bottom: 0.75em;
-  letter-spacing: 0.12em;
+  margin-top: 1.4em;
+  margin-bottom: 0.7em;
+  letter-spacing: 0.1em;
   color: var(--ushuaia-text-dark);
 }
 
@@ -90,12 +82,12 @@ body,
 }
 
 .userstuff blockquote {
-  border-left: 3px solid var(--ushuaia-lighthouse);
-  padding-left: 1em;
+  border-left: 2px solid var(--ushuaia-lighthouse);
+  padding: 0.5em 0 0.5em 1em;
   margin-left: 0;
   color: var(--ushuaia-mist);
-  background: rgba(240, 244, 247, 0.6);
-  border-radius: 0 8px 8px 0;
+  background: rgba(240, 244, 247, 0.5);
+  border-radius: 0 6px 6px 0;
 }
 
 a,
@@ -103,7 +95,7 @@ a:link,
 a:visited {
   color: var(--ushuaia-link);
   text-decoration: none;
-  border-bottom: 1px solid rgba(45, 95, 122, 0.35);
+  border-bottom: 1px solid rgba(45, 95, 122, 0.3);
 }
 
 a:hover,
@@ -112,7 +104,7 @@ a:focus {
   border-bottom-color: var(--ushuaia-lighthouse);
 }
 
-/* ── Tumblr 侧景：固定全屏海图 + 透明水槽 ── */
+/* ── 全页海图（侧缘连续）── */
 
 #outer.wrapper {
   background-color: var(--ushuaia-abyss);
@@ -127,52 +119,51 @@ a:focus {
 #inner.wrapper {
   margin: 0 auto;
   max-width: 40em;
-  padding: 0 0.9em 2.5em 0.9em;
+  padding: 0 0.85em 2em 0.85em;
   background: transparent;
   border: none;
   box-shadow: none;
 }
 
-/* ── Twitter 风：顶栏 = 照片横幅 + 叠色 ── */
+/* ── 顶栏：画幅上缘（与 #main 拼接）── */
 
 #header {
   background-color: var(--ushuaia-hero-tint);
   background-image: var(--ushuaia-bg-image);
   background-repeat: no-repeat;
-  background-position: center 26%;
+  background-position: center 24%;
   background-size: cover;
-  min-height: 9.5em;
-  padding-bottom: 0.5em;
+  min-height: 8.5em;
+  padding-bottom: 0.45em;
   text-align: center;
-  border-bottom: 2px solid var(--ushuaia-lighthouse);
-  border-radius: 0 0 var(--ushuaia-card-radius) var(--ushuaia-card-radius);
-  box-shadow: 0 10px 24px rgba(15, 38, 56, 0.28);
-  margin-bottom: var(--ushuaia-card-gap);
+  margin-bottom: 0;
+  border: 1px solid rgba(184, 202, 217, 0.45);
+  border-bottom: 1px solid var(--ushuaia-line);
+  border-radius: var(--ushuaia-shell-radius) var(--ushuaia-shell-radius) 0 0;
+  box-shadow: var(--ushuaia-shell-shadow);
 }
 
 #header .heading a,
 #header h1 a {
   color: #ffffff;
-  text-shadow: 0 1px 4px rgba(21, 37, 56, 0.9);
+  text-shadow: 0 1px 3px rgba(21, 37, 56, 0.85);
   letter-spacing: 0.08em;
-  font-weight: normal;
 }
 
 #header ul.primary {
-  background: rgba(21, 37, 56, 0.58);
-  border-color: rgba(184, 202, 217, 0.25);
-  border-width: 1px 0 0 0;
-  border-radius: 8px;
-  margin-top: 0.65em;
+  background: rgba(21, 37, 56, 0.5);
+  border-top: 1px solid rgba(184, 202, 217, 0.2);
+  border-radius: 6px;
+  margin-top: 0.55em;
   text-align: center;
 }
 
 #header ul.primary a {
-  border: 1px solid rgba(184, 202, 217, 0.75);
+  border: 1px solid rgba(184, 202, 217, 0.4);
   border-radius: 999px;
-  box-shadow: var(--ushuaia-glow-ice);
-  margin: 0.15em 0.2em;
-  padding: 0.35em 0.8em;
+  margin: 0.12em 0.15em;
+  padding: 0.3em 0.75em;
+  box-shadow: none;
 }
 
 #header .actions a,
@@ -192,16 +183,14 @@ a:focus {
 #header .user a:hover,
 #header .user a:focus {
   color: #ffffff;
-  background: rgba(166, 75, 63, 0.35);
-  border-bottom: 1px solid var(--ushuaia-lighthouse-glow);
+  background: rgba(166, 75, 63, 0.3);
 }
 
 #header .current {
   color: #ffffff;
-  background: rgba(166, 75, 63, 0.82);
+  background: rgba(166, 75, 63, 0.78);
   border: 1px solid var(--ushuaia-lighthouse-glow);
   border-radius: 999px;
-  box-shadow: var(--ushuaia-glow-red);
 }
 
 #header .menu,
@@ -214,96 +203,201 @@ a:focus {
   color: var(--ushuaia-frost);
   border-color: var(--ushuaia-border);
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(8, 16, 24, 0.45);
 }
 
 #greeting {
   color: #d8e2ea;
-  letter-spacing: 0.05em;
-  text-shadow: 0 1px 2px rgba(21, 37, 56, 0.8);
+  text-shadow: 0 1px 2px rgba(21, 37, 56, 0.75);
 }
 
-/* ── 小红书风：圆角卡片浮在海面上 ── */
+/* ── 主区：与顶栏一体的下半张画幅 ── */
 
 #main,
-li.blurb,
-.flash,
-.listbox,
-.listbox .index,
-.dashboard .listbox .index,
-#main fieldset,
-.verbose legend,
-.group.listbox,
-fieldset fieldset.listbox,
-form blockquote.userstuff,
-div.comment,
-li.comment,
-.thread .comment,
-.thread .even,
-#dashboard.own,
-.bookmark .status,
-.splash .news li,
-.filters .group,
-.work.meta.group,
-.preface.group,
-#modal {
-  background: var(--ushuaia-card-bg);
+#main.dashboard,
+.region#main {
+  background: var(--ushuaia-sheet);
   color: var(--ushuaia-text-dark);
-  border: 1px solid rgba(184, 202, 217, 0.9);
-  border-radius: var(--ushuaia-card-radius);
-  box-shadow: 0 8px 28px rgba(15, 38, 56, 0.2);
+  border: 1px solid rgba(184, 202, 217, 0.45);
+  border-top: none;
+  border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
+  box-shadow: var(--ushuaia-shell-shadow);
+  padding: 1.35em 1.55em 1.75em 1.55em;
+  margin-bottom: 0.65em;
 }
 
-#main {
-  margin-bottom: var(--ushuaia-card-gap);
-}
-
-li.blurb,
-.flash,
-.listbox {
-  margin-bottom: var(--ushuaia-card-gap);
+#header + #main,
+#header + main {
+  border-top: none;
+  margin-top: 0;
 }
 
 #main a,
-li.blurb a,
-.listbox a,
-.dashboard a {
+.dashboard a,
+.listbox a {
   color: var(--ushuaia-link);
-  border-bottom-color: rgba(45, 95, 122, 0.28);
+  border-bottom-color: rgba(45, 95, 122, 0.25);
 }
 
 #main a:hover,
-li.blurb a:hover,
 .listbox a:hover {
   color: var(--ushuaia-lighthouse);
 }
+
+/* 顶栏下若直接是列表/仪表盘，补全上圆角衔接 */
+#header + ol,
+#header + ul.work,
+#header + .index,
+#header + .dashboard {
+  border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
+}
+
+/* ── 区内分区：只画线，不另起卡片 ── */
+
+.work.meta.group,
+.preface.group,
+div.comment,
+li.comment,
+.thread .comment,
+.filters .group,
+.flash,
+.group.listbox,
+fieldset fieldset.listbox,
+#dashboard.own,
+.splash .news li,
+form blockquote.userstuff,
+.bookmark .status,
+.verbose legend,
+#main fieldset {
+  background: transparent;
+  color: var(--ushuaia-text-dark);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0 0 1.15em 0;
+  border-bottom: 1px solid var(--ushuaia-line);
+  padding-bottom: 1.15em;
+}
+
+#chapters,
+div#chapters.userstuff,
+.chapter .userstuff,
+.preface blockquote.userstuff {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preface.group {
+  border-bottom: 1px solid var(--ushuaia-line);
+  padding-bottom: 1.15em;
+  margin-bottom: 1.15em;
+}
+
+.work.meta.group {
+  border-bottom: 1px solid var(--ushuaia-line);
+  padding-bottom: 1.15em;
+  margin-bottom: 1.15em;
+}
+
+/* ── 作品标题：在画幅内，不漂在海上 ── */
+
+#main.works-show > h2,
+#main.works-show > h2.heading,
+#main.chapters-show > h2,
+#main.works-show > .heading,
+h2.title.heading {
+  color: var(--ushuaia-text-dark);
+  text-align: center;
+  font-family: "Songti SC", "STSong", "SimSun", serif;
+  text-shadow: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--ushuaia-line);
+  box-shadow: none;
+  padding-bottom: 0.65em;
+  margin-bottom: 1.15em;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+
+/* ── 列表：同一张画幅里的分行 ── */
+
+ol.work.index,
+ul.index,
+.listbox,
+.listbox .index,
+.dashboard .listbox .index {
+  background: var(--ushuaia-sheet);
+  border: 1px solid rgba(184, 202, 217, 0.45);
+  border-top: none;
+  border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
+  box-shadow: var(--ushuaia-shell-shadow);
+  padding: 0.35em 1.35em 1em 1.35em;
+  margin-bottom: 0.65em;
+}
+
+#header + ol.work.index,
+#header + ul.index,
+#header + .listbox {
+  margin-top: 0;
+}
+
+li.blurb,
+li.comment,
+.blurb .blurb,
+.listbox .index li {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--ushuaia-line);
+}
+
+li.blurb:hover,
+.listbox .index li:hover {
+  background: rgba(236, 242, 248, 0.65);
+  border-bottom-color: rgba(166, 75, 63, 0.35);
+}
+
+/* ── 页脚：同列第三段，略深收尾 ── */
 
 #footer,
 #outer #footer {
   background: var(--ushuaia-panel-bg);
   color: var(--ushuaia-text-soft);
-  border: 1px solid var(--ushuaia-border);
-  border-radius: var(--ushuaia-card-radius);
-  margin-top: var(--ushuaia-card-gap);
-  box-shadow: 0 6px 20px rgba(15, 38, 56, 0.25);
+  border: 1px solid rgba(184, 202, 217, 0.35);
+  border-radius: var(--ushuaia-shell-radius);
+  margin-top: 0.65em;
+  box-shadow: var(--ushuaia-shell-shadow);
+  padding: 1em 1.25em;
 }
 
 #footer a {
   color: var(--ushuaia-ice);
-  border: 1px solid rgba(184, 202, 217, 0.45);
-  border-radius: 8px;
-  padding: 0.25em 0.55em;
-  margin: 0.12em;
-  box-shadow: var(--ushuaia-glow-ice);
+  border: 1px solid rgba(184, 202, 217, 0.35);
+  border-radius: 6px;
+  padding: 0.2em 0.5em;
+  margin: 0.1em;
   border-bottom: none;
+  box-shadow: none;
 }
 
 #footer a:hover,
 #footer a:focus {
   color: var(--ushuaia-lighthouse-glow);
+  border-color: var(--ushuaia-lighthouse);
 }
 
-/* ── 标题 ── */
+/* ── 标题与小标题 ── */
 
 #outer .group .heading,
 fieldset.listbox .heading,
@@ -313,22 +407,25 @@ h3.landmark,
 h4.landmark {
   color: var(--ushuaia-text-dark);
   border-left: none;
-  border-bottom: 1px solid var(--ushuaia-border-light);
+  border-bottom: 1px solid var(--ushuaia-line);
   padding-left: 0;
-  padding-bottom: 0.35em;
-  margin-bottom: 0.85em;
-  text-shadow: none;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.75em;
   background: transparent;
-  letter-spacing: 0.1em;
-  font-weight: normal;
+  letter-spacing: 0.08em;
 }
 
 .userstuff h2,
 .userstuff h3 {
-  border-bottom: 1px solid var(--ushuaia-border-light);
-  border-left: none;
-  padding-left: 0;
+  border-bottom: 1px solid var(--ushuaia-line);
 }
+
+.chapter .landmark,
+#chapters .landmark {
+  border-bottom: 1px solid var(--ushuaia-line);
+}
+
+/* ── 按钮：默认轻，悬停才强调 ── */
 
 .actions a,
 button,
@@ -340,7 +437,7 @@ a.current,
   color: var(--ushuaia-deep);
   border: 1px solid var(--ushuaia-border-light);
   border-radius: 999px;
-  box-shadow: var(--ushuaia-glow-ice);
+  box-shadow: none;
 }
 
 .actions a:hover,
@@ -350,45 +447,38 @@ input[type="submit"]:focus {
   background: var(--ushuaia-deep);
   color: var(--ushuaia-frost);
   border-color: var(--ushuaia-lighthouse);
-  box-shadow: var(--ushuaia-glow-red);
 }
 
 .pagination a,
-.pagination .current,
 ol.pagination a,
-.caution a,
 .filters .actions a {
-  border: 1px solid rgba(184, 202, 217, 0.8);
+  border: 1px solid var(--ushuaia-line);
   border-radius: 8px;
-  box-shadow: var(--ushuaia-glow-ice);
+  box-shadow: none;
 }
 
 .pagination .current,
-a.current,
-.current a {
-  background: rgba(166, 75, 63, 0.18);
+a.current {
+  background: rgba(166, 75, 63, 0.15);
   border-color: var(--ushuaia-lighthouse);
-  box-shadow: var(--ushuaia-glow-red);
 }
 
 input,
 textarea,
 select {
-  background: #f0f4f7;
+  background: #f4f7fa;
   color: var(--ushuaia-text-body);
   border-color: var(--ushuaia-border-light);
   border-radius: 8px;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
   line-height: 1.65;
-  box-shadow: none;
 }
 
 input:focus,
 textarea:focus {
   border-color: var(--ushuaia-lighthouse);
   outline: none;
-  box-shadow: var(--ushuaia-glow-red);
 }
 
 form.comment textarea,
@@ -396,113 +486,20 @@ form.comment textarea,
 #new_comment textarea,
 .new_comment textarea,
 #add_comment textarea {
-  background: rgba(21, 37, 56, 0.9);
+  background: rgba(21, 37, 56, 0.88);
   color: #e8eef3;
-  border: 1px solid rgba(184, 202, 217, 0.85);
-  box-shadow: var(--ushuaia-glow-ice);
-}
-
-form.comment textarea:focus,
-.comment form textarea:focus,
-#new_comment textarea:focus {
-  border-color: var(--ushuaia-lighthouse-glow);
-  box-shadow: var(--ushuaia-glow-red);
+  border: 1px solid rgba(184, 202, 217, 0.6);
 }
 
 form.comment input[type="submit"],
 .comment form input[type="submit"],
 #add_comment input[type="submit"] {
-  background: rgba(21, 37, 56, 0.95);
-  color: #f0f4f7;
+  background: var(--ushuaia-deep);
+  color: var(--ushuaia-frost);
   border: 1px solid var(--ushuaia-lighthouse-glow);
-  box-shadow: var(--ushuaia-glow-red);
 }
 
-/* ── 作品页：多卡片叠放（元数据 / 简介 / 正文）── */
-
-#main.works-show,
-#main.chapters-show,
-#main.works-index {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-}
-
-.work.meta.group,
-.preface.group {
-  padding: 1.15em 1.5em 1.35em 1.5em;
-  margin-bottom: var(--ushuaia-card-gap);
-  background: rgba(252, 253, 254, 0.94);
-  box-shadow: 0 6px 22px rgba(15, 38, 56, 0.16), var(--ushuaia-glow-ice);
-}
-
-#main.works-show > h2,
-#main.works-show > h2.heading,
-#main.chapters-show > h2,
-#main.works-show > .heading,
-.work.meta.group + h2,
-h2.title.heading {
-  color: #f0f4f7;
-  text-align: center;
-  font-family: "Songti SC", "STSong", "SimSun", serif;
-  text-shadow: 0 1px 4px rgba(21, 37, 56, 0.9);
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  margin-bottom: var(--ushuaia-card-gap);
-  letter-spacing: 0.14em;
-  line-height: 1.5;
-}
-
-#chapters,
-div#chapters.userstuff,
-.chapter .userstuff,
-.preface blockquote.userstuff {
-  background: var(--ushuaia-paper);
-  border: 1px solid rgba(184, 202, 217, 0.9);
-  border-left: 4px solid rgba(45, 95, 122, 0.45);
-  border-radius: var(--ushuaia-card-radius);
-  box-shadow: 0 8px 28px rgba(15, 38, 56, 0.2), var(--ushuaia-glow-ice);
-  padding: 1.5em 1.75em 1.85em 1.85em;
-  margin-bottom: var(--ushuaia-card-gap);
-}
-
-.work .preface .userstuff,
-#chapters .userstuff,
-.chapter .userstuff {
-  max-width: 36em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.chapter .landmark,
-#chapters .landmark {
-  color: var(--ushuaia-text-dark);
-  border-bottom: 1px solid var(--ushuaia-border-light);
-}
-
-/* ── 信息流卡片 ── */
-
-li.blurb,
-.blurb .blurb,
-.listbox .index,
-li.comment {
-  border-color: rgba(184, 202, 217, 0.9);
-}
-
-li.blurb {
-  padding: 1em 1.15em;
-  border: 1px solid rgba(184, 202, 217, 0.95);
-  box-shadow: 0 6px 22px rgba(15, 38, 56, 0.16), var(--ushuaia-glow-ice);
-}
-
-li.blurb:hover,
-.listbox .index li:hover {
-  border-color: var(--ushuaia-lighthouse);
-  background: rgba(252, 253, 254, 1);
-  box-shadow: 0 8px 26px rgba(15, 38, 56, 0.2), var(--ushuaia-glow-red);
-}
+/* ── 标签 / 元信息 ── */
 
 dl.meta,
 dl.stats,
@@ -513,14 +510,15 @@ a.tag:visited {
 }
 
 .tags a.tag {
-  border: 1px solid rgba(184, 202, 217, 0.65);
+  border: 1px solid var(--ushuaia-line);
   border-radius: 999px;
-  padding: 0.15em 0.55em;
+  padding: 0.12em 0.5em;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .tags a.tag:hover,
 a.tag:hover {
-  background: rgba(166, 75, 63, 0.12);
+  background: rgba(166, 75, 63, 0.1);
   color: var(--ushuaia-lighthouse);
   border-color: var(--ushuaia-lighthouse);
 }
@@ -533,41 +531,37 @@ a.tag:hover {
 .alert.flash,
 .required .autocomplete,
 .system .tweet_list li {
-  background: #f0f4f7;
+  background: rgba(244, 247, 250, 0.95);
   color: var(--ushuaia-text-dark);
-  border: 1px solid var(--ushuaia-border-light);
-  border-radius: var(--ushuaia-card-radius);
+  border: 1px solid var(--ushuaia-line);
+  border-radius: 8px;
   box-shadow: none;
 }
 
 th,
 td,
 table {
-  background: #f0f4f7;
+  background: transparent;
   color: var(--ushuaia-text-dark);
-  border-color: var(--ushuaia-border-light);
+  border-color: var(--ushuaia-line);
 }
 
 tr:hover,
 td:hover {
-  background: #e4ecf2;
+  background: rgba(236, 242, 248, 0.8);
 }
 
 #dashboard .secondary,
 .secondary {
-  background: var(--ushuaia-panel-bg);
+  background: rgba(21, 37, 56, 0.88);
   color: var(--ushuaia-text-soft);
-  border-color: var(--ushuaia-border);
-  border-radius: var(--ushuaia-card-radius);
-  box-shadow: 0 6px 18px rgba(15, 38, 56, 0.22);
+  border: 1px solid rgba(184, 202, 217, 0.3);
+  border-radius: var(--ushuaia-shell-radius);
+  box-shadow: var(--ushuaia-shell-shadow);
 }
 
 #dashboard .secondary a {
   color: var(--ushuaia-ice);
-}
-
-#dashboard .secondary a:hover {
-  color: var(--ushuaia-frost);
 }
 
 #dashboard .current,
@@ -575,19 +569,19 @@ td:hover {
 .draft,
 .unread,
 .replied {
-  background: rgba(166, 75, 63, 0.1);
+  background: rgba(166, 75, 63, 0.08);
   border-color: var(--ushuaia-lighthouse);
-  color: var(--ushuaia-text-dark);
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
+#modal,
 #ui-datepicker-div,
 .ui-datepicker {
-  background: var(--ushuaia-card-bg);
+  background: var(--ushuaia-sheet);
   color: var(--ushuaia-text-dark);
-  border-color: var(--ushuaia-border-light);
-  border-radius: var(--ushuaia-card-radius);
-  box-shadow: 0 8px 28px rgba(15, 38, 56, 0.2);
+  border: 1px solid var(--ushuaia-line);
+  border-radius: var(--ushuaia-shell-radius);
+  box-shadow: var(--ushuaia-shell-shadow);
 }
 
 #inner.wrapper,
@@ -601,6 +595,6 @@ li.blurb {
 button,
 input[type="submit"] {
   min-height: 2.25em;
-  padding: 0.5em 1em;
+  padding: 0.45em 0.95em;
   letter-spacing: 0.04em;
 }
