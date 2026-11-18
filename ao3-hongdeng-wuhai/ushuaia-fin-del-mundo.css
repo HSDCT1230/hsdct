@@ -523,13 +523,38 @@ h2.title {
 }
 
 li.blurb h4,
-li.blurb h4 a,
-.blurb .heading,
-.blurb .heading a {
+li.blurb h4.heading {
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
-  font-size: 1.12em;
-  line-height: 1.55;
+  font-size: 1.2em;
+  line-height: 1.5;
   color: #e8eef3;
+}
+
+li.blurb h4 a,
+li.blurb h4.heading a {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #e8eef3;
+}
+
+li.blurb h5,
+li.blurb h5.fandoms,
+li.blurb h5.heading,
+li.blurb h5 a,
+li.blurb h5.fandoms a,
+li.blurb h6,
+li.blurb h6 a {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 0.9em;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #b4c2ce;
+}
+
+li.blurb h5 a,
+li.blurb h5.fandoms a {
+  color: #b8d8ec;
 }
 
 #main,
@@ -1632,6 +1657,15 @@ body.skins-show #outer #main fieldset select {
 
 #outer #main li.blurb .summary {
   color: #e8eef3;
+  font-size: 0.94em;
+  line-height: 1.75;
+}
+
+#outer #main li.blurb .summary .userstuff,
+#outer #main li.blurb blockquote.userstuff,
+#outer #main li.blurb .userstuff {
+  font-size: 1em;
+  line-height: 1.75;
 }
 
 #outer #main li.blurb p.actions a,
@@ -1739,11 +1773,38 @@ body.skins-show #outer #main fieldset select {
   border-bottom-color: rgba(184, 202, 217, 0.55);
 }
 
+#outer #main li.blurb h4.heading,
+#outer #main li.blurb h4 {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
 #outer #main li.blurb h4.heading a,
 #outer #main li.blurb h4 a {
-  font-size: 1.12em;
+  font-size: 1em;
   color: #e8eef3;
   border-bottom: 1px solid rgba(184, 202, 217, 0.45);
+}
+
+#outer #main li.blurb h5,
+#outer #main li.blurb h5.fandoms,
+#outer #main li.blurb h5.heading,
+#outer #main li.blurb h5 a,
+#outer #main li.blurb h5.fandoms a,
+#outer #main li.blurb h5.heading a,
+#outer #main li.blurb h6,
+#outer #main li.blurb h6 a {
+  font-size: 0.9em;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #b4c2ce;
+}
+
+#outer #main li.blurb h5 a,
+#outer #main li.blurb h5.fandoms a,
+#outer #main li.blurb h5.heading a {
+  color: #b8d8ec;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.35);
 }
 
 #outer #main li.blurb h4 a[rel="author"],
@@ -2166,4 +2227,16 @@ body.skins-edit #outer #main li.error,
   width: auto;
   min-width: 0;
   max-width: 100%;
+}
+
+/* List/search pages: page heading above work titles; blurbs stay capped below h4. */
+#outer #main.works-index > h2,
+#outer #main.works-index > h2.heading,
+#outer #main.works-search > h2,
+#outer #main.works-search > h2.heading,
+#outer #main.bookmarks-index > h2,
+#outer #main.bookmarks-index > h2.heading,
+#outer #main > h2.heading.landmark {
+  font-size: 1.32em;
+  line-height: 1.5;
 }
