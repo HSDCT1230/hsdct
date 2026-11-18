@@ -8,6 +8,7 @@ body {
   font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 16px;
   line-height: 1.75;
+  letter-spacing: normal;
 }
 
 #outer,
@@ -15,7 +16,7 @@ body {
   background-color: transparent;
   background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center 32%;
   background-size: cover;
 }
 
@@ -61,7 +62,7 @@ a:focus {
 }
 
 #header {
-  background-color: rgba(21, 37, 56, 0.42);
+  background-color: rgba(21, 37, 56, 0.28);
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0.45em;
@@ -75,12 +76,12 @@ a:focus {
 #header h1 a {
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(21, 37, 56, 0.85);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   border-bottom: none;
 }
 
 #header .primary {
-  background-color: rgba(21, 37, 56, 0.5);
+  background-color: rgba(21, 37, 56, 0.35);
   background-image: none;
   border-top: 1px solid rgba(184, 202, 217, 0.2);
   border-radius: 6px;
@@ -119,7 +120,7 @@ a:focus {
 }
 
 #dashboard {
-  background-color: rgba(21, 37, 56, 0.58);
+  background-color: rgba(21, 37, 56, 0.36);
   color: #eef2f6;
   border: 1px solid rgba(184, 202, 217, 0.32);
   border-top: none;
@@ -144,7 +145,7 @@ a:focus {
 }
 
 #main {
-  background-color: rgba(21, 37, 56, 0.38);
+  background-color: rgba(21, 37, 56, 0.24);
   color: #eef2f6;
   border: 1px solid rgba(184, 202, 217, 0.32);
   border-top: none;
@@ -160,7 +161,7 @@ a:focus {
   font-size: 1.15em;
   line-height: 2;
   color: #eef2f6;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .userstuff p {
@@ -170,6 +171,7 @@ a:focus {
   margin-bottom: 1.5em;
   text-align: justify;
   word-wrap: break-word;
+  letter-spacing: 0.02em;
   color: #eef2f6;
 }
 
@@ -216,7 +218,7 @@ h2.title {
   text-align: center;
   font-size: 1.35em;
   line-height: 1.55;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   background-color: transparent;
   border-bottom: 1px solid rgba(184, 202, 217, 0.28);
   padding-bottom: 0.65em;
@@ -244,6 +246,13 @@ li.blurb h4 a,
   font-size: 1em;
   line-height: 1.55;
   color: #a8cce0;
+}
+
+#main,
+li.blurb,
+.blurb .summary,
+.blurb blockquote {
+  letter-spacing: normal;
 }
 
 li.blurb {
@@ -322,7 +331,7 @@ select {
 .flash,
 .notice,
 .caution {
-  background-color: rgba(21, 37, 56, 0.85);
+  background-color: rgba(21, 37, 56, 0.65);
   color: #f0f4f7;
   border: 1px solid #a64b3f;
   border-radius: 8px;
@@ -331,7 +340,7 @@ select {
 }
 
 #footer {
-  background-color: rgba(21, 37, 56, 0.72);
+  background-color: rgba(21, 37, 56, 0.5);
   color: #a8b6c4;
   border: 1px solid rgba(184, 202, 217, 0.35);
   border-radius: 16px;
