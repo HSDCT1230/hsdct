@@ -1,6 +1,6 @@
 # AO3 站点皮肤 · 红灯雾海
 
-半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图在 `html`：`100% auto` 保持比例，`repeat-y` 纵向衔接，`background-attachment: fixed` 尽量固定（部分手机会仍随页滚动）。
+半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图**只写在 `#outer`**（不要写在 `html`/`body`，保存后容易被删）：`100% auto` + `repeat-y` 纵向衔接。
 
 ## 文件
 

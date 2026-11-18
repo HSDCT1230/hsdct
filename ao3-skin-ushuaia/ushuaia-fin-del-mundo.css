@@ -1,10 +1,5 @@
 html {
   background-color: #1b2e4b;
-  background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
-  background-repeat: repeat-y;
-  background-position: center top;
-  background-size: 100% auto;
-  background-attachment: fixed;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
