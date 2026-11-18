@@ -3557,9 +3557,56 @@ body.skins-edit #outer #main li.error,
  * The footer red tile is the archive footer, not that search field.
  */
 #outer #main form.filters,
-#outer #main form.search {
+#outer #main form.search,
+body.javascript #outer #main form.filters,
+body.javascript #outer #main form.search,
+#outer.filtering #main form.filters {
+  position: static;
+  float: none;
+  clear: both;
+  top: auto;
+  right: auto;
+  left: auto;
+  width: 100%;
   max-width: 100%;
   min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/*
+ * Opening filters on a phone adds .filtering to #outer and parks
+ * form.filters at right: -16em. That drawer, and the fixed #leave_filters
+ * curtain (left/right: -10em), both stick out of the 390px box.
+ */
+#outer.filtering {
+  right: auto;
+  left: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#outer #main form.filters #leave_filters,
+#outer.filtering #main form.filters #leave_filters,
+#outer.filtering .filters #leave_filters,
+#outer #main form.filters .narrow-shown,
+#outer #main form.filters p.narrow-shown {
+  position: static;
+  float: none;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
   white-space: normal;
   word-wrap: break-word;
