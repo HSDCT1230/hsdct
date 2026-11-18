@@ -4607,3 +4607,160 @@ html body #outer #main form .autocomplete .dropdown ul li {
   float: none;
   box-shadow: none;
 }
+
+/*
+ * Every AO3 surface that is still #fff, #eee, #ddd, or #ededed.
+ * Fills are color blocks. Red is a material, used for the open header
+ * control, tag fields, submit, and the current dashboard item.
+ * QR codes stay white so they remain scannable.
+ */
+html body #outer fieldset,
+html body #outer fieldset fieldset,
+html body #outer form dl,
+html body #outer fieldset dl dl,
+html body #outer form blockquote.userstuff,
+html body #outer .secondary,
+html body #outer .toggled form,
+html body #outer .dynamic form,
+html body #outer div.dynamic,
+html body #outer .listbox,
+html body #outer .listbox .index,
+html body #outer li.listbox,
+html body #outer table,
+html body #outer thead td,
+html body #outer th,
+html body #outer tr:hover,
+html body #outer td,
+html body #outer col.name,
+html body #outer dl.index dd,
+html body #outer li.relationships a,
+html body #outer li.relationships a:link,
+html body #outer li.relationships a:visited,
+html body #outer .comment h4.byline,
+html body #outer .thread .even,
+html body #outer .annotation,
+html body #outer .item dl.visibility,
+html body #outer .reading h4.viewed,
+html body #outer .statistics .index li:nth-of-type(even),
+html body #outer .nomination dt,
+html body #outer .autocomplete div.dropdown ul,
+html body #outer .ui-sortable li,
+html body #outer #ui-datepicker-div,
+html body #outer .ui-datepicker table,
+html body #outer .ui-datepicker td,
+html body #outer .ui-datepicker td:hover,
+html body #outer #modal,
+html body #outer #tos_prompt,
+html body #outer .search [role="tooltip"],
+html body #outer form.verbose legend,
+html body #outer .verbose form legend,
+html body #outer #small_login,
+html body #outer .work.navigation .download,
+html body #outer .work.navigation .download .secondary {
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+  box-shadow: none;
+  border-color: #3d5570;
+}
+
+html body #outer .own,
+html body #outer .draft,
+html body #outer .unread,
+html body #outer .child,
+html body #outer .unwrangled,
+html body #outer .unreviewed,
+html body #outer span.unread,
+html body #outer .replied,
+html body #outer span.claimed,
+html body #outer .actions span.defaulted {
+  background-color: rgba(107, 42, 38, 0.45);
+  background-image: none;
+  color: #f8ecea;
+  box-shadow: none;
+}
+
+html body #outer #main > h2.heading,
+html body #outer #main > h2 {
+  background-color: #121c2f;
+  background-image: linear-gradient(to right, #8f3d36, #121c2f);
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 0.45em 0.75em;
+}
+
+html body #outer #header li.dropdown.open > a,
+html body #outer #header .dropdown.open > a,
+html body #outer #greeting li.dropdown.open > a,
+html body #outer #dashboard .current,
+html body #outer #dashboard .current a,
+html body #outer #main form.filters input[type="submit"],
+html body #outer #main form.filters button,
+html body #outer #main dd.submit input[type="submit"] {
+  background-color: #6b2a26;
+  background-image: linear-gradient(to bottom, #8f3d36, #6b2a26);
+  color: #ffffff;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+html body #outer #inner #main form.filters dd.fandom input,
+html body #outer #inner #main form.filters dd.character input,
+html body #outer #inner #main form.filters dd.relationship input,
+html body #outer #inner #main form.filters dd.freeform input,
+html body #outer #inner #main form.filters dd.tags input[type="text"],
+html body #outer #main fieldset.work dd.fandom input,
+html body #outer #main fieldset.work dd.character input,
+html body #outer #main fieldset.work dd.relationship input,
+html body #outer #main fieldset.work dd.freeform input,
+html body #outer #main .autocomplete li.added,
+html body #outer #main .ui-sortable li {
+  background-color: #6b2a26;
+  background-image: linear-gradient(to bottom, #8f3d36, #5c2420);
+  color: #f8ecea;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+html body #outer .filters .indicator:before {
+  background-color: #0c1520;
+  background-image: none;
+  border-color: #5c789e;
+  color: #f0f4f7;
+  box-shadow: none;
+}
+
+html body #outer .filters input:checked + .indicator:before,
+html body #outer .filters [type="checkbox"]:checked + .indicator:before,
+html body #outer .filters [type="radio"]:checked + .indicator:before {
+  background-color: #8f3d36;
+  background-image: none;
+  border-color: #d47a6e;
+  color: #ffffff;
+}
+
+html body #outer .filters .exclude [type="checkbox"]:checked + .indicator:before {
+  background-color: #5c2420;
+  background-image: none;
+  color: #f8ecea;
+}
+
+html body #outer p.qr svg {
+  background-color: #ffffff;
+  background-image: none;
+  border-color: #ffffff;
+}
