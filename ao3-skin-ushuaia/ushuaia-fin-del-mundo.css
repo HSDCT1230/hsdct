@@ -100,6 +100,7 @@ h6,
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: normal;
+  color: #f0f4f7;
 }
 
 a,
@@ -117,7 +118,8 @@ a:focus {
 }
 
 #header {
-  background-color: rgba(21, 37, 56, 0.18);
+  background-color: rgba(21, 37, 56, 0.78);
+  color: #f0f4f7;
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0.45em;
@@ -136,7 +138,7 @@ a:focus {
 }
 
 #header .primary {
-  background-color: rgba(21, 37, 56, 0.22);
+  background-color: rgba(8, 14, 24, 0.72);
   background-image: none;
   border-top: 1px solid rgba(184, 202, 217, 0.2);
   border-radius: 6px;
@@ -145,8 +147,9 @@ a:focus {
 }
 
 #header .primary a {
-  color: #e8eef3;
-  border: 1px solid rgba(184, 202, 217, 0.4);
+  color: #f0f4f7;
+  background-color: rgba(21, 37, 56, 0.65);
+  border: 1px solid rgba(184, 202, 217, 0.55);
   border-radius: 8px;
   margin: 0.08em 0.08em;
   padding: 0.25em 0.55em;
@@ -176,8 +179,8 @@ a:focus {
 
 #dashboard,
 #dashboard.own {
-  background-color: rgba(21, 37, 56, 0.48);
-  color: #eef2f6;
+  background-color: rgba(21, 37, 56, 0.75);
+  color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.32);
   border-top: 1px solid rgba(184, 202, 217, 0.22);
   border-bottom: 1px solid rgba(184, 202, 217, 0.22);
@@ -189,7 +192,7 @@ a:focus {
 
 #dashboard a,
 #dashboard a:visited {
-  color: #c5d2de;
+  color: #e0e8ef;
   border-bottom: none;
 }
 
@@ -202,8 +205,8 @@ a:focus {
 }
 
 #main {
-  background-color: rgba(21, 37, 56, 0.58);
-  color: #eef2f6;
+  background-color: rgba(21, 37, 56, 0.82);
+  color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.25);
   border-top: none;
   border-radius: 0 0 12px 12px;
@@ -332,19 +335,25 @@ li.blurb .tags {
 
 .tags a.tag,
 a.tag {
-  border: 1px solid rgba(184, 202, 217, 0.28);
+  border: 1px solid rgba(184, 202, 217, 0.45);
   border-radius: 999px;
   padding: 0.12em 0.5em;
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #c5d2de;
+  background-color: rgba(8, 14, 24, 0.72);
+  color: #e8eef3;
 }
 
 .actions a,
 .actions a:link,
 .actions a:visited,
+.action,
+.action:link,
+.action:visited,
 ul.actions a,
 ul.navigation.actions a,
 p.actions a,
+#main ul.actions a,
+#main p.actions a,
+#header .actions a,
 button,
 input[type="submit"],
 input[type="button"],
@@ -381,7 +390,8 @@ a.current {
 
 input,
 textarea,
-select {
+select,
+select option {
   background-color: rgba(8, 14, 24, 0.82);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.55);
@@ -409,7 +419,7 @@ select {
 .flash,
 .notice,
 .caution {
-  background-color: rgba(21, 37, 56, 0.45);
+  background-color: rgba(8, 14, 24, 0.88);
   color: #f0f4f7;
   border: 1px solid #a64b3f;
   border-radius: 8px;
@@ -418,8 +428,8 @@ select {
 }
 
 #footer {
-  background-color: rgba(21, 37, 56, 0.32);
-  color: #a8b6c4;
+  background-color: rgba(21, 37, 56, 0.78);
+  color: #d8e2ea;
   border: 1px solid rgba(184, 202, 217, 0.35);
   border-radius: 16px;
   margin-top: 0.65em;
@@ -472,9 +482,9 @@ select {
 }
 
 legend {
-  color: #152538;
-  background-color: #d0dce6;
-  border: 1px solid #7a94ab;
+  color: #0f1e30;
+  background-color: #d8e2ea;
+  border: 1px solid #5c7894;
   padding: 0.12em 0.55em;
   border-radius: 6px;
 }
@@ -507,4 +517,75 @@ abbr.required {
 #dashboard a:hover,
 #dashboard a:focus {
   color: #ffffff;
+}
+
+#inner label,
+#inner dt,
+form dt,
+form label,
+.actions label {
+  color: #d8e2ea;
+}
+
+#main a,
+#main a:link,
+#main a:visited,
+#dashboard a,
+.blurb .summary a,
+dl.meta a {
+  color: #b8d8ec;
+}
+
+#main a:hover,
+#main a:focus,
+#dashboard a:hover,
+.blurb .summary a:hover {
+  color: #e8a8a0;
+}
+
+.blurb .summary,
+.blurb .statistics,
+.blurb blockquote,
+.preface .notes,
+dl.meta,
+dd.words,
+.status {
+  color: #e8eef3;
+}
+
+.listbox,
+.listbox .index,
+.listbox .heading,
+.filters,
+.dynamic,
+.secondary,
+.comment,
+.thread .even,
+table,
+th,
+td {
+  color: #f0f4f7;
+}
+
+th {
+  background-color: rgba(8, 14, 24, 0.55);
+}
+
+td {
+  background-color: rgba(21, 37, 56, 0.35);
+}
+
+.pagination a,
+.navigation.pagination a {
+  background-color: rgba(21, 37, 56, 0.85);
+  color: #e8eef3;
+  border: 1px solid rgba(184, 202, 217, 0.45);
+  border-radius: 6px;
+  padding: 0.2em 0.45em;
+}
+
+#search .button,
+#header #search .button {
+  background-color: rgba(21, 37, 56, 0.92);
+  color: #f0f4f7;
 }
