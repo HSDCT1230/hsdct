@@ -3116,3 +3116,433 @@ body.skins-edit #outer #main li.error,
   color: #f0f4f7;
   box-shadow: none;
 }
+
+/*
+ * Color blocks for the header stack and open menus.
+ * #header is a sibling of #inner. header#header.region plus the nav
+ * child chain beats the end-of-file menu rules, including the
+ * nav#greeting and li[id^="medium_"] :hover rules above.
+ * Title stays on the header. Greeting and the Fandoms bar are separate
+ * fills. Submenu rows are filled chips with a gap, not a stroked box.
+ * Red is the search field, the hovered row, and the current capsule.
+ */
+#outer header#header.region {
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#outer header#header.region > h1.heading,
+#outer header#header.region > .heading {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.1em 0 0.15em 0;
+  text-align: center;
+  position: static;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-sizing: border-box;
+}
+
+#outer header#header.region > h1.heading a,
+#outer header#header.region > .heading a,
+#outer header#header.region > h1.heading img.logo,
+#outer header#header.region img.logo {
+  float: none;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+#outer header#header.region img.logo {
+  height: 42px;
+  width: auto;
+}
+
+#outer header#header.region > nav#greeting {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: 0.4em 0 0.15em 0;
+  padding: 0.4em 0.35em 0.45em 0.35em;
+  text-align: center;
+  overflow: visible;
+  box-sizing: border-box;
+  background-color: #121c2f;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  z-index: 60;
+}
+
+#outer header#header.region > nav#greeting > p.icon {
+  float: none;
+  clear: none;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0.1em 0.15em;
+  padding: 0;
+  line-height: 1;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+#outer header#header.region > nav#greeting > p.icon img.icon {
+  float: none;
+  display: block;
+  width: 1.786em;
+  height: 1.786em;
+  vertical-align: middle;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+}
+
+#outer header#header.region > nav#greeting > ul.user.navigation.actions {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  position: static;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  white-space: normal;
+  overflow: visible;
+}
+
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  margin: 0.12em 0.15em;
+  padding: 0;
+  vertical-align: middle;
+  position: static;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li > a,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li > a:link,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li > a:visited {
+  display: inline-block;
+  float: none;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  line-height: 1.45;
+  white-space: normal;
+  vertical-align: middle;
+  box-sizing: border-box;
+  background-image: none;
+  box-shadow: none;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions {
+  clear: both;
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: 0.45em 0 0.15em 0;
+  padding: 0.45em 0.4em 0.5em 0.4em;
+  text-align: center;
+  overflow: visible;
+  box-sizing: border-box;
+  background-color: #080e18;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  z-index: 40;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown.open,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.search,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown.open {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  margin: 0.12em 0.1em;
+  vertical-align: middle;
+  position: static;
+  overflow: visible;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  box-sizing: border-box;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li.search > form#search,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.search > form.search,
+#outer header#header.region form#search fieldset,
+#outer header#header.region #search fieldset,
+#outer header#header.region #search p,
+#outer header#header.region form#search p {
+  float: none;
+  display: inline;
+  width: auto;
+  max-width: 100%;
+  position: static;
+  clear: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  margin: 0.2em 0 0 0;
+  padding: 0.3em 0;
+  height: auto;
+  float: none;
+  clear: both;
+  box-sizing: border-box;
+  overflow: visible;
+  z-index: 700;
+  list-style: none;
+  text-align: left;
+  background-color: #121c2f;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: none;
+  color: #f0f4f7;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.dropdown-menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"],
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"] {
+  display: block;
+  float: none;
+  clear: both;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  position: static;
+  margin: 0.25em 0.4em;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #f0f4f7;
+  text-align: left;
+  overflow: visible;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:link,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:visited,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:link,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:visited,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:link,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:visited,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:link,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:visited,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"] > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"] > a:link,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"] > a:visited,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"] > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"] > a:link,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"] > a:visited {
+  display: block;
+  float: none;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  margin: 0;
+  padding: 0.65em 0.85em;
+  box-sizing: border-box;
+  position: static;
+  line-height: 1.45;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  white-space: normal;
+  word-wrap: break-word;
+  text-decoration: none;
+  text-shadow: none;
+  overflow: visible;
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 6px;
+  box-shadow: none;
+  color: #f0f4f7;
+}
+
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li:hover,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li:hover,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"]:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"]:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li:hover > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li:hover > a:link,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li:hover > a:visited,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:focus,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:focus,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li:hover > a,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:hover,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:focus,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:hover,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:focus,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"]:hover > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"] > a:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li[id^="medium_"] > a:focus,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"] > a:hover,
+#outer header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li[id^="medium_"] > a:focus {
+  background-color: #6b2a26;
+  background-image: none;
+  color: #ffffff;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#outer header#header.region form#search input#site_search,
+#outer header#header.region form#search input#site_search.text,
+#outer header#header.region #search input.text,
+#outer header#header.region #search input[type="text"] {
+  background-color: #6b2a26;
+  background-image: none;
+  color: #f8ecea;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d47a6e;
+  box-shadow: none;
+}
+
+#outer header#header.region form#search input#site_search:focus,
+#outer header#header.region #search input[type="text"]:focus {
+  background-color: #7a322c;
+  background-image: none;
+  color: #ffffff;
+  border-color: #f0b2a8;
+}
+
+#outer header#header.region #search input.button,
+#outer header#header.region #search input[type="submit"],
+#outer header#header.region form#search input.button,
+#outer header#header.region form#search input[type="submit"] {
+  background-color: #8f3d36;
+  background-image: none;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e08a80;
+  box-shadow: none;
+}
+
+#outer header#header.region .current > a,
+#outer header#header.region a.current,
+#outer header#header.region li.current > a,
+#outer header#header.region > nav > ul.primary.navigation.actions > li > a.current,
+#outer header#header.region > nav#greeting > ul.user.navigation.actions > li > a.current {
+  background-color: rgba(166, 75, 63, 0.78);
+  background-image: none;
+  color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d47a6e;
+  border-radius: 999px;
+  box-shadow: none;
+}
