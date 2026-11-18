@@ -31,7 +31,9 @@ body.javascript #outer.wrapper {
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
-  padding: 0;
+  padding-left: 0.55em;
+  padding-right: 0.55em;
+  box-sizing: border-box;
 }
 
 body.javascript,
@@ -52,10 +54,9 @@ html.javascript,
 }
 
 #inner {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 40em;
-  width: calc(100% - 1.1em);
+  width: 100%;
   padding: 0 0 1em 0;
   border: none;
   box-shadow: none;
