@@ -2588,6 +2588,144 @@ body.skins-edit #outer #main li.error,
   border: 1px solid #5c789e;
 }
 
+/*
+ * Second-level header rows: Fandoms → Theater / Anime & Manga, and the same
+ * lists under Browse, Search, About, Hi, and Post.
+ * Those anchors live in ul.navigation.actions, so AO3's .actions a:link
+ * paints background #eee plus a white gradient and a #bbb border.
+ * #header .open a and #header .dropdown:hover a paint #ddd, and
+ * #header .dropdown .menu a:hover paints white. These selectors beat
+ * .actions a, #header .primary .menu a, and #header .dropdown .menu a.
+ * #header is a sibling of #inner. li.dropdown is left position:static so
+ * the open panel stays the full width of its bar.
+ */
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu {
+  background-color: #152538;
+  background-image: none;
+  border-color: #5c789e;
+  box-shadow: none;
+  color: #f0f4f7;
+}
+
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu > li,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu > li,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu > li,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu > li,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu > li,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu > li,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"],
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] {
+  background-color: #152538;
+  background-image: none;
+  border: 0 solid #5c789e;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.4);
+  box-shadow: none;
+  color: #f0f4f7;
+  height: auto;
+  display: block;
+  white-space: normal;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: none;
+  position: static;
+  box-sizing: border-box;
+}
+
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu > li:last-child,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu > li:last-child,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu > li:last-child,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu > li:last-child {
+  border-bottom: 0 solid #5c789e;
+}
+
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:active,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu a:active,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:active,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:link,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:visited,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:hover,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:focus,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:active,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu a,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu a:link,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu a:visited,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu a:hover,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu a:focus,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu a:active,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:link,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:visited,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:hover,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:focus,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:active,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:active,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] > a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:active {
+  background-color: #152538;
+  background-image: none;
+  border: 0 solid #5c789e;
+  box-shadow: none;
+  color: #f0f4f7;
+  height: auto;
+  display: block;
+  white-space: normal;
+  width: 100%;
+  margin: 0;
+  padding: 0.65em 0.85em;
+  box-sizing: border-box;
+  text-decoration: none;
+  float: none;
+  position: static;
+  line-height: 1.45;
+}
+
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:focus,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:hover,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:focus,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:hover,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:focus {
+  background-color: #1e3a56;
+  background-image: none;
+  border: 0 solid #5c789e;
+  color: #f0f4f7;
+}
+
 /* List/search pages: page heading above work titles; blurbs stay capped below h4. */
 #outer #main.works-index > h2,
 #outer #main.works-index > h2.heading,
