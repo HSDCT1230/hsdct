@@ -42,7 +42,8 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 - AO3 皮肤通过 CSS 引用 GitHub `raw` 地址加载 `assets/les-eclaireurs-bg.jpg`，避免部分图床在中国大陆不可用。
 - 若你 fork 本仓库并替换图片，请同步修改 `ushuaia-fin-del-mundo.css` 里 `#outer` 的 `background-image` 为你的 raw 链接。
-- 竖图采用顶图一张 + `no-repeat` + `100% auto`，避免 `repeat-y` 重复灯塔；下方由深蓝底色 `#1b2e4b` 延伸。
+- 竖图采用顶图一张 + `no-repeat` + `100% auto`，避免 `repeat-y` 重复灯塔；图下沿用 `#1b2e4b` 底色。
+- 底图最下沿与正文区之间有一层与图高等高的线性渐变（约 `133vw`），把海面自然过渡到页底色，避免硬切线。
 
 ## AO3 限制与注意
 
