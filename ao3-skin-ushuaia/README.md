@@ -33,7 +33,7 @@
 
 （合并到 `main` 后可将路径中的分支名改成 `main`。）
 
-若要换图：修改 CSS 里 `--ushuaia-bg-image` 的 `url(...)`，须为 **HTTPS** 且 **.jpg/.png/.gif** 直链。
+若要换图：在 CSS 里搜索 `#outer.wrapper` 与 `#header`，把两处 `background-image: url(...)` 改成你的 **HTTPS .jpg/.png** 直链（**不能**把 `url()` 写在 `:root` 变量里，AO3 会拒绝保存）。
 
 ## 配色说明（与照片一致）
 

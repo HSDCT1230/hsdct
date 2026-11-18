@@ -30,7 +30,7 @@
   --ushuaia-read-gap: 1.8em;
   --ushuaia-shell-radius: 16px;
   --ushuaia-shell-shadow: 0 10px 28px rgba(8, 16, 28, 0.28);
-  --ushuaia-bg-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
+  /* 背景图不能写在 :root 变量里（AO3 会拒绝）；请在下方的 #outer / #header 中改 url */
 }
 
 /* ── 界面字体 ── */
