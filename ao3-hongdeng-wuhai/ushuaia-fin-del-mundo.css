@@ -3880,3 +3880,439 @@ body.javascript #outer #main form.search,
   background-image: none;
   color: #f0f4f7;
 }
+
+/*
+ * Final second-level header rows.
+ * #header is a sibling of #inner. Fandoms, Browse, Search, About, Hi, and
+ * Post all use li.dropdown > ul.menu, and AO3 adds .dropdown-menu plus .open.
+ * .actions a:link paints #eee, a white gradient, and a #bbb border.
+ * #header .open a and #header .dropdown:hover a paint #ddd.
+ * #header .dropdown .menu a is transparent, so the light panel shows through.
+ * Earlier skin rules set background-color: transparent and leave that
+ * gradient in place, or they stop at header#header.region and :hover #1e3a56.
+ * html body plus header#header and .open/.dropdown-menu outranks those
+ * selectors. Rows stay filled blocks: no drawn border, padding kept.
+ * The search field stays #6b2a26. Filters and the footer are untouched.
+ */
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.dropdown-menu,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.dropdown-menu,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu {
+  background-color: #121c2f;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  color: #f0f4f7;
+}
+
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu > li,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu > li,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu li[id^="medium_"],
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu li[id^="medium_"],
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu > li,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu > li,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"],
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li {
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #f0f4f7;
+}
+
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li > a:visited,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:visited,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:visited,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu > li > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu > li > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu > li > a:visited,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:visited,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu li[id^="medium_"] > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu li[id^="medium_"] > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu li[id^="medium_"] > a:visited,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu li[id^="medium_"] > a,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu li[id^="medium_"] > a:link,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu li[id^="medium_"] > a:visited,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li > a,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li > a:link,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li > a:visited,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:link,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:visited,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:link,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:visited,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu > li > a,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu > li > a:link,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu > li > a:visited,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:link,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:visited,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:link,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:visited,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:link,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:visited,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:link,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:visited,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:link,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:visited,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:link,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:visited {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0.65em 0.85em;
+  box-sizing: border-box;
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: #f0f4f7;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li > a:focus,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu > li > a:active,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:focus,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:active,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:focus,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu > li > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu > li > a:focus,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:focus,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu li[id^="medium_"] > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu li[id^="medium_"] > a:focus,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu li[id^="medium_"] > a:hover,
+html body #outer header#header > nav > ul.primary.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu li[id^="medium_"] > a:focus,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li > a:hover,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li > a:focus,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu > li > a:active,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:hover,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:focus,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.menu.dropdown-menu > li > a:active,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:hover,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown.open > ul.dropdown-menu > li > a:focus,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu > li > a:hover,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu > li > a:focus,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:hover,
+html body #outer header#header > nav#greeting > ul.user.navigation.actions > li.dropdown:hover > ul.menu.dropdown-menu > li > a:focus,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:hover,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu > li > a:focus,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:hover,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:focus,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:hover,
+html body #outer.wrapper header#header.region > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:focus,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:hover,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:focus,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:hover,
+html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:focus {
+  background-color: #6b2a26;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+
+/*
+ * Phone filter rows. AO3 floats dt at 30% and dd at 80%, sets inputs to
+ * 20em, nowraps submits, and absolute-positions the suggestion list at
+ * the top of its field. Negative bottom margins then pull the next heading
+ * up under the previous control. The ul rule above also forces that list
+ * open, so a closed list covers its input and the next field. These
+ * selectors win on #inner #main form.filters. Header search stays #6b2a26.
+ * The form stays navy, not red, and Include / Exclude stay light text on
+ * navy rather than #ddd. Suggestion lists stay closed until opened, then
+ * sit under their own input. The footer drops the red tile.
+ */
+#outer #inner #main form.filters,
+#outer #inner #main form#work-filters.filters,
+body.javascript #outer #inner #main form.filters,
+#outer.filtering #inner #main form.filters,
+#outer #inner #main form.filters fieldset,
+#outer #inner #main form.filters dl,
+#outer #inner #main form.filters dt,
+#outer #inner #main form.filters dd,
+#outer #inner #main form.filters li,
+#outer #inner #main form.filters p,
+#outer #inner #main form.filters label,
+#outer #inner #main form.filters legend,
+#outer #inner #main form.filters input,
+#outer #inner #main form.filters select,
+#outer #inner #main form.filters textarea,
+#outer #inner #main form.filters button,
+#outer #inner #main form.filters dd.submit input,
+#outer #inner #main form.filters input[type="submit"],
+#outer #inner #main form.filters input[type="text"],
+#outer #inner #main form.filters input[type="checkbox"],
+#outer #inner #main form.filters input[type="radio"] {
+  float: none;
+  clear: both;
+  display: block;
+  position: static;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#outer #inner #main form.filters,
+#outer #inner #main form#work-filters.filters,
+#outer #inner #main form.filters fieldset,
+#outer #inner #main form.filters dl,
+#outer #inner #main form.filters dt,
+#outer #inner #main form.filters dd,
+#outer #inner #main form.filters li,
+#outer #inner #main form.filters label,
+#outer #inner #main form.filters a,
+#outer #inner #main form.filters dt.heading,
+#outer #inner #main form.filters dt.include,
+#outer #inner #main form.filters dt.exclude,
+#outer #inner #main form.filters dt.include.heading,
+#outer #inner #main form.filters dt.exclude.heading,
+#outer #inner #main form.filters dt.sort {
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+#outer #inner #main form.filters input,
+#outer #inner #main form.filters select,
+#outer #inner #main form.filters textarea,
+#outer #inner #main form.filters input[type="text"],
+#outer #inner #main form.filters input[type="submit"],
+#outer #inner #main form.filters button,
+#outer #inner #main form.filters dd.submit input {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  box-sizing: border-box;
+  white-space: normal;
+  background-color: #0c1520;
+  background-image: none;
+  color: #f0f4f7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+}
+
+#outer #inner #main form.filters ul.autocomplete,
+#outer #inner #main form.filters dd.autocomplete ul.autocomplete,
+#outer #inner #main form.filters .autocomplete ul,
+#outer #inner #main form#work-filters ul.autocomplete {
+  display: none;
+  position: static;
+  float: none;
+  clear: both;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  z-index: auto;
+  background-color: #0a121c;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+#outer #inner #main form.filters ul.autocomplete li,
+#outer #inner #main form.filters ul.autocomplete a,
+#outer #inner #main form.filters .autocomplete ul li,
+#outer #inner #main form.filters .autocomplete ul a {
+  display: block;
+  float: none;
+  position: static;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  color: #f0f4f7;
+  background-color: #152538;
+  background-image: none;
+}
+
+#outer #footer,
+#outer #footer ul,
+#outer #footer ol,
+#outer #footer li,
+#outer #footer .module,
+#outer #footer .menu,
+#outer #footer .heading,
+#outer #footer a,
+#outer #footer button {
+  float: none;
+  position: static;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+/*
+ * Pull the filter form out to #outer's edges. #outer pads 0.55em, #inner
+ * has a 1px border, and #main pads 0.85em. A -1.4em margin on a stretched
+ * form lands 1px inside #outer, within 2px.
+ * Fieldset, dl, and list padding are cleared so each control shares that edge.
+ */
+#outer #inner #main form.filters,
+#outer #inner #main form#work-filters.filters,
+body.javascript #outer #inner #main form.filters,
+#outer.filtering #inner #main form.filters {
+  width: auto;
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -1.4em;
+  margin-right: -1.4em;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border-width: 0;
+}
+
+#outer #inner #main form.filters fieldset,
+#outer #inner #main form.filters dl,
+#outer #inner #main form.filters dt,
+#outer #inner #main form.filters dd,
+#outer #inner #main form.filters ul,
+#outer #inner #main form.filters ol,
+#outer #inner #main form.filters li,
+#outer #inner #main form.filters p,
+#outer #inner #main form.filters label,
+#outer #inner #main form.filters legend {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border-width: 0;
+  list-style: none;
+}
+
+#outer #inner #main form.filters #leave_filters,
+#outer.filtering #inner #main form.filters #leave_filters,
+#outer.filtering .filters #leave_filters,
+#outer #inner #main form.filters p.narrow-shown {
+  position: static;
+  float: none;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+#outer #inner #main form.filters ul.autocomplete li,
+#outer #inner #main form.filters ul.autocomplete a,
+#outer #inner #main form.filters .autocomplete ul li,
+#outer #inner #main form.filters .autocomplete ul a {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
