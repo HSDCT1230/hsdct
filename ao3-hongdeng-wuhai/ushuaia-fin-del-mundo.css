@@ -177,7 +177,12 @@ a:focus {
 #header .dropdown:hover > a,
 #header li.dropdown.open > a,
 #header li.open > a,
-#header .dropdown.open > a {
+#header .dropdown.open > a,
+#greeting .dropdown:hover > a,
+#greeting li.dropdown.open > a,
+#greeting li.open > a,
+#header #small_login:hover > a,
+#header #small_login.open > a {
   color: #ffffff;
   background-color: rgba(166, 75, 63, 0.3);
 }
@@ -220,14 +225,23 @@ a:focus {
 #header .menu,
 #greeting .menu,
 #header .dropdown .menu,
-#greeting .dropdown .menu {
+#greeting .dropdown .menu,
+#header #small_login ul.menu,
+#header li.user ul.menu,
+#header .actions li.dropdown ul.menu,
+#header .secondary li.dropdown ul.menu {
   position: absolute;
   top: 100%;
   left: 0;
   right: auto;
   width: 16em;
+  max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
+}
+
+#header .primary li.dropdown ul.menu {
+  width: 14em;
 }
 
 #header .dropdown:hover .menu,
@@ -236,19 +250,31 @@ a:focus {
 #header li.open .menu,
 #greeting .dropdown:hover .menu,
 #greeting li.dropdown.open .menu,
-#greeting li.open .menu {
+#greeting li.open .menu,
+#header #small_login:hover ul.menu,
+#header #small_login.open ul.menu,
+#header li.user.open ul.menu,
+#header .actions li.dropdown.open ul.menu,
+#header .secondary li.dropdown.open ul.menu {
   display: block;
 }
 
+#header #small_login,
+#header li.user,
 #greeting li.user,
 #greeting li.dropdown,
-#header .primary li.dropdown {
+#header .primary li.dropdown,
+#header .actions li.dropdown,
+#header .secondary li.dropdown {
   position: relative;
   overflow: visible;
 }
 
 #greeting li.open .menu,
-#greeting li.dropdown.open .menu {
+#greeting li.dropdown.open .menu,
+#header li.user.open ul.menu,
+#header li.user ul.menu,
+#header .actions li.user ul.menu {
   right: 0;
   left: auto;
 }
@@ -256,7 +282,9 @@ a:focus {
 #header .actions,
 #header .primary ul,
 #header ul.navigation.actions,
-#greeting ul {
+#header .secondary ul,
+#greeting ul,
+#header #small_login {
   overflow: visible;
 }
 
@@ -328,6 +356,9 @@ a:focus {
   box-shadow: none;
   padding: 0.7em 0.85em 0.8em 0.85em;
   margin: 0;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
 }
 
 #dashboard a,
@@ -1068,9 +1099,16 @@ body.skins-show #outer #main fieldset select {
   border: 1px solid rgba(184, 202, 217, 0.55);
 }
 
+#outer #inner,
+#outer #inner.wrapper {
+  overflow: visible;
+}
+
 #outer #header,
 #outer #greeting,
-#outer #header .primary {
+#outer #header .primary,
+#outer #dashboard,
+#outer #header #small_login {
   overflow: visible;
 }
 
@@ -1110,8 +1148,89 @@ body.skins-show #outer #main fieldset select {
 
 #outer #greeting li.dropdown.open ul.menu,
 #outer #greeting li.open ul.menu,
-#outer #greeting .dropdown:hover ul.menu {
+#outer #greeting .dropdown:hover ul.menu,
+#outer #header #small_login.open ul.menu,
+#outer #header #small_login:hover ul.menu,
+#outer #header li.user.open ul.menu,
+#outer #header .actions li.dropdown.open ul.menu {
   display: block;
+}
+
+#outer #header #small_login ul.menu,
+#outer #header li.user ul.menu,
+#outer #header .actions li.dropdown ul.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 16em;
+  max-width: 100%;
+  z-index: 500;
+}
+
+#outer #header li.user ul.menu,
+#outer #header li.user.open ul.menu {
+  right: 0;
+  left: auto;
+}
+
+#outer #main form .autocomplete,
+#outer #main .autocomplete,
+#outer #main dl .autocomplete,
+#outer #main li.autocomplete,
+#outer #main .required .autocomplete {
+  position: relative;
+  overflow: visible;
+  z-index: 80;
+}
+
+#outer #main ul.autocomplete,
+#outer #main .autocomplete ul {
+  position: absolute;
+  z-index: 400;
+  width: 100%;
+  max-width: 100%;
+  background-color: #0a121c;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+  padding: 0.35em 0.25em;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#outer #main ul.autocomplete li,
+#outer #main .autocomplete ul li {
+  background-color: transparent;
+  color: #f0f4f7;
+}
+
+#outer #main ul.autocomplete a,
+#outer #main .autocomplete ul a {
+  display: block;
+  color: #f0f4f7;
+  background-color: rgba(21, 37, 56, 0.9);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+  border-radius: 6px;
+  margin: 0.15em 0.25em;
+  padding: 0.25em 0.45em;
+}
+
+#outer #main ul.autocomplete a:hover,
+#outer #main ul.autocomplete a:focus,
+#outer #main .autocomplete ul a:hover,
+#outer #main .autocomplete ul a:focus {
+  background-color: rgba(166, 75, 63, 0.58);
+  color: #ffffff;
+  border-color: #d47a6e;
+}
+
+#outer #main .filters,
+#outer #main .filters fieldset,
+#outer #main .dynamic,
+#outer #main .dynamic form {
+  overflow: visible;
 }
 
 #outer #header .dropdown .menu a,
@@ -1295,7 +1414,7 @@ body.skins-show #outer #main fieldset select {
   padding: 0.95em 1.05em 1.05em 1.05em;
   margin: 0.65em 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #outer #main.splash .module,
