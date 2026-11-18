@@ -5289,3 +5289,545 @@ html body #outer p.qr svg {
   background-image: none;
   border-color: #ffffff;
 }
+
+/* ------------------------------------------------------------------
+ * Homepage splash look only.
+ * Real AO3: #main.docs.index > .splash (favorite|browse + latest.news).
+ * Fixtures/legacy: body.home, #main.splash, #main.home.
+ * Other pages keep the styles above.
+ * ------------------------------------------------------------------ */
+
+/* Open the #inner card so the #outer lighthouse reads full-bleed on home */
+#outer #inner:has(#main.docs.index),
+#outer #inner:has(#main .splash),
+#outer #inner:has(#main.splash),
+#outer #inner:has(#main.home),
+body.home #outer #inner,
+body.home #outer #inner.wrapper {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: 42em;
+}
+
+/* Keep the lighthouse clearer through the favorites zone on home only */
+#outer:has(#main.docs.index),
+#outer:has(#main .splash),
+#outer:has(#main.splash),
+body.home #outer,
+body.home #outer.wrapper {
+  background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 52%, rgba(27, 46, 75, 0.35) 72%, rgba(27, 46, 75, 0.85) 88%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/hsdct/5c9621713aef2325f7aae7d893cec2b5d65282cf/ao3-hongdeng-wuhai/assets/les-eclaireurs-bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center top;
+  background-size: 100% 160vw, 100% auto;
+}
+
+#outer #main.docs.index,
+#outer #main.home,
+#outer #main.splash,
+body.home #outer #main,
+#outer #main .splash {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  padding-top: 0.35em;
+  padding-left: 0.85em;
+  padding-right: 0.85em;
+}
+
+/* Kill white / navy card frames inside splash only */
+#outer #main.docs.index .splash .module,
+#outer #main.docs.index .splash .listbox,
+#outer #main.docs.index .splash .index,
+#outer #main .splash .module,
+#outer #main .splash .listbox,
+#outer #main .splash .index,
+#outer #main.splash .module,
+#outer #main.splash .listbox,
+#outer #main.splash .news,
+#outer #main.splash .favorite,
+#outer #main.splash .browse,
+body.home #outer #main .splash .module,
+body.home #outer #main .splash .listbox {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* Hero: favorites / browse float on the lighthouse (no boxes) */
+#outer #main.docs.index .splash .favorite.module,
+#outer #main.docs.index .splash .browse.module,
+#outer #main .splash .favorite.module,
+#outer #main .splash .browse.module,
+#outer #main.splash .favorite.module,
+#outer #main.splash .browse.module,
+#outer #main.splash .favorite,
+#outer #main.splash .browse,
+body.home #outer #main .favorite.module,
+body.home #outer #main .browse.module {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  float: none;
+  margin: 0 0 0.35em 0;
+  padding: 0.85em 0.15em 1.75em 0.15em;
+  overflow: visible;
+  width: 100%;
+}
+
+/* Logged-out intro: keep transparent so the lighthouse shows through */
+#outer #main.docs.index .splash .intro.module,
+#outer #main .splash .intro.module,
+#outer #main.splash .intro.module,
+body.home #outer #main .intro.module {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  margin: 0 0 0.5em 0;
+  padding: 0.35em 0.15em 0.75em 0.15em;
+}
+
+#outer #main.docs.index .splash .intro .account,
+#outer #main .splash .intro .account,
+#outer #main.splash .intro .account {
+  background-color: rgba(8, 14, 24, 0.35);
+  background-image: none;
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+#outer #main.docs.index .splash .favorite.module h3.heading,
+#outer #main.docs.index .splash .browse.module h3.heading,
+#outer #main .splash .favorite.module h3.heading,
+#outer #main .splash .browse.module h3.heading,
+#outer #main.splash .favorite h3,
+#outer #main.splash .favorite h3.heading,
+#outer #main.splash .browse h3,
+#outer #main.splash .browse h3.heading,
+body.home #outer #main .favorite h3.heading,
+body.home #outer #main .browse h3.heading {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #8f3d36;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.85em;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: normal;
+  margin: 0 0 0.35em 0;
+  padding: 0;
+  text-shadow: none;
+}
+
+#outer #main.docs.index .splash .browse.module p.note,
+#outer #main .splash .browse.module p.note,
+#outer #main.splash .browse p.note,
+body.home #outer #main .browse p.note,
+#outer #main.docs.index .splash .favorite.module p,
+#outer #main .splash .favorite.module p {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  font-size: 0.95em;
+  line-height: 1.45;
+  margin: 0 0 0.85em 0;
+  padding: 0;
+  text-shadow: 0 1px 2px rgba(8, 14, 24, 0.55);
+}
+
+#outer #main.docs.index .splash .favorite.module ul,
+#outer #main.docs.index .splash .browse.module ul,
+#outer #main .splash .favorite.module ul,
+#outer #main .splash .browse.module ul,
+#outer #main.splash .favorite ul,
+#outer #main.splash .browse ul,
+body.home #outer #main .favorite ul,
+body.home #outer #main .browse ul {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#outer #main.docs.index .splash .favorite.module li,
+#outer #main.docs.index .splash .browse.module li,
+#outer #main .splash .favorite.module li,
+#outer #main .splash .browse.module li,
+#outer #main.splash .favorite li,
+#outer #main.splash .browse li,
+body.home #outer #main .favorite li,
+body.home #outer #main .browse li {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #8f3d36;
+  display: list-item;
+  float: left;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  list-style-type: square;
+  list-style-position: outside;
+  margin: 0 0 0.4em 0;
+  padding: 0 0.4em 0 0;
+  width: 46%;
+  margin-left: 4%;
+  box-sizing: border-box;
+}
+
+/* Drop AO3's default red » so only the square marker shows */
+#outer #main.docs.index .splash .browse.module li a:before,
+#outer #main .splash .browse.module li a:before,
+#outer #main.splash .browse li a:before,
+body.home #outer #main .browse li a:before,
+#outer #main.docs.index .splash .favorite.module li a:before,
+#outer #main .splash .favorite.module li a:before,
+#outer #main.splash .favorite li a:before {
+  content: none;
+  color: #8f3d36;
+  padding: 0;
+}
+
+#outer #main.docs.index .splash .favorite.module li a,
+#outer #main.docs.index .splash .browse.module li a,
+#outer #main .splash .favorite.module li a,
+#outer #main .splash .browse.module li a,
+#outer #main.splash .favorite li a,
+#outer #main.splash .browse li a,
+#outer #main.splash .favorite ul li a,
+body.home #outer #main .favorite li a,
+body.home #outer #main .browse li a {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #f0f4f7;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  text-decoration: none;
+  text-shadow: 0 1px 2px rgba(8, 14, 24, 0.45);
+}
+
+#outer #main.docs.index .splash .favorite.module li a:hover,
+#outer #main.docs.index .splash .browse.module li a:hover,
+#outer #main .splash .favorite.module li a:hover,
+#outer #main .splash .browse.module li a:hover,
+#outer #main.splash .favorite li a:hover,
+#outer #main.splash .browse li a:hover,
+body.home #outer #main .favorite li a:hover,
+body.home #outer #main .browse li a:hover,
+#outer #main.docs.index .splash .favorite.module li a:focus,
+#outer #main.docs.index .splash .browse.module li a:focus,
+#outer #main .splash .favorite.module li a:focus,
+#outer #main .splash .browse.module li a:focus {
+  background-color: transparent;
+  color: #e8a8a0;
+  border-bottom: 1px solid #a64b3f;
+}
+
+/* News: textured navy block under the hero */
+#outer #main.docs.index .splash .latest.news.module,
+#outer #main.docs.index .splash .news.module,
+#outer #main .splash .latest.news.module,
+#outer #main .splash .news.module,
+#outer #main.splash .latest.news.module,
+#outer #main.splash .news.module,
+#outer #main.splash .news,
+body.home #outer #main .latest.news.module,
+body.home #outer #main .news.module {
+  background-color: #121c2f;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.012) 0, rgba(255, 255, 255, 0.012) 1px, transparent 1px, transparent 4px), linear-gradient(to bottom, #152538 0%, #121c2f 38%, #0c1422 100%);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  clear: both;
+  float: none;
+  margin: 0 0 1em 0;
+  padding: 1em 0.85em 1.15em 0.85em;
+  overflow: visible;
+  width: 100%;
+}
+
+#outer #main.docs.index .splash .latest.news.module h3.heading,
+#outer #main.docs.index .splash .news.module h3.heading,
+#outer #main .splash .latest.news.module h3.heading,
+#outer #main .splash .news.module h3.heading,
+#outer #main.splash .news h3,
+#outer #main.splash .news h3.heading,
+body.home #outer #main .news h3.heading {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-bottom: 1px solid rgba(184, 216, 236, 0.55);
+  border-radius: 0;
+  box-shadow: none;
+  color: #8f3d36;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.75em;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0 0 0.75em 0;
+  overflow: hidden;
+  padding: 0 0 0.35em 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module h3.heading .title,
+#outer #main .splash .latest.news.module h3.heading .title,
+#outer #main.splash .news h3 .title,
+body.home #outer #main .news h3 .title {
+  color: #8f3d36;
+  float: left;
+}
+
+#outer #main.docs.index .splash .latest.news.module h3.heading .link,
+#outer #main .splash .latest.news.module h3.heading .link,
+#outer #main.splash .news h3 .link,
+body.home #outer #main .news h3 .link {
+  float: right;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  font-size: 0.52em;
+  line-height: 2.4;
+  margin: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module h3.heading .link a,
+#outer #main .splash .latest.news.module h3.heading .link a,
+#outer #main.splash .news h3 .link a,
+#outer #main.splash .news h3 a,
+body.home #outer #main .news h3 a {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(184, 216, 236, 0.65);
+  color: #dce6f0;
+  text-decoration: none;
+}
+
+#outer #main.docs.index .splash .latest.news.module h3.heading .link a:hover,
+#outer #main .splash .latest.news.module h3.heading .link a:hover,
+#outer #main.splash .news h3 a:hover,
+body.home #outer #main .news h3 a:hover {
+  color: #e8a8a0;
+  border-bottom: 1px solid #a64b3f;
+}
+
+#outer #main.docs.index .splash .latest.news.module ul.news,
+#outer #main.docs.index .splash .latest.news.module ul.index,
+#outer #main .splash .latest.news.module ul.news,
+#outer #main .splash .news.module ul.news,
+#outer #main.splash .news ul,
+body.home #outer #main .news ul.news {
+  background-color: transparent;
+  border: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post,
+#outer #main.docs.index .splash .latest.news.module li.group,
+#outer #main .splash .latest.news.module li.post,
+#outer #main .splash .news.module li.post,
+#outer #main.splash .news li,
+#outer #main.splash li.news,
+body.home #outer #main .news li.post {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.28);
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 0.95em 0;
+  padding: 0 0 0.95em 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post:last-child,
+#outer #main .splash .latest.news.module li.post:last-child,
+#outer #main.splash .news li:last-child,
+body.home #outer #main .news li.post:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post .header.module,
+#outer #main .splash .latest.news.module li.post .header.module,
+#outer #main.splash .news .header.module,
+body.home #outer #main .news .header.module {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post h4.heading,
+#outer #main.docs.index .splash .latest.news.module li.post h4,
+#outer #main .splash .latest.news.module li.post h4.heading,
+#outer #main.splash .news h4,
+#outer #main.splash li.news h4.heading,
+body.home #outer #main .news h4.heading {
+  background-color: transparent;
+  border: none;
+  color: #b8d8ec;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0 0 0.25em 0;
+  padding: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post h4.heading a,
+#outer #main.docs.index .splash .latest.news.module li.post h4 a,
+#outer #main .splash .latest.news.module li.post h4 a,
+#outer #main.splash .news h4 a,
+#outer #main.splash li.news h4 a,
+body.home #outer #main .news h4 a {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(184, 216, 236, 0.45);
+  color: #b8d8ec;
+  text-decoration: none;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post h4 a:hover,
+#outer #main .splash .latest.news.module li.post h4 a:hover,
+#outer #main.splash .news h4 a:hover,
+body.home #outer #main .news h4 a:hover {
+  color: #e8a8a0;
+  border-bottom-color: #a64b3f;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post p.meta,
+#outer #main .splash .latest.news.module li.post p.meta,
+#outer #main.splash .news p.meta,
+body.home #outer #main .news p.meta {
+  background-color: transparent;
+  border: none;
+  color: #b4c2ce;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  font-size: 0.82em;
+  line-height: 1.45;
+  margin: 0 0 0.55em 0;
+  padding: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post p.meta a,
+#outer #main .splash .latest.news.module li.post p.meta a,
+#outer #main.splash .news p.meta a,
+body.home #outer #main .news p.meta a {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(180, 194, 206, 0.55);
+  color: #b4c2ce;
+  text-decoration: none;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post blockquote.userstuff,
+#outer #main.docs.index .splash .latest.news.module li.post blockquote,
+#outer #main .splash .latest.news.module li.post blockquote.userstuff,
+#outer #main.splash .news blockquote,
+body.home #outer #main .news blockquote {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #ffffff;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  font-size: 0.98em;
+  line-height: 1.55;
+  margin: 0 0 0.45em 0;
+  padding: 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post blockquote.userstuff p,
+#outer #main .splash .latest.news.module li.post blockquote.userstuff p,
+#outer #main.splash .news blockquote p,
+body.home #outer #main .news blockquote p {
+  background-color: transparent;
+  color: #ffffff;
+  margin: 0 0 0.4em 0;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post p.jump,
+#outer #main .splash .latest.news.module li.post p.jump,
+#outer #main.splash .news p.jump,
+body.home #outer #main .news p.jump {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post p.jump a,
+#outer #main .splash .latest.news.module li.post p.jump a,
+#outer #main.splash .news p.jump a,
+body.home #outer #main .news p.jump a {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(240, 244, 247, 0.55);
+  color: #ffffff;
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+  font-size: 0.92em;
+  text-decoration: none;
+}
+
+#outer #main.docs.index .splash .latest.news.module li.post p.jump a:hover,
+#outer #main .splash .latest.news.module li.post p.jump a:hover,
+#outer #main.splash .news p.jump a:hover,
+body.home #outer #main .news p.jump a:hover {
+  color: #e8a8a0;
+  border-bottom: 1px solid #a64b3f;
+}
+
+/* Remaining splash modules (readings / inbox / social): flat navy, no white cards */
+#outer #main.docs.index .splash .social.module,
+#outer #main.docs.index .splash .readings.module,
+#outer #main.docs.index .splash .inbox.module,
+#outer #main .splash .social.module,
+#outer #main .splash .readings.module,
+#outer #main .splash .inbox.module,
+#outer #main.splash .social.module,
+#outer #main.splash .readings.module,
+body.home #outer #main .social.module {
+  background-color: #121c2f;
+  background-image: linear-gradient(to bottom, #152538 0%, #121c2f 100%);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 0 0.85em 0;
+  padding: 0.85em;
+}
+
+#outer #main.docs.index .splash .social.module h3.heading,
+#outer #main.docs.index .splash .readings.module h3.heading,
+#outer #main .splash .social.module h3.heading,
+#outer #main.splash .social h3,
+body.home #outer #main .social h3.heading {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(184, 216, 236, 0.4);
+  color: #8f3d36;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.45em;
+  margin: 0 0 0.55em 0;
+  padding: 0 0 0.3em 0;
+}
