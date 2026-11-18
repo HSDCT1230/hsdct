@@ -27,13 +27,17 @@
 
 ## 背景图（已内置你的灯塔照片）
 
-皮肤默认使用仓库内 `assets/les-eclaireurs-bg.jpg`，AO3 中对应：
+**AO3 能用的外链**（经验证较稳）：`upload.wikimedia.org`、Imgur 直链（`i.imgur.com/xxxx.jpg`）、部分图床。  
+**常被拒绝**：`raw.githubusercontent.com`、`cdn.jsdelivr.net`（含 `@分支` 的地址）。
 
-`https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg`
+默认 CSS 使用维基 Commons 红灯塔图；**换成你的那张照片**：
 
-（合并到 `main` 后可将路径中的分支名改成 `main`。）
-
-若要换图：在 CSS 里搜索 `#outer.wrapper` 与 `#header`，把两处 `background-image: url(...)` 改成你的 **HTTPS .jpg/.png** 直链（**不能**把 `url()` 写在 `:root` 变量里，AO3 会拒绝保存）。
+1. 把 `les-eclaireurs-bg.jpg` 上传到 [Imgur](https://imgur.com/)（无需登录也可上传）。
+2. 在图片页点右键 **复制图片地址**，得到形如 `https://i.imgur.com/xxxxxxxx.jpg` 的链接。
+3. 在 CSS 里只改 **`#outer.wrapper`** 中的这一行：  
+   `background-image: url("你的链接.jpg");`  
+   **不要**写在 `:root` 里，**不要**再给 `#header` 加 `background-image`（顶栏用半透明色叠在海图上即可）。
+4. 重新 **Submit** / **Update**。
 
 ## 配色说明（与照片一致）
 

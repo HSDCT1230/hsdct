@@ -30,7 +30,8 @@
   --ushuaia-read-gap: 1.8em;
   --ushuaia-shell-radius: 16px;
   --ushuaia-shell-shadow: 0 10px 28px rgba(8, 16, 28, 0.28);
-  /* 背景图不能写在 :root 变量里（AO3 会拒绝）；请在下方的 #outer / #header 中改 url */
+  /* 背景：只能写在 #outer.wrapper 的 background-image（勿用 :root 变量）
+   * AO3 常拒绝 github / jsdelivr；自定义图请用 imgur 或维基直链 .jpg */
 }
 
 /* ── 界面字体 ── */
