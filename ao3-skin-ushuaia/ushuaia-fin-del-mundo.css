@@ -1,59 +1,61 @@
 /*
- * AO3 Site Skin: 乌斯怀亚 · Fin del Mundo
- * 北欧寒冬 / 冷蓝基调 / 红色灯塔强调
+ * AO3 Site Skin: 南极灯塔 · 极简文艺
+ * 艺术氛围 / 冷酷配色 / 红灯塔一点红
  * 中文阅读优化 · 桌面与手机通用（无 @media）
  *
- * 背景图：在下方 --ushuaia-bg-image 中替换为你的图片直链（HTTPS，.jpg/.png）
+ * 背景图：在 --ushuaia-bg-image 中换成你的南极灯塔直链（HTTPS，.jpg/.png）
  */
 
 :root {
-  --ushuaia-abyss: #081018;
-  --ushuaia-deep: #0f2438;
-  --ushuaia-frost: #dceaf5;
-  --ushuaia-ice: #a8c4d9;
-  --ushuaia-mist: #6b8fa8;
-  --ushuaia-panel-bg: rgba(12, 28, 44, 0.94);
-  --ushuaia-panel-light: rgba(220, 234, 245, 0.97);
-  --ushuaia-text: #e8f1f8;
-  --ushuaia-text-soft: #b8cdd9;
-  --ushuaia-text-dark: #152535;
-  --ushuaia-text-body: #1a2d3f;
-  --ushuaia-lighthouse: #c6283a;
-  --ushuaia-lighthouse-dim: #8f1c2a;
-  --ushuaia-lighthouse-glow: #e85a6b;
-  --ushuaia-border: #2d4a62;
-  --ushuaia-border-light: #c5d8e8;
-  --ushuaia-link: #5eb3e8;
-  --ushuaia-link-hover: #f07080;
-  --ushuaia-bg-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9e/Ushuaia_-_Lago_Acigami.jpg");
+  --ushuaia-abyss: #06080c;
+  --ushuaia-deep: #121820;
+  --ushuaia-frost: #e6e9ed;
+  --ushuaia-ice: #9aa8b5;
+  --ushuaia-mist: #5c6b78;
+  --ushuaia-panel-bg: rgba(14, 18, 24, 0.9);
+  --ushuaia-panel-light: rgba(252, 252, 253, 0.97);
+  --ushuaia-text: #d8dde3;
+  --ushuaia-text-soft: #8a959f;
+  --ushuaia-text-dark: #1c242c;
+  --ushuaia-text-body: #232b34;
+  --ushuaia-lighthouse: #9e2a32;
+  --ushuaia-lighthouse-dim: #6e1c22;
+  --ushuaia-lighthouse-glow: #c13d48;
+  --ushuaia-border: #2a333d;
+  --ushuaia-border-light: #d4d9de;
+  --ushuaia-link: #3d6d8a;
+  --ushuaia-link-hover: #9e2a32;
+  --ushuaia-bg-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Faro_Les_Eclaireurs_Ushuaia.jpg");
 }
 
-/* ── 全局与中文排版 ── */
+/* ── 界面：冷静无衬线 ── */
 
 body,
 .group .group,
 .region,
 .system .intro,
 #outer .wrapper {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  font-size: 1.05em;
-  line-height: 1.75;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 1em;
+  line-height: 1.7;
+  font-weight: normal;
   color: var(--ushuaia-text);
 }
+
+/* ── 正文：宋体系，留白与行距 ── */
 
 .userstuff,
 .userstuff p,
 .userstuff li,
 .userstuff blockquote,
 .comment .userstuff,
-#workskin,
 .preface .notes,
 .preface blockquote,
 .notes blockquote.userstuff {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", serif;
-  font-size: 1.125em;
-  line-height: 1.9;
-  letter-spacing: 0.03em;
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
+  font-size: 1.12em;
+  line-height: 2;
+  letter-spacing: 0.06em;
   color: var(--ushuaia-text-body);
   word-wrap: break-word;
   word-break: normal;
@@ -63,14 +65,25 @@ body,
 .userstuff h3,
 .userstuff h4,
 .userstuff .heading {
-  line-height: 1.55;
-  margin-top: 1.35em;
-  margin-bottom: 0.65em;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  margin-top: 1.6em;
+  margin-bottom: 0.75em;
+  letter-spacing: 0.12em;
+  color: var(--ushuaia-text-dark);
 }
 
 .userstuff p {
-  margin-bottom: 0.85em;
+  margin-bottom: 1.1em;
   text-indent: 0;
+}
+
+.userstuff blockquote {
+  border-left: 2px solid var(--ushuaia-border-light);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--ushuaia-mist);
 }
 
 a,
@@ -78,7 +91,7 @@ a:link,
 a:visited {
   color: var(--ushuaia-link);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(61, 109, 138, 0.35);
 }
 
 a:hover,
@@ -87,40 +100,44 @@ a:focus {
   border-bottom-color: var(--ushuaia-lighthouse);
 }
 
-/* ── 页面背景：极地海面 / 可换图 ── */
+/* ── 背景：南极灯塔，画面留白 ── */
 
 #outer.wrapper {
   background-color: var(--ushuaia-abyss);
   background-image: var(--ushuaia-bg-image);
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
   min-height: 100%;
 }
 
 #inner.wrapper {
-  margin: 0 2%;
-  max-width: 48em;
+  margin: 0 3%;
+  max-width: 46em;
 }
 
-/* ── 顶栏：深蓝夜幕 + 灯塔红点缀 ── */
+/* ── 顶栏：扁平、无阴影 ── */
 
 #header {
   background: var(--ushuaia-panel-bg);
-  border-bottom: 3px solid var(--ushuaia-lighthouse);
-  box-shadow: 0 2px 8px rgba(8, 16, 24, 0.65);
-  margin-bottom: 0.5em;
+  border-bottom: 1px solid var(--ushuaia-lighthouse);
+  box-shadow: none;
+  margin-bottom: 1.25em;
 }
 
 #header .heading a,
 #header h1 a {
   color: var(--ushuaia-frost);
-  text-shadow: 1px 1px 2px var(--ushuaia-abyss);
+  text-shadow: none;
+  letter-spacing: 0.08em;
+  font-weight: normal;
 }
 
 #header ul.primary {
-  background: rgba(8, 20, 32, 0.88);
+  background: transparent;
   border-color: var(--ushuaia-border);
+  border-width: 0;
+  border-top: 1px solid var(--ushuaia-border);
 }
 
 #header .actions a,
@@ -129,7 +146,8 @@ a:focus {
 #header fieldset {
   color: var(--ushuaia-ice);
   background: transparent;
-  border-color: var(--ushuaia-border);
+  border-color: transparent;
+  box-shadow: none;
 }
 
 #header .actions a:hover,
@@ -139,7 +157,13 @@ a:focus {
 #header .user a:hover,
 #header .user a:focus {
   color: var(--ushuaia-frost);
-  background: rgba(198, 40, 58, 0.35);
+  background: transparent;
+  border-bottom: 1px solid var(--ushuaia-lighthouse);
+}
+
+#header .current {
+  color: var(--ushuaia-lighthouse-glow);
+  border-bottom: 1px solid var(--ushuaia-lighthouse);
 }
 
 #header .menu,
@@ -148,16 +172,18 @@ a:focus {
 #header .dropdown:hover .menu a:hover,
 #header .dropdown .menu a:focus,
 .search span.tip {
-  background: rgba(10, 26, 40, 0.96);
+  background: rgba(8, 10, 14, 0.97);
   color: var(--ushuaia-frost);
   border-color: var(--ushuaia-border);
+  box-shadow: none;
 }
 
 #greeting {
-  color: var(--ushuaia-ice);
+  color: var(--ushuaia-text-soft);
+  letter-spacing: 0.05em;
 }
 
-/* ── 主内容区：磨砂冰层面板，保证字迹清晰 ── */
+/* ── 内容：近白冷面，无卡片阴影 ── */
 
 #main,
 li.blurb,
@@ -182,13 +208,15 @@ li.comment,
   background: var(--ushuaia-panel-light);
   color: var(--ushuaia-text-dark);
   border-color: var(--ushuaia-border-light);
+  box-shadow: none;
 }
 
 #main a,
 li.blurb a,
 .listbox a,
 .dashboard a {
-  color: #1a5f8a;
+  color: var(--ushuaia-link);
+  border-bottom-color: rgba(61, 109, 138, 0.3);
 }
 
 #main a:hover,
@@ -201,12 +229,14 @@ li.blurb a:hover,
 #outer #footer {
   background: var(--ushuaia-panel-bg);
   color: var(--ushuaia-text-soft);
-  border-top: 2px solid var(--ushuaia-lighthouse-dim);
-  margin-top: 1em;
+  border-top: 1px solid var(--ushuaia-border);
+  margin-top: 2em;
+  box-shadow: none;
 }
 
 #footer a {
   color: var(--ushuaia-ice);
+  border-bottom: none;
 }
 
 #footer a:hover,
@@ -214,21 +244,31 @@ li.blurb a:hover,
   color: var(--ushuaia-lighthouse-glow);
 }
 
-/* ── 标题与分区：左侧灯塔色条 ── */
+/* ── 标题：细线，文艺留白 ── */
 
 #outer .group .heading,
 fieldset.listbox .heading,
 .userstuff .heading,
 .heading,
-.userstuff h2,
-.userstuff h3,
 h3.landmark,
 h4.landmark {
-  color: var(--ushuaia-deep);
-  border-left: 4px solid var(--ushuaia-lighthouse);
-  padding-left: 0.55em;
+  color: var(--ushuaia-text-dark);
+  border-left: none;
+  border-bottom: 1px solid var(--ushuaia-border-light);
+  padding-left: 0;
+  padding-bottom: 0.35em;
+  margin-bottom: 0.85em;
   text-shadow: none;
   background: transparent;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+.userstuff h2,
+.userstuff h3 {
+  border-bottom: 1px solid var(--ushuaia-border-light);
+  border-left: none;
+  padding-left: 0;
 }
 
 .actions a,
@@ -237,39 +277,41 @@ input[type="submit"],
 #outer .current,
 a.current,
 .current a:visited {
-  background: var(--ushuaia-deep);
-  color: var(--ushuaia-frost);
-  border-color: var(--ushuaia-border);
+  background: transparent;
+  color: var(--ushuaia-deep);
+  border: 1px solid var(--ushuaia-border-light);
+  box-shadow: none;
 }
 
 .actions a:hover,
 .actions a:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background: var(--ushuaia-lighthouse);
-  color: #ffffff;
-  border-color: var(--ushuaia-lighthouse-dim);
+  background: var(--ushuaia-deep);
+  color: var(--ushuaia-frost);
+  border-color: var(--ushuaia-deep);
 }
 
 input,
 textarea,
 select {
-  background: #f4f9fc;
+  background: #fafbfc;
   color: var(--ushuaia-text-body);
   border-color: var(--ushuaia-border-light);
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.65;
+  box-shadow: none;
 }
 
 input:focus,
 textarea:focus {
-  border-color: var(--ushuaia-lighthouse);
+  border-color: var(--ushuaia-mist);
   outline: none;
-  box-shadow: 0 0 0 2px rgba(198, 40, 58, 0.25);
+  box-shadow: none;
 }
 
-/* ── 作品阅读页 ── */
+/* ── 阅读页：居中窄栏，像版心 ── */
 
 #main.works-show,
 #main.chapters-show,
@@ -277,51 +319,56 @@ textarea:focus {
 .work.meta.group,
 .preface.group {
   background: var(--ushuaia-panel-light);
-  box-shadow: 0 2px 12px rgba(8, 16, 24, 0.35);
+  box-shadow: none;
+  padding-top: 0.5em;
 }
 
 .work .preface .userstuff,
 #chapters .userstuff,
 .chapter .userstuff {
-  max-width: 42em;
+  max-width: 38em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 0.5em;
+  padding: 0 0.25em;
 }
 
 .chapter .landmark,
 #chapters .landmark {
-  color: var(--ushuaia-deep);
+  color: var(--ushuaia-text-dark);
   border-bottom: 1px solid var(--ushuaia-border-light);
 }
 
-/* ── 列表 / 模糊卡片 ── */
+/* ── 列表：极简分隔 ── */
 
 li.blurb,
 .blurb .blurb,
 .listbox .index,
 li.comment {
-  box-shadow: 0 1px 4px rgba(15, 36, 56, 0.12);
+  box-shadow: none;
+  border-color: var(--ushuaia-border-light);
 }
 
 li.blurb:hover,
 .listbox .index li:hover {
   border-color: var(--ushuaia-mist);
+  background: #f7f8f9;
 }
 
-/* ── 元数据、标签、提示 ── */
+/* ── 标签与元信息：低饱和 ── */
 
 dl.meta,
 dl.stats,
 .tags a.tag,
 a.tag:visited {
-  color: var(--ushuaia-text-body);
+  color: var(--ushuaia-mist);
+  font-size: 0.95em;
 }
 
 .tags a.tag:hover,
 a.tag:hover {
-  background: rgba(198, 40, 58, 0.15);
-  color: var(--ushuaia-lighthouse-dim);
+  background: transparent;
+  color: var(--ushuaia-lighthouse);
+  border-bottom: 1px solid var(--ushuaia-lighthouse);
 }
 
 .notice,
@@ -332,29 +379,31 @@ a.tag:hover {
 .alert.flash,
 .required .autocomplete,
 .system .tweet_list li {
-  background: rgba(220, 234, 245, 0.98);
+  background: #f5f6f7;
   color: var(--ushuaia-text-dark);
-  border-color: var(--ushuaia-lighthouse);
+  border: 1px solid var(--ushuaia-border-light);
+  box-shadow: none;
 }
 
 th,
 td,
 table {
-  background: #eef5fa;
+  background: #fafbfc;
   color: var(--ushuaia-text-dark);
   border-color: var(--ushuaia-border-light);
 }
 
 tr:hover,
 td:hover {
-  background: #e2edf5;
+  background: #f0f2f4;
 }
 
 #dashboard .secondary,
 .secondary {
-  background: rgba(15, 36, 56, 0.92);
-  color: var(--ushuaia-frost);
+  background: var(--ushuaia-panel-bg);
+  color: var(--ushuaia-text-soft);
   border-color: var(--ushuaia-border);
+  box-shadow: none;
 }
 
 #dashboard .secondary a {
@@ -362,7 +411,7 @@ td:hover {
 }
 
 #dashboard .secondary a:hover {
-  color: var(--ushuaia-lighthouse-glow);
+  color: var(--ushuaia-frost);
 }
 
 #dashboard .current,
@@ -370,12 +419,12 @@ td:hover {
 .draft,
 .unread,
 .replied {
-  background: rgba(198, 40, 58, 0.2);
+  background: transparent;
   border-color: var(--ushuaia-lighthouse);
   color: var(--ushuaia-text-dark);
 }
 
-/* ── 弹层 / 日期选择等 ── */
+/* ── 弹层 ── */
 
 #modal,
 .ui-datepicker,
@@ -383,9 +432,8 @@ td:hover {
   background: var(--ushuaia-panel-light);
   color: var(--ushuaia-text-dark);
   border-color: var(--ushuaia-border-light);
+  box-shadow: none;
 }
-
-/* ── 小屏：流式边距（不依赖 @media）── */
 
 #inner.wrapper,
 #main,
@@ -398,5 +446,6 @@ li.blurb {
 button,
 input[type="submit"] {
   min-height: 2.25em;
-  padding: 0.45em 0.85em;
+  padding: 0.5em 1em;
+  letter-spacing: 0.04em;
 }

@@ -3,26 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AO3 皮肤预览 · 乌斯怀亚</title>
+  <title>AO3 皮肤预览 · 南极灯塔</title>
   <link rel="stylesheet" href="/ushuaia-fin-del-mundo.css" />
   <style>
-    /* 仅预览页：模拟 AO3 骨架，正式皮肤勿含 @media */
     @media (max-width: 640px) {
-      #inner.wrapper { margin: 0 1%; }
-      .userstuff { font-size: 1.08em; }
+      #inner.wrapper { margin: 0 2%; }
     }
     .preview-banner {
-      background: var(--ushuaia-lighthouse);
-      color: #fff;
+      background: var(--ushuaia-deep);
+      color: var(--ushuaia-ice);
       text-align: center;
-      padding: 0.5em;
-      font-size: 0.9em;
+      padding: 0.45em;
+      font-size: 0.85em;
+      letter-spacing: 0.12em;
+      border-bottom: 1px solid var(--ushuaia-lighthouse);
     }
     .mock-ao3 { min-height: 100vh; }
   </style>
 </head>
 <body class="logged-in">
-  <div class="preview-banner">本地预览 · 实际上线请在 AO3「创建站点皮肤」中粘贴 CSS</div>
+  <div class="preview-banner">本地预览 · 南极灯塔极简文艺</div>
   <div id="outer" class="wrapper mock-ao3">
     <div id="inner" class="wrapper">
       <header id="header" class="region">
@@ -41,7 +41,7 @@
       </header>
 
       <main id="main" class="works-show region">
-        <h2 class="heading">作品示例：世界尽头的灯塔</h2>
+        <h2 class="heading">作品示例 · 红灯在雾海尽头</h2>
         <div class="work meta group">
           <h3 class="landmark heading">Metadata</h3>
           <dl class="meta">
@@ -49,23 +49,24 @@
             <dt>Words:</dt><dd>1,024</dd>
           </dl>
           <ul class="tags commas">
-            <li><a class="tag" href="#">北欧氛围</a></li>
-            <li><a class="tag" href="#">乌斯怀亚</a></li>
+            <li><a class="tag" href="#">南极</a></li>
+            <li><a class="tag" href="#">灯塔</a></li>
+            <li><a class="tag" href="#">极简</a></li>
           </ul>
         </div>
 
         <div class="preface group">
           <h3 class="landmark heading">Summary</h3>
           <blockquote class="userstuff">
-            <p>寒冷的海风吹过关塔上的红灯，像乌斯怀亚冬夜里唯一醒着的眼睛。面板使用浅色磨砂底，长文行高约 1.9，适合中文连续阅读。</p>
+            <p>风暴过去之后，海峡只剩下灰与一点红。皮肤把界面收成白与冷灰，只在边缘留住灯塔的颜色。</p>
           </blockquote>
         </div>
 
         <div id="chapters" class="userstuff">
           <h3 class="landmark heading">Chapter Text</h3>
-          <p>她站在甲板上，看远处冰水交接处泛起青灰色的光。港口开玩笑叫它「世界尽头」，可尽头之后还有更长的夜，以及 beacon 在雾里轻轻荡开的红。</p>
-          <p>这是第二段正文。在 AO3 作品页，`.userstuff` 会限制在大约 42em 宽度内居中，双眼扫视时不必摆头太多。若你提供自己的背景图，只要改 CSS 里的图片地址，并把面板透明度略调高，就能在风景与可读性之间取得平衡。</p>
-          <p>第三段用来感受段落间距：中文段间距不必首行缩进，左右对齐靠浏览器默认左对齐即可；中英文混排时 `word-wrap` 会处理长单词换行。</p>
+          <p>她不被脚步声惊动。冰山在远处缓慢转折，像一枚安静搁浅的字母；灯塔旋转的光环落在水面，碎成无法拼合的短句。</p>
+          <p>极简不是空，是把多余的框线、阴影、渐变都收走。正文用宋体系，行距略开，字距略松——像诗集里的版式，而不是信息流里的卡片。背景可以是你的南极灯塔摄影，也可以是水墨处理过的风景；字始终在近乎纯白的面板上，冷而清楚。</p>
+          <p>若你觉得酷一些，可以把面板再调白一点、把链接的蓝再压低；若红灯太亮，CSS 里有一组 `--ushuaia-lighthouse` 变量，改成更暗的锈红即可。</p>
         </div>
 
         <ul class="actions">
@@ -76,7 +77,7 @@
       </main>
 
       <footer id="footer" class="region">
-        <p>Customize · Default · Revert skin — 预览页模拟 AO3 页脚配色</p>
+        <p>Customize · Default · Revert skin</p>
       </footer>
     </div>
   </div>
