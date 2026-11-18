@@ -346,11 +346,13 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"] {
+  background-image: none;
   background-color: rgba(21, 37, 56, 0.92);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.58);
   border-radius: 8px;
   box-shadow: none;
+  text-shadow: none;
   font-family: "source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif;
   font-size: 0.9em;
   letter-spacing: normal;
