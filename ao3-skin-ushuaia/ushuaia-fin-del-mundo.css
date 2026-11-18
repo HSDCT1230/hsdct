@@ -1267,3 +1267,84 @@ body.skins-show #outer #main fieldset select {
   font-size: 1.12em;
   color: #e8eef3;
 }
+
+#outer #main.works-show h2.title {
+  border-bottom: 1px solid rgba(166, 75, 63, 0.48);
+}
+
+#outer #main li.warnings a.tag,
+#outer #main li.warning a.tag,
+#outer #main dd.warnings a.tag,
+#outer #main dd.warning a.tag,
+#outer #main .tags.warnings a.tag {
+  border-color: rgba(166, 75, 63, 0.72);
+  color: #edd8d4;
+}
+
+#outer #main li.rating a.tag,
+#outer #main li.ratings a.tag,
+#outer #main dd.rating a.tag {
+  border-color: rgba(166, 75, 63, 0.42);
+  color: #e0e8ef;
+}
+
+#outer #main li.warnings a.tag:hover,
+#outer #main li.warning a.tag:hover,
+#outer #main dd.warnings a.tag:hover {
+  background-color: rgba(166, 75, 63, 0.35);
+  color: #f0e8e6;
+}
+
+#outer #main ol.chapter.index li.current a,
+#outer #main ol.chapter.index .current a,
+#outer #main ul.chapter.index li.current a,
+#outer #main #chapters li.current a,
+#outer #main .chapter.index .current a {
+  background-color: rgba(166, 75, 63, 0.52);
+  border-left: 3px solid #a64b3f;
+  color: #ffffff;
+}
+
+#outer #main.works-show ul.work.navigation.actions li.current a,
+#outer #main.works-show ul.actions li.current a,
+#outer #main ul.work.navigation.actions a.current {
+  background-color: rgba(166, 75, 63, 0.82);
+  border-color: #d47a6e;
+  color: #ffffff;
+}
+
+#outer #main li.blurb dl.stats a:hover,
+#outer #main li.blurb .stats a:hover,
+#outer #main dl.stats a:hover {
+  color: #e8a8a0;
+  border-color: rgba(166, 75, 63, 0.55);
+}
+
+#outer #main .filters fieldset.toggled,
+#outer #main .filters.open,
+#outer #main form.filters fieldset.expanded {
+  border-color: rgba(166, 75, 63, 0.45);
+}
+
+#outer #main input:focus,
+#outer #main textarea:focus,
+#outer #main select:focus,
+#outer #header input:focus,
+#outer #search input:focus {
+  border-color: #d47a6e;
+  outline: none;
+}
+
+#outer #main h2.heading a:hover,
+#outer #main li.blurb h4.heading a:hover,
+#outer #main li.blurb h4 a:hover {
+  color: #e8a8a0;
+  border-bottom-color: #a64b3f;
+}
+
+#outer #main.works-show h3.byline a:hover,
+#outer #main li.blurb h4 a[rel="author"]:hover,
+#outer #main a[rel="author"]:hover {
+  color: #d8e2ea;
+  border-bottom-color: rgba(184, 202, 217, 0.55);
+}
