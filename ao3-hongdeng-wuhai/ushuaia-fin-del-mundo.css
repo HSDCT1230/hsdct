@@ -4764,3 +4764,186 @@ html body #outer p.qr svg {
   background-image: none;
   border-color: #ffffff;
 }
+
+/*
+ * Fandom and Character tag bars stay inside the fieldset border.
+ * AO3's token widget is ul.autocomplete > li.added.tag (not token-input-*).
+ * #outer #main ul.autocomplete is position:absolute and width:100% of #main,
+ * the same specificity as the relative rule, and it wins on Character rows
+ * that are not under .required. That list, and a token list with a fixed
+ * min-width, crosses the fieldset on both ends. These selectors win that
+ * tie. The bars stay dark red. Header search stays #6b2a26.
+ * An open suggestion list may be absolute, but only inside this fieldset.
+ */
+html body #outer #inner #main form.filters,
+html body #outer #inner #main form#work-filters.filters,
+html body.javascript #outer #inner #main form.filters,
+html body.javascript #outer #inner #main form#work-filters.filters,
+html body #outer.filtering #inner #main form.filters {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  box-sizing: border-box;
+  float: none;
+  position: static;
+}
+
+html body #outer #inner #main form.filters fieldset,
+html body #outer #inner #main form#work-filters.filters fieldset,
+html body.javascript #outer #inner #main form.filters fieldset {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0.75em;
+  padding-right: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.75em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+html body #outer #main form fieldset.work {
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+html body #outer #inner #main form.filters dt.fandom,
+html body #outer #inner #main form.filters dd.fandom,
+html body #outer #inner #main form.filters dt.character,
+html body #outer #inner #main form.filters dd.character,
+html body #outer #inner #main form.filters dd.fandom li,
+html body #outer #inner #main form.filters dd.character li,
+html body #outer #inner #main form.filters dd.fandom label,
+html body #outer #inner #main form.filters dd.character label,
+html body #outer #inner #main form.filters dd.fandom ul,
+html body #outer #inner #main form.filters dd.character ul,
+html body #outer #inner #main form.filters dd.fandom ul.autocomplete,
+html body #outer #inner #main form.filters dd.character ul.autocomplete,
+html body #outer #inner #main form.filters dd.fandom li.added,
+html body #outer #inner #main form.filters dd.character li.added,
+html body #outer #inner #main form.filters dd.fandom li.tag,
+html body #outer #inner #main form.filters dd.character li.tag,
+html body #outer #inner #main form.filters dd.fandom li.input,
+html body #outer #inner #main form.filters dd.character li.input,
+html body #outer #inner #main form.filters dd.fandom ul.token-input-list,
+html body #outer #inner #main form.filters dd.character ul.token-input-list,
+html body #outer #inner #main form.filters dd.fandom li.token-input-token,
+html body #outer #inner #main form.filters dd.character li.token-input-token,
+html body #outer #inner #main form.filters dd.fandom li.token-input-input-token,
+html body #outer #inner #main form.filters dd.character li.token-input-input-token,
+html body #outer #inner #main form.filters dd.fandom input,
+html body #outer #inner #main form.filters dd.character input,
+html body #outer #inner #main form.filters dd.fandom input[type="text"],
+html body #outer #inner #main form.filters dd.character input[type="text"],
+html body #outer #main form fieldset.work dt.fandom,
+html body #outer #main form fieldset.work dd.fandom,
+html body #outer #main form fieldset.work dt.character,
+html body #outer #main form fieldset.work dd.character,
+html body #outer #main form fieldset.work dd.fandom ul.autocomplete,
+html body #outer #main form fieldset.work dd.character ul.autocomplete,
+html body #outer #main form fieldset.work dd.fandom li.added.tag,
+html body #outer #main form fieldset.work dd.character li.added.tag,
+html body #outer #main form fieldset.work dd.fandom li.input,
+html body #outer #main form fieldset.work dd.character li.input,
+html body #outer #main form fieldset.work dd.fandom input,
+html body #outer #main form fieldset.work dd.character input,
+html body #outer #main form fieldset.work dd.fandom input[type="text"],
+html body #outer #main form fieldset.work dd.character input[type="text"] {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  float: none;
+  position: static;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  display: block;
+}
+
+html body #outer #inner #main form.filters dd.fandom div.autocomplete.dropdown,
+html body #outer #inner #main form.filters dd.character div.autocomplete.dropdown,
+html body #outer #inner #main form.filters dd.fandom div.autocomplete.dropdown ul,
+html body #outer #inner #main form.filters dd.character div.autocomplete.dropdown ul,
+html body #outer #main form fieldset.work dd.fandom div.autocomplete.dropdown,
+html body #outer #main form fieldset.work dd.character div.autocomplete.dropdown,
+html body #outer #main form fieldset.work dd.fandom div.autocomplete.dropdown ul,
+html body #outer #main form fieldset.work dd.character div.autocomplete.dropdown ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  float: none;
+}
+
+/*
+ * form#work-filters ul.autocomplete is display:none from an earlier rule
+ * with four ids. That hides the token list and lets a fixed min-width win.
+ * This outranks it, so the list and its tags sit in the padding box.
+ */
+html body #outer #inner #main form#work-filters ul.autocomplete,
+html body #outer #inner #main form#work-filters.filters dd.fandom ul.autocomplete,
+html body #outer #inner #main form#work-filters.filters dd.character ul.autocomplete,
+html body #outer #inner #main form#work-filters.filters dd.fandom li,
+html body #outer #inner #main form#work-filters.filters dd.character li,
+html body #outer #inner #main form#work-filters.filters dd.fandom li.added.tag,
+html body #outer #inner #main form#work-filters.filters dd.character li.added.tag,
+html body #outer #inner #main form#work-filters.filters dd.fandom li.input,
+html body #outer #inner #main form#work-filters.filters dd.character li.input,
+html body #outer #inner #main form#work-filters.filters dd.fandom ul.token-input-list,
+html body #outer #inner #main form#work-filters.filters dd.character ul.token-input-list,
+html body #outer #inner #main form#work-filters.filters dd.fandom li.token-input-token,
+html body #outer #inner #main form#work-filters.filters dd.character li.token-input-token,
+html body #outer #inner #main form#work-filters.filters dd.fandom input,
+html body #outer #inner #main form#work-filters.filters dd.character input,
+html body #outer #inner #main form#work-filters.filters dd.fandom input[type="text"],
+html body #outer #inner #main form#work-filters.filters dd.character input[type="text"] {
+  display: block;
+  position: static;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+html body #outer #inner #main form#work-filters.filters dd.fandom div.autocomplete.dropdown,
+html body #outer #inner #main form#work-filters.filters dd.character div.autocomplete.dropdown,
+html body #outer #inner #main form#work-filters.filters dd.fandom div.autocomplete.dropdown ul,
+html body #outer #inner #main form#work-filters.filters dd.character div.autocomplete.dropdown ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  float: none;
+}
