@@ -1,38 +1,67 @@
 html {
   background-color: #1b2e4b;
+  background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-size: 100% auto;
+  background-attachment: fixed;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: transparent;
   color: #e8eef3;
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: normal;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 #outer,
 #outer.wrapper {
   background-color: transparent;
-  background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center 32%;
-  background-size: cover;
+  background-image: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 #inner,
 #inner.wrapper {
   background-color: transparent;
   background-image: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #inner {
   margin: 0 auto;
   max-width: 40em;
   width: 100%;
-  padding: 0 0.65em 1.75em 0.65em;
+  padding: 0 0.5em 1.5em 0.5em;
   border: none;
   box-shadow: none;
+}
+
+#header,
+#main,
+#dashboard,
+#footer,
+.flash {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 h1,
@@ -42,9 +71,10 @@ h4,
 h5,
 h6,
 .heading {
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-weight: 400;
   line-height: 1.55;
+  letter-spacing: normal;
 }
 
 a,
@@ -62,26 +92,26 @@ a:focus {
 }
 
 #header {
-  background-color: rgba(21, 37, 56, 0.28);
+  background-color: rgba(21, 37, 56, 0.18);
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0.45em;
-  border: 1px solid rgba(184, 202, 217, 0.32);
-  border-bottom: 1px solid rgba(184, 202, 217, 0.28);
-  border-radius: 16px 16px 0 0;
-  box-shadow: 0 6px 18px rgba(8, 16, 28, 0.22);
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  border-bottom: 1px solid rgba(184, 202, 217, 0.22);
+  border-radius: 12px 12px 0 0;
+  box-shadow: none;
 }
 
 #header .heading a,
 #header h1 a {
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(21, 37, 56, 0.85);
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
   border-bottom: none;
 }
 
 #header .primary {
-  background-color: rgba(21, 37, 56, 0.35);
+  background-color: rgba(21, 37, 56, 0.22);
   background-image: none;
   border-top: 1px solid rgba(184, 202, 217, 0.2);
   border-radius: 6px;
@@ -92,8 +122,8 @@ a:focus {
 #header .primary a {
   color: #e8eef3;
   border: 1px solid rgba(184, 202, 217, 0.4);
-  border-radius: 999px;
-  margin: 0.08em 0.1em;
+  border-radius: 8px;
+  margin: 0.08em 0.08em;
   padding: 0.25em 0.55em;
   box-shadow: none;
   font-size: 0.92em;
@@ -120,7 +150,7 @@ a:focus {
 }
 
 #dashboard {
-  background-color: rgba(21, 37, 56, 0.36);
+  background-color: rgba(21, 37, 56, 0.22);
   color: #eef2f6;
   border: 1px solid rgba(184, 202, 217, 0.32);
   border-top: none;
@@ -145,33 +175,33 @@ a:focus {
 }
 
 #main {
-  background-color: rgba(21, 37, 56, 0.24);
+  background-color: rgba(21, 37, 56, 0.14);
   color: #eef2f6;
-  border: 1px solid rgba(184, 202, 217, 0.32);
+  border: 1px solid rgba(184, 202, 217, 0.25);
   border-top: none;
-  border-radius: 0 0 16px 16px;
-  box-shadow: 0 6px 18px rgba(8, 16, 28, 0.22);
-  padding: 1.35em 1.25em 1.75em 1.25em;
+  border-radius: 0 0 12px 12px;
+  box-shadow: none;
+  padding: 1.15em 0.85em 1.5em 0.85em;
   margin: 0 0 0.65em 0;
   line-height: 1.75;
 }
 
 .userstuff {
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
-  font-size: 1.15em;
-  line-height: 2;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.12em;
+  line-height: 1.9;
   color: #eef2f6;
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
 }
 
 .userstuff p {
   font-size: 1em;
-  line-height: 2;
+  line-height: 1.9;
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.35em;
   text-align: justify;
   word-wrap: break-word;
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
   color: #eef2f6;
 }
 
@@ -181,7 +211,7 @@ a:focus {
 .userstuff h4,
 .userstuff h5,
 .userstuff h6 {
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-weight: 400;
   color: #f0f4f7;
   line-height: 1.6;
@@ -213,12 +243,12 @@ a:focus {
 #main.works-show > h2,
 #main.works-show > h2.heading,
 h2.title {
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   color: #f0f4f7;
   text-align: center;
   font-size: 1.35em;
   line-height: 1.55;
-  letter-spacing: 0.02em;
+  letter-spacing: normal;
   background-color: transparent;
   border-bottom: 1px solid rgba(184, 202, 217, 0.28);
   padding-bottom: 0.65em;
@@ -229,7 +259,7 @@ h2.title {
 #main.works-index > h2.heading,
 #main.bookmarks-index > h2,
 #main.collections-index > h2 {
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1.05em;
   line-height: 1.55;
   text-align: left;
@@ -242,7 +272,7 @@ li.blurb h4,
 li.blurb h4 a,
 .blurb .heading,
 .blurb .heading a {
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1em;
   line-height: 1.55;
   color: #a8cce0;
@@ -290,8 +320,9 @@ input[type="submit"] {
   border: 1px solid rgba(184, 202, 217, 0.52);
   border-radius: 8px;
   box-shadow: none;
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif;
   font-size: 0.9em;
+  letter-spacing: normal;
   padding: 0.4em 0.7em;
 }
 
@@ -309,9 +340,10 @@ select {
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.55);
   border-radius: 8px;
-  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
+  font-family: "songti sc", "stsong", "georgia", serif;
   font-size: 1em;
   line-height: 1.75;
+  letter-spacing: normal;
 }
 
 #header #search input,
@@ -331,7 +363,7 @@ select {
 .flash,
 .notice,
 .caution {
-  background-color: rgba(21, 37, 56, 0.65);
+  background-color: rgba(21, 37, 56, 0.45);
   color: #f0f4f7;
   border: 1px solid #a64b3f;
   border-radius: 8px;
@@ -340,7 +372,7 @@ select {
 }
 
 #footer {
-  background-color: rgba(21, 37, 56, 0.5);
+  background-color: rgba(21, 37, 56, 0.32);
   color: #a8b6c4;
   border: 1px solid rgba(184, 202, 217, 0.35);
   border-radius: 16px;
