@@ -1,7 +1,7 @@
 /*
  * AO3 Site Skin: Les Éclaireurs · 南极灯塔
  * 整体一块画幅：顶栏与主区衔接，区内用细分隔线而非碎卡片
- * 中文阅读：行距 1.875、黑宋分层 · AO3 无 @media
+ * 中英正文：无衬线、行距 1.8 · 半透明画幅 + 浅色字 · AO3 无 @media
  */
 
 :root {
@@ -9,24 +9,27 @@
   --ushuaia-deep: #152538;
   --ushuaia-frost: #f0f4f7;
   --ushuaia-ice: #b8cad9;
-  --ushuaia-mist: #4a4e52;
-  --ushuaia-panel-bg: rgba(21, 37, 56, 0.9);
+  --ushuaia-mist: #9aa8b5;
+  --ushuaia-panel-bg: rgba(21, 37, 56, 0.72);
   --ushuaia-text: #e8eef3;
-  --ushuaia-text-soft: #8a9aab;
-  --ushuaia-text-dark: #2f3640;
-  --ushuaia-text-body: #35404a;
+  --ushuaia-text-soft: #a8b6c4;
+  --ushuaia-ink: #eef2f6;
+  --ushuaia-ink-soft: #c5d2de;
+  --ushuaia-ink-muted: #9fadb9;
   --ushuaia-lighthouse: #a64b3f;
   --ushuaia-lighthouse-dim: #7c3830;
-  --ushuaia-lighthouse-glow: #b85a4e;
+  --ushuaia-lighthouse-glow: #d47a6e;
   --ushuaia-border: #2a4566;
-  --ushuaia-border-light: #b8cad9;
-  --ushuaia-link: #2d5f7a;
-  --ushuaia-link-hover: #a64b3f;
-  --ushuaia-hero-tint: rgba(21, 37, 56, 0.52);
-  --ushuaia-sheet: rgba(250, 252, 254, 0.97);
-  --ushuaia-line: rgba(184, 202, 217, 0.55);
+  --ushuaia-border-light: rgba(184, 202, 217, 0.45);
+  --ushuaia-link: #a8cce0;
+  --ushuaia-link-hover: #e8a8a0;
+  --ushuaia-hero-tint: rgba(21, 37, 56, 0.42);
+  --ushuaia-sheet: rgba(21, 37, 56, 0.48);
+  --ushuaia-line: rgba(184, 202, 217, 0.28);
+  --ushuaia-read-line: 1.8;
+  --ushuaia-read-gap: 1.8em;
   --ushuaia-shell-radius: 16px;
-  --ushuaia-shell-shadow: 0 12px 32px rgba(15, 38, 56, 0.22);
+  --ushuaia-shell-shadow: 0 10px 28px rgba(8, 16, 28, 0.28);
   --ushuaia-bg-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
 }
 
@@ -53,11 +56,11 @@ body,
 .preface .notes,
 .preface blockquote,
 .notes blockquote.userstuff {
-  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
-  font-size: 1.125em;
-  line-height: 1.875;
-  letter-spacing: 0.04em;
-  color: var(--ushuaia-text-body);
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.0625em;
+  line-height: var(--ushuaia-read-line);
+  letter-spacing: normal;
+  color: var(--ushuaia-ink);
   word-wrap: break-word;
   word-break: normal;
 }
@@ -66,27 +69,31 @@ body,
 .userstuff h3,
 .userstuff h4,
 .userstuff .heading {
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  line-height: 1.6;
-  margin-top: 1.4em;
-  margin-bottom: 0.7em;
-  letter-spacing: 0.1em;
-  color: var(--ushuaia-text-dark);
+  line-height: 1.55;
+  margin-top: 1.35em;
+  margin-bottom: 0.65em;
+  letter-spacing: 0.04em;
+  color: var(--ushuaia-frost);
 }
 
 .userstuff p {
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: var(--ushuaia-read-gap);
   text-indent: 0;
 }
 
+.userstuff p + p {
+  margin-top: 0;
+}
+
 .userstuff blockquote {
-  border-left: 2px solid var(--ushuaia-lighthouse);
+  border-left: 2px solid rgba(166, 75, 63, 0.75);
   padding: 0.5em 0 0.5em 1em;
   margin-left: 0;
-  color: var(--ushuaia-mist);
-  background: rgba(240, 244, 247, 0.5);
+  color: var(--ushuaia-ink-soft);
+  background: rgba(255, 255, 255, 0.06);
   border-radius: 0 6px 6px 0;
 }
 
@@ -137,7 +144,7 @@ a:focus {
   padding-bottom: 0.45em;
   text-align: center;
   margin-bottom: 0;
-  border: 1px solid rgba(184, 202, 217, 0.45);
+  border: 1px solid rgba(184, 202, 217, 0.32);
   border-bottom: 1px solid var(--ushuaia-line);
   border-radius: var(--ushuaia-shell-radius) var(--ushuaia-shell-radius) 0 0;
   box-shadow: var(--ushuaia-shell-shadow);
@@ -216,8 +223,8 @@ a:focus {
 #main.dashboard,
 .region#main {
   background: var(--ushuaia-sheet);
-  color: var(--ushuaia-text-dark);
-  border: 1px solid rgba(184, 202, 217, 0.45);
+  color: var(--ushuaia-ink);
+  border: 1px solid rgba(184, 202, 217, 0.32);
   border-top: none;
   border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
   box-shadow: var(--ushuaia-shell-shadow);
@@ -233,14 +240,16 @@ a:focus {
 
 #main a,
 .dashboard a,
-.listbox a {
+.listbox a,
+ol.work.index a {
   color: var(--ushuaia-link);
-  border-bottom-color: rgba(45, 95, 122, 0.25);
+  border-bottom-color: rgba(168, 204, 224, 0.45);
 }
 
 #main a:hover,
-.listbox a:hover {
-  color: var(--ushuaia-lighthouse);
+.listbox a:hover,
+ol.work.index a:hover {
+  color: var(--ushuaia-link-hover);
 }
 
 /* 顶栏下若直接是列表/仪表盘，补全上圆角衔接 */
@@ -269,7 +278,7 @@ form blockquote.userstuff,
 .verbose legend,
 #main fieldset {
   background: transparent;
-  color: var(--ushuaia-text-dark);
+  color: var(--ushuaia-ink);
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -313,10 +322,10 @@ div#chapters.userstuff,
 #main.chapters-show > h2,
 #main.works-show > .heading,
 h2.title.heading {
-  color: var(--ushuaia-text-dark);
+  color: var(--ushuaia-frost);
   text-align: center;
-  font-family: "Songti SC", "STSong", "SimSun", serif;
-  text-shadow: none;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 1px 3px rgba(8, 16, 28, 0.65);
   background: transparent;
   border: none;
   border-bottom: 1px solid var(--ushuaia-line);
@@ -335,7 +344,8 @@ ul.index,
 .listbox .index,
 .dashboard .listbox .index {
   background: var(--ushuaia-sheet);
-  border: 1px solid rgba(184, 202, 217, 0.45);
+  color: var(--ushuaia-ink);
+  border: 1px solid rgba(184, 202, 217, 0.32);
   border-top: none;
   border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
   box-shadow: var(--ushuaia-shell-shadow);
@@ -364,8 +374,8 @@ li.comment,
 
 li.blurb:hover,
 .listbox .index li:hover {
-  background: rgba(236, 242, 248, 0.65);
-  border-bottom-color: rgba(166, 75, 63, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  border-bottom-color: rgba(166, 75, 63, 0.45);
 }
 
 /* ── 页脚：同列第三段，略深收尾 ── */
@@ -405,7 +415,7 @@ fieldset.listbox .heading,
 .heading,
 h3.landmark,
 h4.landmark {
-  color: var(--ushuaia-text-dark);
+  color: var(--ushuaia-ink-soft);
   border-left: none;
   border-bottom: 1px solid var(--ushuaia-line);
   padding-left: 0;
@@ -433,8 +443,8 @@ input[type="submit"],
 #outer .current,
 a.current,
 .current a:visited {
-  background: #ffffff;
-  color: var(--ushuaia-deep);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ushuaia-ink);
   border: 1px solid var(--ushuaia-border-light);
   border-radius: 999px;
   box-shadow: none;
@@ -444,9 +454,9 @@ a.current,
 .actions a:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background: var(--ushuaia-deep);
-  color: var(--ushuaia-frost);
-  border-color: var(--ushuaia-lighthouse);
+  background: rgba(166, 75, 63, 0.35);
+  color: #ffffff;
+  border-color: var(--ushuaia-lighthouse-glow);
 }
 
 .pagination a,
@@ -466,13 +476,13 @@ a.current {
 input,
 textarea,
 select {
-  background: #f4f7fa;
-  color: var(--ushuaia-text-body);
+  background: rgba(10, 18, 30, 0.55);
+  color: var(--ushuaia-ink);
   border-color: var(--ushuaia-border-light);
   border-radius: 8px;
-  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
-  line-height: 1.65;
+  line-height: var(--ushuaia-read-line);
 }
 
 input:focus,
@@ -505,7 +515,7 @@ dl.meta,
 dl.stats,
 .tags a.tag,
 a.tag:visited {
-  color: var(--ushuaia-mist);
+  color: var(--ushuaia-ink-muted);
   font-size: 0.95em;
 }
 
@@ -513,14 +523,15 @@ a.tag:visited {
   border: 1px solid var(--ushuaia-line);
   border-radius: 999px;
   padding: 0.12em 0.5em;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ushuaia-ink-soft);
 }
 
 .tags a.tag:hover,
 a.tag:hover {
-  background: rgba(166, 75, 63, 0.1);
-  color: var(--ushuaia-lighthouse);
-  border-color: var(--ushuaia-lighthouse);
+  background: rgba(166, 75, 63, 0.2);
+  color: #ffffff;
+  border-color: var(--ushuaia-lighthouse-glow);
 }
 
 .notice,
@@ -531,8 +542,8 @@ a.tag:hover {
 .alert.flash,
 .required .autocomplete,
 .system .tweet_list li {
-  background: rgba(244, 247, 250, 0.95);
-  color: var(--ushuaia-text-dark);
+  background: rgba(21, 37, 56, 0.65);
+  color: var(--ushuaia-ink);
   border: 1px solid var(--ushuaia-line);
   border-radius: 8px;
   box-shadow: none;
@@ -542,13 +553,13 @@ th,
 td,
 table {
   background: transparent;
-  color: var(--ushuaia-text-dark);
+  color: var(--ushuaia-ink-soft);
   border-color: var(--ushuaia-line);
 }
 
 tr:hover,
 td:hover {
-  background: rgba(236, 242, 248, 0.8);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 #dashboard .secondary,
@@ -578,7 +589,7 @@ td:hover {
 #ui-datepicker-div,
 .ui-datepicker {
   background: var(--ushuaia-sheet);
-  color: var(--ushuaia-text-dark);
+  color: var(--ushuaia-ink);
   border: 1px solid var(--ushuaia-line);
   border-radius: var(--ushuaia-shell-radius);
   box-shadow: var(--ushuaia-shell-shadow);
