@@ -22,11 +22,11 @@ body {
 #outer.wrapper,
 body.javascript #outer,
 body.javascript #outer.wrapper {
-  background-color: transparent;
-  background-image: url("https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/assets/les-eclaireurs-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
+  background-color: #1b2e4b;
+  background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 46%, rgba(27, 46, 75, 0.28) 68%, rgba(27, 46, 75, 0.72) 84%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/assets/les-eclaireurs-bg.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, center top;
+  background-size: 100% 133vw, 100% auto;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
