@@ -1,6 +1,6 @@
 /*
  * AO3 Site Skin: Les Éclaireurs · 南极灯塔
- * 版式参考：Twitter 横幅顶栏 / Tumblr 窄栏侧景 / 小红书圆角卡片流
+ * 版式参考：星夜 Archive 光晕描边 / 水彩阅读的版心留白 / 社交卡片流
  * 中文阅读：页边距、行距 1.875、黑宋分层
  * AO3 皮肤无 @media
  *
@@ -31,6 +31,9 @@
   --ushuaia-hero-tint: rgba(21, 37, 56, 0.5);
   --ushuaia-card-radius: 14px;
   --ushuaia-card-gap: 1.15em;
+  --ushuaia-paper: rgba(248, 251, 253, 0.96);
+  --ushuaia-glow-ice: 0 0 8px rgba(184, 202, 217, 0.5);
+  --ushuaia-glow-red: 0 0 10px rgba(166, 75, 63, 0.4);
   --ushuaia-bg-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
 }
 
@@ -82,7 +85,7 @@ body,
 
 .userstuff p {
   margin-top: 0;
-  margin-bottom: 0.85em;
+  margin-bottom: 1em;
   text-indent: 0;
 }
 
@@ -138,8 +141,9 @@ a:focus {
   background-repeat: no-repeat;
   background-position: center 26%;
   background-size: cover;
-  min-height: 7em;
-  padding-bottom: 0.35em;
+  min-height: 9.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
   border-bottom: 2px solid var(--ushuaia-lighthouse);
   border-radius: 0 0 var(--ushuaia-card-radius) var(--ushuaia-card-radius);
   box-shadow: 0 10px 24px rgba(15, 38, 56, 0.28);
@@ -160,6 +164,15 @@ a:focus {
   border-width: 1px 0 0 0;
   border-radius: 8px;
   margin-top: 0.65em;
+  text-align: center;
+}
+
+#header ul.primary a {
+  border: 1px solid rgba(184, 202, 217, 0.75);
+  border-radius: 999px;
+  box-shadow: var(--ushuaia-glow-ice);
+  margin: 0.15em 0.2em;
+  padding: 0.35em 0.8em;
 }
 
 #header .actions a,
@@ -184,8 +197,11 @@ a:focus {
 }
 
 #header .current {
-  color: #ffc8c2;
-  border-bottom: 2px solid var(--ushuaia-lighthouse);
+  color: #ffffff;
+  background: rgba(166, 75, 63, 0.82);
+  border: 1px solid var(--ushuaia-lighthouse-glow);
+  border-radius: 999px;
+  box-shadow: var(--ushuaia-glow-red);
 }
 
 #header .menu,
@@ -274,6 +290,11 @@ li.blurb a:hover,
 
 #footer a {
   color: var(--ushuaia-ice);
+  border: 1px solid rgba(184, 202, 217, 0.45);
+  border-radius: 8px;
+  padding: 0.25em 0.55em;
+  margin: 0.12em;
+  box-shadow: var(--ushuaia-glow-ice);
   border-bottom: none;
 }
 
@@ -319,7 +340,7 @@ a.current,
   color: var(--ushuaia-deep);
   border: 1px solid var(--ushuaia-border-light);
   border-radius: 999px;
-  box-shadow: none;
+  box-shadow: var(--ushuaia-glow-ice);
 }
 
 .actions a:hover,
@@ -328,7 +349,26 @@ input[type="submit"]:hover,
 input[type="submit"]:focus {
   background: var(--ushuaia-deep);
   color: var(--ushuaia-frost);
-  border-color: var(--ushuaia-deep);
+  border-color: var(--ushuaia-lighthouse);
+  box-shadow: var(--ushuaia-glow-red);
+}
+
+.pagination a,
+.pagination .current,
+ol.pagination a,
+.caution a,
+.filters .actions a {
+  border: 1px solid rgba(184, 202, 217, 0.8);
+  border-radius: 8px;
+  box-shadow: var(--ushuaia-glow-ice);
+}
+
+.pagination .current,
+a.current,
+.current a {
+  background: rgba(166, 75, 63, 0.18);
+  border-color: var(--ushuaia-lighthouse);
+  box-shadow: var(--ushuaia-glow-red);
 }
 
 input,
@@ -348,7 +388,34 @@ input:focus,
 textarea:focus {
   border-color: var(--ushuaia-lighthouse);
   outline: none;
-  box-shadow: none;
+  box-shadow: var(--ushuaia-glow-red);
+}
+
+form.comment textarea,
+.comment form textarea,
+#new_comment textarea,
+.new_comment textarea,
+#add_comment textarea {
+  background: rgba(21, 37, 56, 0.9);
+  color: #e8eef3;
+  border: 1px solid rgba(184, 202, 217, 0.85);
+  box-shadow: var(--ushuaia-glow-ice);
+}
+
+form.comment textarea:focus,
+.comment form textarea:focus,
+#new_comment textarea:focus {
+  border-color: var(--ushuaia-lighthouse-glow);
+  box-shadow: var(--ushuaia-glow-red);
+}
+
+form.comment input[type="submit"],
+.comment form input[type="submit"],
+#add_comment input[type="submit"] {
+  background: rgba(21, 37, 56, 0.95);
+  color: #f0f4f7;
+  border: 1px solid var(--ushuaia-lighthouse-glow);
+  box-shadow: var(--ushuaia-glow-red);
 }
 
 /* ── 作品页：多卡片叠放（元数据 / 简介 / 正文）── */
@@ -366,29 +433,38 @@ textarea:focus {
 .preface.group {
   padding: 1.15em 1.5em 1.35em 1.5em;
   margin-bottom: var(--ushuaia-card-gap);
+  background: rgba(252, 253, 254, 0.94);
+  box-shadow: 0 6px 22px rgba(15, 38, 56, 0.16), var(--ushuaia-glow-ice);
 }
 
 #main.works-show > h2,
 #main.works-show > h2.heading,
 #main.chapters-show > h2,
-#main.works-show > .heading {
-  color: #e8eef3;
+#main.works-show > .heading,
+.work.meta.group + h2,
+h2.title.heading {
+  color: #f0f4f7;
+  text-align: center;
+  font-family: "Songti SC", "STSong", "SimSun", serif;
   text-shadow: 0 1px 4px rgba(21, 37, 56, 0.9);
   background: transparent;
   border: none;
   box-shadow: none;
   margin-bottom: var(--ushuaia-card-gap);
+  letter-spacing: 0.14em;
+  line-height: 1.5;
 }
 
 #chapters,
 div#chapters.userstuff,
 .chapter .userstuff,
 .preface blockquote.userstuff {
-  background: var(--ushuaia-card-bg);
+  background: var(--ushuaia-paper);
   border: 1px solid rgba(184, 202, 217, 0.9);
+  border-left: 4px solid rgba(45, 95, 122, 0.45);
   border-radius: var(--ushuaia-card-radius);
-  box-shadow: 0 8px 28px rgba(15, 38, 56, 0.2);
-  padding: 1.35em 1.65em 1.65em 1.65em;
+  box-shadow: 0 8px 28px rgba(15, 38, 56, 0.2), var(--ushuaia-glow-ice);
+  padding: 1.5em 1.75em 1.85em 1.85em;
   margin-bottom: var(--ushuaia-card-gap);
 }
 
@@ -415,10 +491,17 @@ li.comment {
   border-color: rgba(184, 202, 217, 0.9);
 }
 
+li.blurb {
+  padding: 1em 1.15em;
+  border: 1px solid rgba(184, 202, 217, 0.95);
+  box-shadow: 0 6px 22px rgba(15, 38, 56, 0.16), var(--ushuaia-glow-ice);
+}
+
 li.blurb:hover,
 .listbox .index li:hover {
   border-color: var(--ushuaia-lighthouse);
   background: rgba(252, 253, 254, 1);
+  box-shadow: 0 8px 26px rgba(15, 38, 56, 0.2), var(--ushuaia-glow-red);
 }
 
 dl.meta,
