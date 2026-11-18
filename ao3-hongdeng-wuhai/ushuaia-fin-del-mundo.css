@@ -2908,3 +2908,211 @@ body.skins-edit #outer #main li.error,
   font-size: 1.32em;
   line-height: 1.5;
 }
+
+/*
+ * Header stack and submenu edges.
+ * #header is a sibling of #inner. The logo, the icon with Hi / Post / Log Out,
+ * and the Fandoms bar are three rows. Second-level rows keep a full-width box
+ * (padding, background, border-box) but do not draw their own outline. The open
+ * panel keeps a single translucent edge. These selectors outrank the long
+ * ul.primary / ul.menu link rules above, including :hover and li[id^="medium_"].
+ */
+#outer #header > h1.heading,
+#outer #header > .heading {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: static;
+}
+
+#outer #header > nav#greeting {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+#outer #header > nav#greeting > p.icon,
+#outer #header > nav#greeting > p.icon img.icon {
+  float: none;
+  clear: none;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#outer #header > nav#greeting > ul.user.navigation.actions {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  position: static;
+}
+
+#outer #header > nav#greeting > ul.user.navigation.actions > li {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  position: static;
+}
+
+#outer #header > nav > ul.primary.navigation.actions {
+  clear: both;
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#outer #header > nav > ul.primary.navigation.actions > li,
+#outer #header > nav > ul.primary.navigation.actions > li.search,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown.open {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  position: static;
+}
+
+#outer #header > nav > ul.primary.navigation.actions > li.search > form#search,
+#outer #header > nav > ul.primary.navigation.actions > li.search > form.search {
+  float: none;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  position: static;
+  clear: none;
+}
+
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(184, 202, 217, 0.45);
+  background-color: #152538;
+  background-image: none;
+  box-shadow: none;
+}
+
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"],
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"],
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li {
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-width: 0;
+  background-color: #152538;
+  background-image: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:link,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:visited,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:active,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:link,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:visited,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:active,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:link,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:visited,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:active,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:link,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:visited,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:active,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:link,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:visited,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:hover,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:focus,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:active,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:link,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:visited,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:hover,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:focus,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:active,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:link,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:visited,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:hover,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:focus,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:active {
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  background-color: #152538;
+  background-image: none;
+  box-shadow: none;
+  color: #f0f4f7;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.65em 0.85em;
+  display: block;
+  height: auto;
+  border-radius: 0;
+}
+
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.menu.dropdown-menu li[id^="medium_"] > a:focus,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:hover,
+#outer #header > nav > ul.primary.navigation.actions > li.dropdown > ul.dropdown-menu li[id^="medium_"] > a:focus,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:hover,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu > li > a:focus,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:hover,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.menu.dropdown-menu > li > a:focus,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:hover,
+#outer #header > nav#greeting > ul.user.navigation.actions > li.dropdown > ul.dropdown-menu > li > a:focus {
+  background-color: #1e3a56;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  color: #f0f4f7;
+  box-shadow: none;
+}
