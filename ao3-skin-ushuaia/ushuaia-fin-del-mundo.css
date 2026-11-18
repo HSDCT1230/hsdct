@@ -600,9 +600,11 @@ td {
 }
 
 #outer #header form.search input.button,
+#outer #header form.search input[type="submit"],
 #outer #search input.button,
 #outer #search input[type="submit"],
-#outer input.button {
+#outer #header #search input[type="submit"] {
+  background-image: none;
   background-color: rgba(21, 37, 56, 0.92);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.58);
@@ -625,23 +627,82 @@ td {
   border-color: #d47a6e;
 }
 
-#outer #main ul.actions a,
-#outer #main p.actions a,
+#outer #inner #main ul.actions li a,
+#outer #inner #main ul.actions li a:link,
+#outer #inner #main ul.actions li a:visited,
+#outer #inner #main p.actions a,
+#outer #inner #main p.actions a:link,
+#outer #inner #main ul.navigation.actions li a,
 #outer #main .actions a,
 #outer #main .actions input,
 #outer #main .actions button,
 #outer #main form .actions input,
 #outer #main form .actions a,
-#outer #main ul.navigation.actions a,
-#outer ul.actions a,
-#outer p.actions a,
-#outer .actions input,
-#outer a.button,
 #outer .listbox .actions a,
-#outer .filters .actions a {
+#outer .filters .actions a,
+#outer .listbox .navigation.actions a {
+  background-image: none;
   background-color: rgba(21, 37, 56, 0.92);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.58);
+  border-radius: 8px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#footer,
+#footer ul,
+#footer ol,
+#footer li,
+#footer h3,
+#footer h4,
+#footer .heading,
+#footer .navigation,
+#footer .menu {
+  text-align: left;
+}
+
+#footer ul.navigation.actions,
+#footer ul.menu,
+#footer ul.navigation {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+#footer ul.navigation.actions li,
+#footer ul.menu li {
+  text-align: left;
+}
+
+#footer ul.navigation.actions a,
+#footer ul.navigation.actions a:link,
+#footer ul.navigation.actions a:visited,
+#footer ul.actions a,
+#footer ul.actions a:link,
+#footer ul.actions a:visited,
+#footer ul.menu a,
+#footer ul.menu a:link,
+#footer ul.menu a:visited,
+#footer .menu a,
+#footer li a {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  color: #f0f4f7;
+  text-shadow: none;
+}
+
+#footer ul.navigation.actions a:hover,
+#footer ul.menu a:hover,
+#footer a:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(240, 244, 247, 0.55);
 }
 
 body.skins-edit #outer #main fieldset,
