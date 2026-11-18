@@ -227,8 +227,6 @@ a:focus {
   box-sizing: border-box;
 }
 
-#greeting li.dropdown,
-#header .actions li.dropdown,
 #header .secondary li.dropdown {
   position: relative;
   overflow: visible;
@@ -2098,13 +2096,91 @@ body.skins-edit #outer #main li.error,
 }
 
 /*
- * Header dropdown panels — single source of truth (AO3 mobile + desktop).
- * Only li.dropdown > ul.menu are panels; ul.menu.navigation.primary is the nav bar.
+ * Side-by-side buttons and header menus.
+ * AO3 .actions a uses height:1.286em and white-space:nowrap, and #header li
+ * is position:relative. That clips capsule rows and shrinks open menus to
+ * the trigger. These rules win on the real DOM:
+ * nav#greeting > ul.user.navigation.actions > li
+ * ul.primary.navigation.actions > li.dropdown > ul.menu
  */
 #outer #inner #header {
   position: relative;
   overflow: visible;
   box-sizing: border-box;
+}
+
+#outer #greeting,
+#outer #greeting ul.user,
+#outer #header ul.primary,
+#outer #header ul.primary.navigation.actions,
+#outer #dashboard,
+#outer #dashboard ul,
+#outer #main ul.navigation.actions,
+#outer #main ul.actions,
+#outer .primary.header ul.navigation.actions {
+  float: none;
+  clear: both;
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+#outer #greeting ul.user > li,
+#outer #header ul.primary > li,
+#outer #dashboard li,
+#outer #main ul.navigation.actions > li,
+#outer #main ul.actions > li,
+#outer .primary.header ul.navigation.actions > li,
+#outer #header li.search {
+  float: none;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  position: static;
+  white-space: normal;
+}
+
+#outer #greeting ul.user > li > a,
+#outer #header ul.primary > li > a,
+#outer #header ul.navigation.actions.primary > li > a,
+#outer #dashboard a,
+#outer #dashboard span,
+#outer #main ul.navigation.actions > li > a,
+#outer #main ul.actions > li > a,
+#outer .primary.header ul.navigation.actions > li > a,
+#outer #header #search input,
+#outer #header #search .button {
+  display: inline-block;
+  height: auto;
+  min-height: 0;
+  max-width: 100%;
+  line-height: 1.45;
+  white-space: normal;
+  overflow: visible;
+  box-sizing: border-box;
+  vertical-align: middle;
+  float: none;
+}
+
+#outer #header li.search,
+#outer #header #search,
+#outer #header .search {
+  float: none;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  position: static;
+}
+
+#outer #header #search input.text,
+#outer #header #search input[type="text"] {
+  width: 9em;
+  max-width: 100%;
+  height: auto;
 }
 
 #outer #inner #greeting,
@@ -2211,14 +2287,20 @@ body.skins-edit #outer #main li.error,
   text-align: left;
 }
 
-#outer #inner #header li.dropdown:hover > ul.menu,
+#outer #inner #header ul.primary li.dropdown.open > ul.menu,
+#outer #inner #header ul.primary li.dropdown:hover > ul.menu,
+#outer #inner #header .primary li.dropdown.open > ul.menu,
+#outer #inner #header .primary li.dropdown:hover > ul.menu,
+#outer #inner #header ul.navigation.actions.primary li.dropdown.open > ul.menu,
+#outer #inner #header ul.navigation.actions.primary li.dropdown:hover > ul.menu,
 #outer #inner #header li.dropdown.open > ul.menu,
+#outer #inner #header li.dropdown:hover > ul.menu,
 #outer #inner #header li.open > ul.menu,
-#outer #inner #greeting li.dropdown:hover > ul.menu,
 #outer #inner #greeting li.dropdown.open > ul.menu,
+#outer #inner #greeting li.dropdown:hover > ul.menu,
 #outer #inner #greeting li.open > ul.menu,
-#outer #inner #header #small_login:hover ul.menu,
-#outer #inner #header #small_login.open ul.menu {
+#outer #inner #header #small_login.open ul.menu,
+#outer #inner #header #small_login:hover ul.menu {
   display: block;
 }
 
@@ -2228,7 +2310,7 @@ body.skins-edit #outer #main li.error,
   width: auto;
   float: none;
   clear: both;
-  margin: 0 0.25em;
+  margin: 0 0.35em;
   padding: 0;
   position: static;
   height: auto;
@@ -2258,7 +2340,8 @@ body.skins-edit #outer #main li.error,
   padding: 0.75em 0.65em 0.65em 0.65em;
   line-height: 1.55;
   font-size: 16px;
-  min-height: 0;
+  height: auto;
+  min-height: 2.4em;
   box-sizing: border-box;
   white-space: normal;
   word-wrap: break-word;
