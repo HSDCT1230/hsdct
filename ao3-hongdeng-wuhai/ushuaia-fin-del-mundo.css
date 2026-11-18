@@ -4947,3 +4947,345 @@ html body #outer #inner #main form#work-filters.filters dd.character div.autocom
   box-sizing: border-box;
   float: none;
 }
+
+/*
+ * Live archive, short selectors.
+ * #header sits beside #inner, so nothing here goes through #inner #header.
+ * Descendant selectors still match when a wrapper is added or .open /
+ * .dropdown-menu / .region is missing. html body plus the classes that
+ * are really on the node beats the mid-file rules that leave
+ * background-color transparent or a 1px frame on top of AO3's gradient.
+ * Every fill sets background-image as well, or the white gradient remains.
+ * Tag inputs and their bars are the dark red material and stay in the
+ * fieldset padding box. Header search stays #6b2a26. QR codes stay white.
+ */
+html body #outer #header ul.menu,
+html body #outer #header ul.dropdown-menu,
+html body #outer #greeting ul.menu,
+html body #outer #greeting ul.dropdown-menu,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu,
+html body #outer #header ul.user.navigation.actions li.dropdown ul.menu,
+html body #outer #greeting ul.user.navigation.actions li.dropdown ul.menu,
+html body #outer #greeting ul.user.navigation.actions li.dropdown ul.dropdown-menu {
+  background-color: #121c2f;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  color: #f0f4f7;
+}
+
+html body #outer #header ul.menu li,
+html body #outer #header ul.dropdown-menu li,
+html body #outer #header li[id^="medium_"],
+html body #outer #greeting ul.menu li,
+html body #outer #greeting ul.dropdown-menu li,
+html body #outer #header ul.actions li.dropdown ul.menu li,
+html body #outer #header ul.actions li.dropdown ul.dropdown-menu li,
+html body #outer #greeting ul.actions li.dropdown ul.menu li,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu li,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu li,
+html body #outer #greeting ul.user.navigation.actions li.dropdown ul.menu li {
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #f0f4f7;
+}
+
+html body #outer #header ul.menu a,
+html body #outer #header ul.menu a:link,
+html body #outer #header ul.menu a:visited,
+html body #outer #header ul.dropdown-menu a,
+html body #outer #header ul.dropdown-menu a:link,
+html body #outer #header ul.dropdown-menu a:visited,
+html body #outer #header li[id^="medium_"] a,
+html body #outer #header li[id^="medium_"] a:link,
+html body #outer #header li[id^="medium_"] a:visited,
+html body #outer #greeting ul.menu a,
+html body #outer #greeting ul.menu a:link,
+html body #outer #greeting ul.menu a:visited,
+html body #outer #greeting ul.dropdown-menu a,
+html body #outer #greeting ul.dropdown-menu a:link,
+html body #outer #greeting ul.dropdown-menu a:visited,
+html body #outer #header ul.actions li.dropdown ul.menu a,
+html body #outer #header ul.actions li.dropdown ul.menu a:link,
+html body #outer #header ul.actions li.dropdown ul.menu a:visited,
+html body #outer #header ul.actions li.dropdown ul.dropdown-menu a,
+html body #outer #header ul.actions li.dropdown ul.dropdown-menu a:link,
+html body #outer #header ul.actions li.dropdown ul.dropdown-menu a:visited,
+html body #outer #greeting ul.actions li.dropdown ul.menu a,
+html body #outer #greeting ul.actions li.dropdown ul.menu a:link,
+html body #outer #greeting ul.actions li.dropdown ul.menu a:visited,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu a,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu a:link,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu a:visited,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu a,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu a:link,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu a:visited,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu li[id^="medium_"] a,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu li[id^="medium_"] a:link,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu li[id^="medium_"] a:visited {
+  background-color: #152538;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #f0f4f7;
+}
+
+html body #outer #header ul.menu a:hover,
+html body #outer #header ul.menu a:focus,
+html body #outer #header ul.dropdown-menu a:hover,
+html body #outer #header ul.dropdown-menu a:focus,
+html body #outer #header li[id^="medium_"] a:hover,
+html body #outer #header li[id^="medium_"] a:focus,
+html body #outer #greeting ul.menu a:hover,
+html body #outer #greeting ul.menu a:focus,
+html body #outer #greeting ul.dropdown-menu a:hover,
+html body #outer #greeting ul.dropdown-menu a:focus,
+html body #outer #header ul.actions li.dropdown ul.menu a:hover,
+html body #outer #header ul.actions li.dropdown ul.menu a:focus,
+html body #outer #header ul.actions li.dropdown ul.dropdown-menu a:hover,
+html body #outer #header ul.actions li.dropdown ul.dropdown-menu a:focus,
+html body #outer #greeting ul.actions li.dropdown ul.menu a:hover,
+html body #outer #greeting ul.actions li.dropdown ul.menu a:focus,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu a:hover,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu a:focus,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu a:hover,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.dropdown-menu a:focus,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu li[id^="medium_"] a:hover,
+html body #outer #header ul.primary.navigation.actions li.dropdown ul.menu li[id^="medium_"] a:focus {
+  background-color: #6b2a26;
+  background-image: none;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  color: #ffffff;
+}
+
+html body #outer #header li.dropdown.open > a,
+html body #outer #header li.dropdown.open > a:link,
+html body #outer #header li.dropdown.open > a:visited,
+html body #outer #header li.dropdown.open > a:hover,
+html body #outer #header li.dropdown.open > a:focus,
+html body #outer #greeting li.dropdown.open > a,
+html body #outer #greeting li.dropdown.open > a:link,
+html body #outer #greeting li.dropdown.open > a:visited,
+html body #outer #greeting li.dropdown.open > a:hover,
+html body #outer #greeting li.dropdown.open > a:focus {
+  background-color: #6b2a26;
+  background-image: linear-gradient(to bottom, #8f3d36, #6b2a26);
+  color: #ffffff;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+html body #outer fieldset,
+html body #outer fieldset fieldset,
+html body #outer form dl,
+html body #outer .listbox,
+html body #outer .listbox .index,
+html body #outer table,
+html body #outer th,
+html body #outer td,
+html body #outer tr:hover,
+html body #outer .secondary,
+html body #outer .toggled form,
+html body #outer .dynamic form,
+html body #outer .autocomplete div.dropdown ul,
+html body #outer .ui-sortable li,
+html body #outer .comment h4.byline,
+html body #outer .thread .even,
+html body #outer dl.index dd,
+html body #outer .own,
+html body #outer .draft,
+html body #outer .unread,
+html body #outer #main fieldset,
+html body #outer #main fieldset fieldset,
+html body #outer #main form dl,
+html body #outer #main .listbox,
+html body #outer #main .listbox .index,
+html body #outer #main table,
+html body #outer #main th,
+html body #outer #main td,
+html body #outer #main tr:hover {
+  background-color: #152538;
+  background-image: none;
+  box-shadow: none;
+  border-color: #3d5570;
+  color: #f0f4f7;
+}
+
+html body #outer #main .listbox .index,
+html body #outer #main fieldset fieldset {
+  background-color: #121c2f;
+  background-image: none;
+}
+
+html body #outer form.filters dd.fandom,
+html body #outer form.filters dd.character,
+html body #outer form.filters dd.relationship,
+html body #outer form.filters dd.freeform,
+html body #outer fieldset.work dd.fandom,
+html body #outer fieldset.work dd.character,
+html body #outer fieldset.work dd.relationship,
+html body #outer fieldset.work dd.freeform,
+html body #outer #main form.filters dd.fandom,
+html body #outer #main form.filters dd.character,
+html body #outer #main form.filters dd.relationship,
+html body #outer #main form.filters dd.freeform,
+html body #outer #main fieldset.work dd.fandom,
+html body #outer #main fieldset.work dd.character,
+html body #outer #main fieldset.work dd.relationship,
+html body #outer #main fieldset.work dd.freeform,
+html body #outer #inner #main form.filters dd.fandom,
+html body #outer #inner #main form.filters dd.character,
+html body #outer #inner #main form.filters dd.relationship,
+html body #outer #inner #main form.filters dd.freeform,
+html body #outer form.filters dd.fandom ul,
+html body #outer form.filters dd.character ul,
+html body #outer form.filters dd.relationship ul,
+html body #outer form.filters dd.freeform ul,
+html body #outer fieldset.work dd.fandom ul,
+html body #outer fieldset.work dd.character ul,
+html body #outer fieldset.work dd.relationship ul,
+html body #outer fieldset.work dd.freeform ul,
+html body #outer #main form.filters dd.fandom ul,
+html body #outer #main form.filters dd.character ul,
+html body #outer #main form.filters dd.relationship ul,
+html body #outer #main form.filters dd.freeform ul,
+html body #outer #main fieldset.work dd.fandom ul,
+html body #outer #main fieldset.work dd.character ul,
+html body #outer #main fieldset.work dd.relationship ul,
+html body #outer #main fieldset.work dd.freeform ul,
+html body #outer #inner #main form.filters dd.fandom ul.autocomplete,
+html body #outer #inner #main form.filters dd.character ul.autocomplete,
+html body #outer #inner #main form.filters dd.relationship ul.autocomplete,
+html body #outer #inner #main form.filters dd.freeform ul.autocomplete,
+html body #outer form.filters dd.fandom li,
+html body #outer form.filters dd.character li,
+html body #outer form.filters dd.relationship li,
+html body #outer form.filters dd.freeform li,
+html body #outer fieldset.work dd.fandom li,
+html body #outer fieldset.work dd.character li,
+html body #outer fieldset.work dd.relationship li,
+html body #outer fieldset.work dd.freeform li,
+html body #outer #main fieldset.work dd.fandom li,
+html body #outer #main fieldset.work dd.character li,
+html body #outer #main fieldset.work dd.relationship li,
+html body #outer #main fieldset.work dd.freeform li,
+html body #outer #inner #main form.filters dd.fandom li,
+html body #outer #inner #main form.filters dd.character li,
+html body #outer #inner #main form.filters dd.relationship li,
+html body #outer #inner #main form.filters dd.freeform li {
+  float: none;
+  clear: both;
+  display: block;
+  position: static;
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+html body #outer form.filters dd.fandom input,
+html body #outer form.filters dd.character input,
+html body #outer form.filters dd.relationship input,
+html body #outer form.filters dd.freeform input,
+html body #outer fieldset.work dd.fandom input,
+html body #outer fieldset.work dd.character input,
+html body #outer fieldset.work dd.relationship input,
+html body #outer fieldset.work dd.freeform input,
+html body #outer #main form.filters dd.fandom input,
+html body #outer #main form.filters dd.character input,
+html body #outer #main form.filters dd.relationship input,
+html body #outer #main form.filters dd.freeform input,
+html body #outer #main fieldset.work dd.fandom input,
+html body #outer #main fieldset.work dd.character input,
+html body #outer #main fieldset.work dd.relationship input,
+html body #outer #main fieldset.work dd.freeform input,
+html body #outer #inner #main form.filters dd.fandom input,
+html body #outer #inner #main form.filters dd.character input,
+html body #outer #inner #main form.filters dd.relationship input,
+html body #outer #inner #main form.filters dd.freeform input,
+html body #outer form.filters dd.fandom li.added,
+html body #outer form.filters dd.character li.added,
+html body #outer form.filters dd.relationship li.added,
+html body #outer form.filters dd.freeform li.added,
+html body #outer fieldset.work dd.fandom li.added,
+html body #outer fieldset.work dd.character li.added,
+html body #outer fieldset.work dd.relationship li.added,
+html body #outer fieldset.work dd.freeform li.added,
+html body #outer #main fieldset.work dd.fandom li.added,
+html body #outer #main fieldset.work dd.character li.added,
+html body #outer #main fieldset.work dd.relationship li.added,
+html body #outer #main fieldset.work dd.freeform li.added,
+html body #outer #inner #main form.filters dd.fandom li.added,
+html body #outer #inner #main form.filters dd.character li.added,
+html body #outer #inner #main form.filters dd.relationship li.added,
+html body #outer #inner #main form.filters dd.freeform li.added,
+html body #outer form.filters dd.fandom .ui-sortable li,
+html body #outer form.filters dd.character .ui-sortable li,
+html body #outer form.filters dd.relationship .ui-sortable li,
+html body #outer form.filters dd.freeform .ui-sortable li,
+html body #outer fieldset.work dd.fandom .ui-sortable li,
+html body #outer fieldset.work dd.character .ui-sortable li,
+html body #outer fieldset.work dd.relationship .ui-sortable li,
+html body #outer fieldset.work dd.freeform .ui-sortable li,
+html body #outer #main fieldset.work dd.fandom .ui-sortable li,
+html body #outer #main fieldset.work dd.character .ui-sortable li,
+html body #outer #main fieldset.work dd.relationship .ui-sortable li,
+html body #outer #main fieldset.work dd.freeform .ui-sortable li,
+html body #outer #inner #main form.filters dd.fandom .ui-sortable li,
+html body #outer #inner #main form.filters dd.character .ui-sortable li,
+html body #outer #inner #main form.filters dd.relationship .ui-sortable li,
+html body #outer #inner #main form.filters dd.freeform .ui-sortable li {
+  background-color: #6b2a26;
+  background-image: linear-gradient(to bottom, #8f3d36, #5c2420);
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  float: none;
+  position: static;
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  color: #f8ecea;
+}
+
+html body #outer #header #search input[type="text"],
+html body #outer #header form#search input[type="text"],
+html body #outer #header input#site_search {
+  background-color: #6b2a26;
+  background-image: none;
+  color: #f8ecea;
+}
+
+html body #outer p.qr svg {
+  background-color: #ffffff;
+  background-image: none;
+  border-color: #ffffff;
+}
