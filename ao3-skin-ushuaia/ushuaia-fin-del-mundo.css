@@ -24,7 +24,7 @@
   --ushuaia-link: #a8cce0;
   --ushuaia-link-hover: #e8a8a0;
   --ushuaia-hero-tint: rgba(21, 37, 56, 0.42);
-  --ushuaia-sheet: rgba(21, 37, 56, 0.48);
+  --ushuaia-sheet: rgba(21, 37, 56, 0.58);
   --ushuaia-line: rgba(184, 202, 217, 0.28);
   --ushuaia-read-line: 1.8;
   --ushuaia-read-gap: 1.8em;
@@ -115,11 +115,10 @@ a:focus {
 
 #outer.wrapper {
   background-color: var(--ushuaia-abyss);
-  background-image: var(--ushuaia-bg-image);
+  background-image: url("https://cdn.jsdelivr.net/gh/HSDCT1230/hsdct@cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
   min-height: 100%;
 }
 
@@ -136,7 +135,7 @@ a:focus {
 
 #header {
   background-color: var(--ushuaia-hero-tint);
-  background-image: var(--ushuaia-bg-image);
+  background-image: url("https://cdn.jsdelivr.net/gh/HSDCT1230/hsdct@cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat;
   background-position: center 24%;
   background-size: cover;
@@ -217,6 +216,76 @@ a:focus {
   text-shadow: 0 1px 2px rgba(21, 37, 56, 0.75);
 }
 
+/* ── 仪表盘横条 Profile / Works（原先几乎看不见）── */
+
+#dashboard,
+#dashboard.own,
+#dashboard.works,
+#dashboard.bookmarks,
+.region#dashboard {
+  background: var(--ushuaia-sheet);
+  color: var(--ushuaia-ink);
+  border: 1px solid rgba(184, 202, 217, 0.32);
+  border-top: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.65em 1em 0.75em 1em;
+  margin: 0;
+}
+
+#header + #dashboard {
+  margin-top: 0;
+  border-top: none;
+}
+
+#dashboard ul.navigation a,
+#dashboard ul.navigation a:visited,
+#dashboard ol.navigation a,
+#dashboard ol.navigation a:visited,
+#dashboard .navigation a,
+#dashboard .navigation.actions a,
+#outer #dashboard a {
+  color: var(--ushuaia-ink-soft);
+  border-bottom: none;
+}
+
+#dashboard ul.navigation .current a,
+#dashboard ul.navigation a.current,
+#dashboard .navigation .current,
+#dashboard .current a {
+  color: #ffffff;
+  background: rgba(166, 75, 63, 0.55);
+  border: 1px solid var(--ushuaia-lighthouse-glow);
+  border-radius: 6px;
+}
+
+/* 预览皮肤提示条 */
+
+.flash,
+.system .flash,
+.alert.flash,
+.notice.userstuff,
+.caution,
+#previewnote {
+  background: rgba(21, 37, 56, 0.85);
+  color: var(--ushuaia-frost);
+  border: 1px solid var(--ushuaia-lighthouse);
+  border-radius: 8px;
+  padding: 0.85em 1em;
+  margin: 0.5em 0 0.65em 0;
+  box-shadow: var(--ushuaia-shell-shadow);
+}
+
+.flash .actions a,
+.flash a,
+.notice .actions a,
+.caution .actions a {
+  color: var(--ushuaia-frost);
+  background: rgba(166, 75, 63, 0.45);
+  border: 1px solid var(--ushuaia-lighthouse-glow);
+  border-radius: 6px;
+}
+
 /* ── 主区：与顶栏一体的下半张画幅 ── */
 
 #main,
@@ -255,9 +324,31 @@ ol.work.index a:hover {
 /* 顶栏下若直接是列表/仪表盘，补全上圆角衔接 */
 #header + ol,
 #header + ul.work,
-#header + .index,
-#header + .dashboard {
+#header + .index {
   border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
+}
+
+#dashboard + #main,
+#dashboard + main,
+#dashboard + .flash + #main,
+#flash + #main {
+  border-top: none;
+  margin-top: 0;
+  border-radius: 0 0 var(--ushuaia-shell-radius) var(--ushuaia-shell-radius);
+}
+
+#main.works-index h2,
+#main.works-index > h2,
+#main.works-index .landmark,
+.listbox h2.heading,
+h2.landmark.heading {
+  color: var(--ushuaia-frost);
+}
+
+.filters .group,
+.sort,
+.pagination {
+  color: var(--ushuaia-ink-soft);
 }
 
 /* ── 区内分区：只画线，不另起卡片 ── */
@@ -268,7 +359,6 @@ div.comment,
 li.comment,
 .thread .comment,
 .filters .group,
-.flash,
 .group.listbox,
 fieldset fieldset.listbox,
 #dashboard.own,
@@ -534,12 +624,9 @@ a.tag:hover {
   border-color: var(--ushuaia-lighthouse-glow);
 }
 
-.notice,
-.caution,
 .comment_error,
 .kudos_error,
 .error,
-.alert.flash,
 .required .autocomplete,
 .system .tweet_list li {
   background: rgba(21, 37, 56, 0.65);
@@ -575,7 +662,7 @@ td:hover {
   color: var(--ushuaia-ice);
 }
 
-#dashboard .current,
+#dashboard .secondary .current,
 .own,
 .draft,
 .unread,
@@ -583,6 +670,7 @@ td:hover {
   background: rgba(166, 75, 63, 0.08);
   border-color: var(--ushuaia-lighthouse);
   border-radius: 6px;
+  color: var(--ushuaia-ink);
 }
 
 #modal,
