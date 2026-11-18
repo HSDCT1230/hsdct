@@ -3546,3 +3546,290 @@ body.skins-edit #outer #main li.error,
   border-radius: 999px;
   box-shadow: none;
 }
+
+/*
+ * Phone filters and the work search form.
+ * AO3 floats dt/dd, then on a narrow screen sets those boxes to width 100%.
+ * Padding, borders, nowrap, and min-width still use content-box, so the
+ * boxes and long tag names run past the viewport. #outer hides the spill.
+ * These selectors sit past #outer #main form input and the .heading fill.
+ * Header search stays #6b2a26. This does not paint the filter form red.
+ * The footer red tile is the archive footer, not that search field.
+ */
+#outer #main form.filters,
+#outer #main form.search {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#outer #main.filtered,
+#outer #main .filtered,
+#outer #main.filtered .index,
+#outer .filtered .index {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#outer #main form.filters fieldset,
+#outer #main form.search fieldset,
+#outer #main form.filters dl,
+#outer #main form.filters dl.filters,
+#outer #main form.search dl,
+#outer #main form.filters dt,
+#outer #main form.filters dd,
+#outer #main form.search dt,
+#outer #main form.search dd,
+#outer #main form.filters li,
+#outer #main form.search li,
+#outer #main form.filters p,
+#outer #main form.search p,
+#outer #main form.filters ul,
+#outer #main form.search ul {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#outer #main form.filters,
+#outer #main form.filters fieldset,
+#outer #main form.filters dl,
+#outer #main form.filters dt,
+#outer #main form.filters dd,
+#outer #main form.filters li,
+#outer #main form.filters label,
+#outer #main form.filters legend,
+#outer #main form.search,
+#outer #main form.search fieldset,
+#outer #main form.search dl,
+#outer #main form.search dt,
+#outer #main form.search dd,
+#outer #main form.search li,
+#outer #main form.search label,
+#outer #main form.search legend,
+#outer #main form.filters dt.heading,
+#outer #main form.filters dt.include,
+#outer #main form.filters dt.exclude,
+#outer #main form.filters dt.sort,
+#outer #main form.search dt.heading {
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+#outer #main form.filters legend,
+#outer #main form.search legend {
+  float: none;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#outer #main form.filters label,
+#outer #main form.search label,
+#outer #main form.filters li span,
+#outer #main form.search li span,
+#outer #main form.filters a,
+#outer #main form.search a {
+  display: inline-block;
+  float: none;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  color: #f0f4f7;
+  background-color: transparent;
+  background-image: none;
+}
+
+#outer #main form.filters input,
+#outer #main form.filters select,
+#outer #main form.filters textarea,
+#outer #main form.search input,
+#outer #main form.search select,
+#outer #main form.search textarea {
+  float: none;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#outer #main form.filters input[type="text"],
+#outer #main form.filters input.autocomplete,
+#outer #main form.filters select,
+#outer #main form.filters textarea,
+#outer #main form.search select,
+#outer #main form.search textarea {
+  width: 100%;
+  background-color: #0c1520;
+  background-image: none;
+  color: #f0f4f7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+}
+
+#outer #main form.search input[type="text"],
+#outer #main form.search input.autocomplete {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  float: none;
+  height: auto;
+}
+
+#outer #main form.filters input[type="submit"],
+#outer #main form.filters button,
+#outer #main form.filters dd.submit input,
+#outer #main form.search input[type="submit"],
+#outer #main form.search button,
+#outer #main form.search p.submit input {
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  float: none;
+  height: auto;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+#outer #main form.filters input[type="submit"],
+#outer #main form.filters button,
+#outer #main form.filters dd.submit input {
+  width: 100%;
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+}
+
+#outer #main form.filters .autocomplete,
+#outer #main form.filters dd.autocomplete,
+#outer #main form.search .autocomplete,
+#outer #main form.search dd.autocomplete {
+  position: relative;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#outer #main form.filters ul.autocomplete,
+#outer #main form.filters .autocomplete ul,
+#outer #main form.search ul.autocomplete,
+#outer #main form.search .autocomplete ul {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  float: none;
+  margin: 0;
+  white-space: normal;
+  background-color: #0a121c;
+  background-image: none;
+  color: #f0f4f7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+}
+
+#outer #main form.filters ul.autocomplete li,
+#outer #main form.filters .autocomplete ul li,
+#outer #main form.search ul.autocomplete li,
+#outer #main form.search .autocomplete ul li,
+#outer #main form.filters ul.autocomplete a,
+#outer #main form.filters .autocomplete a,
+#outer #main form.search ul.autocomplete a,
+#outer #main form.search .autocomplete a {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  color: #f0f4f7;
+  background-color: #152538;
+  background-image: none;
+}
+
+#outer #main form.filters .notice,
+#outer #main form.filters .error,
+#outer #main form.search .notice,
+#outer #main form.search .error,
+#outer #main .filters .notice,
+#outer #main .filters .error {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+}
+
+#outer #footer {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+#outer #footer ul,
+#outer #footer li,
+#outer #footer .module,
+#outer #footer .menu,
+#outer #footer .heading,
+#outer #footer a,
+#outer #footer button {
+  float: none;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-image: none;
+  color: #f0f4f7;
+}
