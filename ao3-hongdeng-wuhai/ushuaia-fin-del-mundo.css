@@ -113,14 +113,12 @@ a:visited {
   border-bottom: 1px solid rgba(168, 204, 224, 0.35);
 }
 
-#header ul.menu a,
-#header ul.menu a:link,
-#header ul.menu a:visited,
-#greeting ul.menu a,
-#greeting ul.menu a:link,
-#greeting ul.menu a:visited,
-#header .primary li.dropdown ul.menu a,
-#header li.dropdown ul.menu a {
+#header li.dropdown ul.menu a,
+#header li.dropdown ul.menu a:link,
+#header li.dropdown ul.menu a:visited,
+#greeting li.dropdown ul.menu a,
+#greeting li.dropdown ul.menu a:link,
+#greeting li.dropdown ul.menu a:visited {
   border: 1px solid #5c789e;
 }
 
@@ -207,13 +205,15 @@ a:focus {
   border-radius: 999px;
 }
 
-#header .menu,
-#header .dropdown .menu,
-#header li.dropdown.open .menu,
-#header .dropdown:hover .current + .menu,
-#greeting .menu,
-#greeting .dropdown .menu,
-#greeting li.dropdown.open .menu {
+#header li.dropdown ul.menu,
+#header .dropdown ul.menu,
+#header li.dropdown.open ul.menu,
+#header .dropdown:hover .current + ul.menu,
+#greeting li.dropdown ul.menu,
+#greeting .dropdown ul.menu,
+#greeting li.dropdown.open ul.menu,
+#header #small_login ul.menu,
+#header li.user ul.menu {
   background-color: rgba(8, 14, 24, 0.96);
   background-image: none;
   border: 1px solid rgba(184, 202, 217, 0.42);
@@ -233,10 +233,10 @@ a:focus {
   overflow: visible;
 }
 
-#header .menu,
-#greeting .menu,
-#header .dropdown .menu,
-#greeting .dropdown .menu,
+#header li.dropdown > ul.menu,
+#header .dropdown ul.menu,
+#greeting li.dropdown ul.menu,
+#greeting .dropdown ul.menu,
 #header #small_login ul.menu,
 #header li.user ul.menu,
 #header .actions li.dropdown ul.menu,
@@ -245,23 +245,27 @@ a:focus {
   top: 100%;
   left: 0;
   right: auto;
-  min-width: 16em;
-  width: 18em;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
+  box-sizing: border-box;
 }
 
-#header .primary li.dropdown ul.menu {
-  min-width: 20em;
-  width: 24em;
+#header .primary li.dropdown > ul.menu {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
-#greeting .menu,
-#greeting .dropdown .menu,
-#greeting li.open .menu,
-#greeting li.dropdown.open .menu {
-  min-width: 16em;
-  width: 20em;
+#greeting li.dropdown ul.menu,
+#greeting .dropdown ul.menu,
+#greeting li.open ul.menu,
+#greeting li.dropdown.open ul.menu {
+  min-width: 12em;
+  width: 100%;
+  max-width: 100%;
 }
 
 #header .dropdown:hover .menu,
@@ -308,11 +312,10 @@ a:focus {
   overflow: visible;
 }
 
-#header .dropdown .menu li,
-#header .menu li,
-#greeting .dropdown .menu li,
-#header ul.menu li,
-#greeting ul.menu li {
+#header li.dropdown ul.menu li,
+#greeting li.dropdown ul.menu li,
+#header .dropdown ul.menu li,
+#greeting .dropdown ul.menu li {
   background-color: transparent;
   background-image: none;
   border-bottom: none;
@@ -323,26 +326,27 @@ a:focus {
   box-sizing: border-box;
 }
 
-#header ul.menu,
-#greeting ul.menu,
+#header li.dropdown ul.menu,
+#greeting li.dropdown ul.menu,
 #header .dropdown ul.menu,
-#greeting .dropdown ul.menu {
+#greeting .dropdown ul.menu,
+#header #small_login ul.menu,
+#header li.user ul.menu {
   padding: 0.35em 0.4em 0.45em 0.4em;
   box-sizing: border-box;
 }
 
-#header .dropdown .menu a,
-#header .menu a,
-#header .dropdown .menu a:visited,
-#header .menu a:visited,
-#greeting .dropdown .menu a,
-#greeting .dropdown .menu a:visited,
-#greeting .menu a,
-#greeting .menu a:visited,
-#header .primary ul.menu a,
-#header .actions ul.menu a,
-#header ul.navigation.actions ul.menu a,
-#greeting ul.actions ul.menu a {
+#header li.dropdown ul.menu a,
+#header li.dropdown ul.menu a:visited,
+#greeting li.dropdown ul.menu a,
+#greeting li.dropdown ul.menu a:visited,
+#header .dropdown ul.menu a,
+#header .dropdown ul.menu a:visited,
+#greeting .dropdown ul.menu a,
+#greeting .dropdown ul.menu a:visited,
+#header .actions li.dropdown ul.menu a,
+#header ul.navigation.actions li.dropdown ul.menu a,
+#greeting ul.actions li.dropdown ul.menu a {
   background-color: rgba(21, 37, 56, 0.9);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.4);
@@ -362,14 +366,14 @@ a:focus {
   float: none;
 }
 
-#header .dropdown .menu a:hover,
-#header .dropdown .menu a:focus,
-#header .menu a:hover,
-#header .menu a:focus,
-#greeting .dropdown .menu a:hover,
-#greeting .dropdown .menu a:focus,
-#greeting .menu a:hover,
-#greeting .menu a:focus {
+#header li.dropdown ul.menu a:hover,
+#header li.dropdown ul.menu a:focus,
+#header .dropdown ul.menu a:hover,
+#header .dropdown ul.menu a:focus,
+#greeting li.dropdown ul.menu a:hover,
+#greeting li.dropdown ul.menu a:focus,
+#greeting .dropdown ul.menu a:hover,
+#greeting .dropdown ul.menu a:focus {
   background-color: rgba(166, 75, 63, 0.58);
   color: #ffffff;
   border-color: #d47a6e;
@@ -391,7 +395,8 @@ a:focus {
 #header .user a,
 #header li.user,
 #header li.user a,
-#header .menu .user a {
+#header li.user ul.menu a,
+#header #small_login ul.menu a {
   color: #f0f4f7;
 }
 
@@ -728,15 +733,15 @@ select option {
   color: #e8eef3;
 }
 
-#header ul.menu a,
+#header li.dropdown ul.menu a,
 #header .dropdown ul.menu a,
-#greeting ul.menu a,
+#greeting li.dropdown ul.menu a,
 #greeting .dropdown ul.menu a {
   color: #f0f4f7;
 }
 
 #header .secondary a:hover,
-#header .menu a:hover,
+#header li.dropdown ul.menu a:hover,
 #header .actions a:hover {
   color: #ffffff;
 }
@@ -1195,38 +1200,47 @@ body.skins-show #outer #main fieldset select {
   overflow: visible;
 }
 
-#outer #header .menu,
-#outer #header .dropdown .menu,
-#outer #greeting .menu,
-#outer #greeting .dropdown .menu {
+#outer #header li.dropdown ul.menu,
+#outer #header .dropdown ul.menu,
+#outer #greeting li.dropdown ul.menu,
+#outer #greeting .dropdown ul.menu,
+#outer #header #small_login ul.menu,
+#outer #header li.user ul.menu {
   background-color: rgba(8, 14, 24, 0.96);
   background-image: none;
   border: 1px solid rgba(184, 202, 217, 0.42);
   overflow: visible;
 }
 
-#outer #header .menu,
-#outer #greeting .menu,
-#outer #header .dropdown .menu,
-#outer #greeting .dropdown .menu {
+#outer #header li.dropdown > ul.menu,
+#outer #greeting li.dropdown ul.menu,
+#outer #header .dropdown ul.menu,
+#outer #greeting .dropdown ul.menu,
+#outer #header #small_login ul.menu,
+#outer #header li.user ul.menu,
+#outer #header .actions li.dropdown ul.menu {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 16em;
-  width: 18em;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
+  box-sizing: border-box;
 }
 
-#outer #header .primary li.dropdown ul.menu {
-  min-width: 20em;
-  width: 24em;
+#outer #header .primary li.dropdown > ul.menu {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
-#outer #greeting .menu,
-#outer #greeting .dropdown .menu {
-  min-width: 16em;
-  width: 20em;
+#outer #greeting li.dropdown ul.menu,
+#outer #greeting .dropdown ul.menu {
+  min-width: 12em;
+  width: 100%;
+  max-width: 100%;
 }
 
 #outer #greeting li.open ul.menu,
@@ -1328,18 +1342,18 @@ body.skins-show #outer #main fieldset select {
   overflow: visible;
 }
 
-#outer #header ul.actions ul.menu li a,
 #outer #header ul.actions li.dropdown ul.menu li a,
-#outer #header .primary ul.menu li a,
+#outer #header li.dropdown ul.menu li a,
 #outer #header .dropdown ul.menu li a,
-#outer #header ul.menu li a,
-#outer #greeting ul.menu li a,
-#outer #greeting ul.actions ul.menu li a,
+#outer #greeting li.dropdown ul.menu li a,
+#outer #greeting ul.actions li.dropdown ul.menu li a,
 #outer #greeting .dropdown ul.menu li a,
-#outer #header .dropdown .menu a,
-#outer #header .menu a,
-#outer #greeting .dropdown .menu a,
-#outer #greeting .menu a {
+#outer #header li.dropdown ul.menu a,
+#outer #header .dropdown ul.menu a,
+#outer #greeting li.dropdown ul.menu a,
+#outer #greeting .dropdown ul.menu a,
+#outer #header #small_login ul.menu a,
+#outer #header li.user ul.menu a {
   background-color: rgba(21, 37, 56, 0.9);
   color: #f0f4f7;
   border-width: 1px;
@@ -2124,12 +2138,15 @@ body.skins-edit #outer #main li.error,
   border-radius: 6px;
 }
 
-#outer #inner #header ul.menu,
-#outer #inner #header li.dropdown ul.menu,
-#outer #inner #greeting ul.menu,
-#outer #inner #header .primary li.dropdown ul.menu {
-  min-width: 22em;
-  width: 26em;
+#outer #inner #header li.dropdown > ul.menu,
+#outer #inner #header .primary li.dropdown > ul.menu,
+#outer #inner #header ul.actions li.dropdown > ul.menu,
+#outer #inner #greeting li.dropdown > ul.menu,
+#outer #inner #header #small_login ul.menu,
+#outer #inner #header li.user ul.menu {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
   padding: 0.45em 0.5em 0.55em 0.5em;
   box-sizing: border-box;
   display: block;
@@ -2137,14 +2154,15 @@ body.skins-edit #outer #main li.error,
   height: auto;
 }
 
-#outer #inner #greeting ul.menu,
-#outer #inner #greeting li.dropdown ul.menu {
-  min-width: 17em;
-  width: 21em;
+#outer #inner #greeting li.dropdown > ul.menu,
+#outer #inner #header li.user ul.menu {
+  min-width: 12em;
+  width: 100%;
+  max-width: 100%;
 }
 
-#outer #inner #header ul.menu li,
-#outer #inner #greeting ul.menu li {
+#outer #inner #header li.dropdown ul.menu li,
+#outer #inner #greeting li.dropdown ul.menu li {
   display: block;
   width: 100%;
   float: none;
@@ -2154,21 +2172,20 @@ body.skins-edit #outer #main li.error,
   box-sizing: border-box;
   position: static;
   height: auto;
+  min-height: 0;
   overflow: visible;
 }
 
-#outer #inner #header ul.menu a,
-#outer #inner #header ul.menu li a,
 #outer #inner #header li.dropdown ul.menu a,
 #outer #inner #header li.dropdown ul.menu li a,
 #outer #inner #header .primary li.dropdown ul.menu a,
 #outer #inner #header .primary li.dropdown ul.menu li a,
 #outer #inner #header ul.actions li.dropdown ul.menu a,
 #outer #inner #header ul.actions li.dropdown ul.menu li a,
-#outer #inner #greeting ul.menu a,
-#outer #inner #greeting ul.menu li a,
 #outer #inner #greeting li.dropdown ul.menu a,
-#outer #inner #greeting li.dropdown ul.menu li a {
+#outer #inner #greeting li.dropdown ul.menu li a,
+#outer #inner #header #small_login ul.menu a,
+#outer #inner #header li.user ul.menu a {
   display: block;
   width: 100%;
   padding: 0.65em 0.85em;
@@ -2185,14 +2202,36 @@ body.skins-edit #outer #main li.error,
   color: #f0f4f7;
   text-decoration: none;
   height: auto;
+  min-height: 2.6em;
   position: static;
   float: none;
   vertical-align: baseline;
 }
 
-#outer #inner #header ul.navigation.primary li.dropdown ul.menu li:last-child a,
-#outer #inner #greeting ul.menu li:last-child a {
+#outer #inner #header li.dropdown ul.menu li:last-child a,
+#outer #inner #greeting li.dropdown ul.menu li:last-child a {
   margin-bottom: 0;
+}
+
+/* Do not apply dropdown panel layout to the horizontal primary nav bar (it is also ul.menu). */
+#outer #inner #header ul.navigation.primary,
+#outer #inner #header ul.menu.navigation.actions.primary {
+  display: block;
+  list-style: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  text-align: center;
+}
+
+#outer #inner #header ul.navigation.primary > li,
+#outer #inner #header ul.menu.navigation.actions.primary > li {
+  display: inline-block;
+  width: auto;
+  float: none;
+  margin: 0.12em 0.1em;
+  vertical-align: top;
 }
 
 /* Primary nav capsule: full viewport width (no horizontal overflow). */
