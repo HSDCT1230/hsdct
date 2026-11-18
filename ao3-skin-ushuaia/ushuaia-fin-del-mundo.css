@@ -1,31 +1,33 @@
 /*
- * AO3 Site Skin: 南极灯塔 · 极简文艺
- * 艺术氛围 / 冷酷配色 / 红灯塔一点红
- * 中文阅读优化 · 桌面与手机通用（无 @media）
+ * AO3 Site Skin: Les Éclaireurs · 南极灯塔
+ * 配色取自用户实拍：深海军浪 / 冰云灰白 / 赤陶红灯塔
+ * 中文版式：适宜页边距、行距 1.875、字距与黑/宋分层
+ * AO3 皮肤无 @media，流式版心兼顾手机
  *
- * 背景图：在 --ushuaia-bg-image 中换成你的南极灯塔直链（HTTPS，.jpg/.png）
+ * 背景图（HTTPS .jpg 直链）：
+ * https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg
  */
 
 :root {
-  --ushuaia-abyss: #06080c;
-  --ushuaia-deep: #121820;
-  --ushuaia-frost: #e6e9ed;
-  --ushuaia-ice: #9aa8b5;
-  --ushuaia-mist: #5c6b78;
-  --ushuaia-panel-bg: rgba(14, 18, 24, 0.9);
-  --ushuaia-panel-light: rgba(252, 252, 253, 0.97);
-  --ushuaia-text: #d8dde3;
-  --ushuaia-text-soft: #8a959f;
-  --ushuaia-text-dark: #1c242c;
-  --ushuaia-text-body: #232b34;
-  --ushuaia-lighthouse: #9e2a32;
-  --ushuaia-lighthouse-dim: #6e1c22;
-  --ushuaia-lighthouse-glow: #c13d48;
-  --ushuaia-border: #2a333d;
-  --ushuaia-border-light: #d4d9de;
-  --ushuaia-link: #3d6d8a;
-  --ushuaia-link-hover: #9e2a32;
-  --ushuaia-bg-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Faro_Les_Eclaireurs_Ushuaia.jpg");
+  --ushuaia-abyss: #1b2e4b;
+  --ushuaia-deep: #152538;
+  --ushuaia-frost: #f0f4f7;
+  --ushuaia-ice: #b8cad9;
+  --ushuaia-mist: #4a4e52;
+  --ushuaia-panel-bg: rgba(21, 37, 56, 0.93);
+  --ushuaia-panel-light: rgba(240, 244, 247, 0.98);
+  --ushuaia-text: #e8eef3;
+  --ushuaia-text-soft: #8a9aab;
+  --ushuaia-text-dark: #2f3640;
+  --ushuaia-text-body: #35404a;
+  --ushuaia-lighthouse: #a64b3f;
+  --ushuaia-lighthouse-dim: #7c3830;
+  --ushuaia-lighthouse-glow: #b85a4e;
+  --ushuaia-border: #2a4566;
+  --ushuaia-border-light: #b8cad9;
+  --ushuaia-link: #2d5f7a;
+  --ushuaia-link-hover: #a64b3f;
+  --ushuaia-bg-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
 }
 
 /* ── 界面：冷静无衬线 ── */
@@ -35,9 +37,9 @@ body,
 .region,
 .system .intro,
 #outer .wrapper {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  font-size: 1em;
-  line-height: 1.7;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
   font-weight: normal;
   color: var(--ushuaia-text);
 }
@@ -52,10 +54,10 @@ body,
 .preface .notes,
 .preface blockquote,
 .notes blockquote.userstuff {
-  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
-  font-size: 1.12em;
-  line-height: 2;
-  letter-spacing: 0.06em;
+  font-family: "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  font-size: 1.125em;
+  line-height: 1.875;
+  letter-spacing: 0.04em;
   color: var(--ushuaia-text-body);
   word-wrap: break-word;
   word-break: normal;
@@ -75,7 +77,8 @@ body,
 }
 
 .userstuff p {
-  margin-bottom: 1.1em;
+  margin-top: 0;
+  margin-bottom: 0.85em;
   text-indent: 0;
 }
 
@@ -91,7 +94,7 @@ a:link,
 a:visited {
   color: var(--ushuaia-link);
   text-decoration: none;
-  border-bottom: 1px solid rgba(61, 109, 138, 0.35);
+  border-bottom: 1px solid rgba(45, 95, 122, 0.35);
 }
 
 a:hover,
@@ -106,14 +109,15 @@ a:focus {
   background-color: var(--ushuaia-abyss);
   background-image: var(--ushuaia-bg-image);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
   min-height: 100%;
 }
 
 #inner.wrapper {
-  margin: 0 3%;
-  max-width: 46em;
+  margin: 0 5%;
+  max-width: 44em;
+  padding: 0 0 1.5em 0;
 }
 
 /* ── 顶栏：扁平、无阴影 ── */
@@ -216,7 +220,7 @@ li.blurb a,
 .listbox a,
 .dashboard a {
   color: var(--ushuaia-link);
-  border-bottom-color: rgba(61, 109, 138, 0.3);
+  border-bottom-color: rgba(45, 95, 122, 0.28);
 }
 
 #main a:hover,
@@ -295,7 +299,7 @@ input[type="submit"]:focus {
 input,
 textarea,
 select {
-  background: #fafbfc;
+  background: #f0f4f7;
   color: var(--ushuaia-text-body);
   border-color: var(--ushuaia-border-light);
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -320,16 +324,16 @@ textarea:focus {
 .preface.group {
   background: var(--ushuaia-panel-light);
   box-shadow: none;
-  padding-top: 0.5em;
+  padding: 1.25em 1.75em 2em 1.75em;
 }
 
 .work .preface .userstuff,
 #chapters .userstuff,
 .chapter .userstuff {
-  max-width: 38em;
+  max-width: 36em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 0.25em;
+  padding: 0 0.35em;
 }
 
 .chapter .landmark,
@@ -351,7 +355,7 @@ li.comment {
 li.blurb:hover,
 .listbox .index li:hover {
   border-color: var(--ushuaia-mist);
-  background: #f7f8f9;
+  background: #ecf2f6;
 }
 
 /* ── 标签与元信息：低饱和 ── */
@@ -379,7 +383,7 @@ a.tag:hover {
 .alert.flash,
 .required .autocomplete,
 .system .tweet_list li {
-  background: #f5f6f7;
+  background: #f0f4f7;
   color: var(--ushuaia-text-dark);
   border: 1px solid var(--ushuaia-border-light);
   box-shadow: none;
@@ -388,14 +392,14 @@ a.tag:hover {
 th,
 td,
 table {
-  background: #fafbfc;
+  background: #f0f4f7;
   color: var(--ushuaia-text-dark);
   border-color: var(--ushuaia-border-light);
 }
 
 tr:hover,
 td:hover {
-  background: #f0f2f4;
+  background: #e4ecf2;
 }
 
 #dashboard .secondary,
