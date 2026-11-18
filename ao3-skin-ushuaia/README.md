@@ -17,6 +17,17 @@ AO3 **不会保存半份 CSS**。只要有一条数值不合法，点 **Update**
 
 请再整份粘贴后 **Update**。成功的标志是：回到皮肤列表，而不是停在编辑页顶着红字。然后再 **Preview**。
 
+### 若仍报 `#workskin h3`（或类似 “no rules for …”）
+
+说明 CSS 文本框里**还有旧代码**（常见：从 Word / 作品皮肤示例里混进了 `#workskin`）。新文件里**不应出现** `workskin` 一词。
+
+1. 编辑 **红灯雾海** → 在 CSS 大框内 **全选 → 删除**（不要只追加粘贴）。
+2. 用手机/电脑打开官方文件再复制（不要从聊天记录或 Word 复制）：  
+   https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/ushuaia-fin-del-mundo.css  
+3. 粘贴前在浏览器里搜索 `workskin`，应为 **0 条**；合法文件**第一行**应是 `html {`，不是 `#workskin`。
+4. 同一页面向下滚动，**Parent Skins** 若挂过别的父皮肤，先全部移除再 Update。
+5. Update 成功后会跳回皮肤列表；若仍停在编辑页并有红字，把红字和 CSS **最上面约 20 行**截图发来。
+
 ## 如何设置（AO3）
 
 1. 登录 [AO3](https://archiveofourown.org/)，点击顶栏 **Hi, [用户名]!** → **My Dashboard**（我的仪表盘）。
