@@ -174,8 +174,10 @@ a:focus {
 
 #header .actions a:hover,
 #header .actions a:focus,
-#header .dropdown:hover a,
-#header .open a {
+#header .dropdown:hover > a,
+#header li.dropdown.open > a,
+#header li.open > a,
+#header .dropdown.open > a {
   color: #ffffff;
   background-color: rgba(166, 75, 63, 0.3);
 }
@@ -215,19 +217,47 @@ a:focus {
   overflow: visible;
 }
 
-#header li.dropdown.open ul.menu,
-#greeting li.dropdown.open ul.menu,
-#header .open ul.menu,
-#greeting .open ul.menu {
-  position: relative;
-  display: block;
-  width: 100%;
+#header .menu,
+#greeting .menu,
+#header .dropdown .menu,
+#greeting .dropdown .menu {
+  position: absolute;
+  top: 100%;
   left: 0;
+  right: auto;
+  width: 16em;
+  margin: 0.15em 0 0 0;
+  z-index: 500;
+}
+
+#header .dropdown:hover .menu,
+#header .dropdown:hover .current + .menu,
+#header li.dropdown.open .menu,
+#header li.open .menu,
+#greeting .dropdown:hover .menu,
+#greeting li.dropdown.open .menu,
+#greeting li.open .menu {
+  display: block;
+}
+
+#greeting li.user,
+#greeting li.dropdown,
+#header .primary li.dropdown {
+  position: relative;
+  overflow: visible;
+}
+
+#greeting li.open .menu,
+#greeting li.dropdown.open .menu {
   right: 0;
-  z-index: 300;
-  margin-top: 0.35em;
-  margin-bottom: 0.45em;
-  padding-bottom: 0.45em;
+  left: auto;
+}
+
+#header .actions,
+#header .primary ul,
+#header ul.navigation.actions,
+#greeting ul {
+  overflow: visible;
 }
 
 #header .dropdown .menu li,
@@ -1054,15 +1084,34 @@ body.skins-show #outer #main fieldset select {
   overflow: visible;
 }
 
-#outer #header li.open ul.menu,
+#outer #header .menu,
+#outer #greeting .menu,
+#outer #header .dropdown .menu,
+#outer #greeting .dropdown .menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 16em;
+  margin: 0.15em 0 0 0;
+  z-index: 500;
+}
+
 #outer #greeting li.open ul.menu,
-#outer #header .dropdown.open ul.menu,
-#outer #greeting .dropdown.open ul.menu {
-  position: relative;
+#outer #greeting li.dropdown.open ul.menu {
+  right: 0;
+  left: auto;
+}
+
+#outer #header li.dropdown.open ul.menu,
+#outer #header li.open ul.menu,
+#outer #header .dropdown:hover ul.menu {
   display: block;
-  width: 100%;
-  z-index: 300;
-  margin-bottom: 0.45em;
+}
+
+#outer #greeting li.dropdown.open ul.menu,
+#outer #greeting li.open ul.menu,
+#outer #greeting .dropdown:hover ul.menu {
+  display: block;
 }
 
 #outer #header .dropdown .menu a,
