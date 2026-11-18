@@ -1,10 +1,5 @@
-# AO3 站点皮肤「红灯雾海」
+# 已停用
 
-本皮肤已迁到独立仓库，便于单独收藏与在 AO3 中引用固定 `raw` 链接：
+「红灯雾海」1.0 在 [`../ao3-hongdeng-wuhai/`](../ao3-hongdeng-wuhai/README.md)。
 
-**https://github.com/HSDCT1230/ao3-hongdeng-wuhai**
-
-- CSS（Raw）：<https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/ushuaia-fin-del-mundo.css>
-- 背景图（Raw）：<https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/assets/les-eclaireurs-bg.jpg>
-
-此目录为历史开发副本；请以独立仓库为准。
+请使用那里的 `ushuaia-fin-del-mundo.css`。本目录不再保存皮肤副本。
