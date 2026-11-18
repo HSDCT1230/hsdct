@@ -2325,9 +2325,9 @@ body.skins-edit #outer #main li.error,
   white-space: normal;
   word-wrap: break-word;
   overflow: visible;
-  background-color: transparent;
+  background-color: #152538;
   background-image: none;
-  border: none;
+  border: 1px solid #3d5570;
   border-radius: 0;
   box-shadow: none;
   text-shadow: none;
@@ -2340,7 +2340,161 @@ body.skins-edit #outer #main li.error,
 #outer #header ul.primary.navigation.actions > li.dropdown > ul.menu a:hover,
 #outer #header ul.primary.navigation.actions > li.dropdown > ul.menu a:focus {
   background-color: rgba(166, 75, 63, 0.4);
+  background-image: none;
   color: #ffffff;
+  border-color: #d47a6e;
+}
+
+/*
+ * AO3 paints .actions a:link with a white gradient and .listbox with a
+ * 1px white ring. Those survive a background-color override. Clear them on
+ * header submenus (Fandoms → Theater and the same rows elsewhere) and on
+ * the alphabet / listbox pages those links open.
+ */
+#outer .actions a,
+#outer .actions a:link,
+#outer .actions a:visited,
+#outer .actions a:hover,
+#outer .actions a:focus,
+#outer a.action,
+#outer a.action:link,
+#outer a.action:visited,
+#outer a.action:hover,
+#outer a.action:focus,
+#outer .actions button,
+#outer .actions input,
+#outer button,
+#outer input[type="submit"],
+#outer input[type="button"] {
+  background-image: none;
+  box-shadow: none;
+}
+
+#outer #header ul.menu a,
+#outer #header ul.menu a:link,
+#outer #header ul.menu a:visited,
+#outer #header ul.menu a:hover,
+#outer #header ul.menu a:focus,
+#outer #header ul.dropdown-menu a,
+#outer #header ul.dropdown-menu a:link,
+#outer #header ul.dropdown-menu a:visited,
+#outer #header ul.dropdown-menu a:hover,
+#outer #header ul.dropdown-menu a:focus,
+#outer #greeting ul.menu a,
+#outer #greeting ul.menu a:link,
+#outer #greeting ul.menu a:visited,
+#outer #greeting ul.menu a:hover,
+#outer #greeting ul.menu a:focus,
+#outer #greeting ul.dropdown-menu a,
+#outer #greeting ul.dropdown-menu a:link,
+#outer #greeting ul.dropdown-menu a:visited,
+#outer #greeting ul.dropdown-menu a:hover,
+#outer #greeting ul.dropdown-menu a:focus,
+#outer #header #small_login a,
+#outer #header #small_login a:link,
+#outer #header #small_login a:visited {
+  background-color: #152538;
+  background-image: none;
+  border: 1px solid #3d5570;
+  border-radius: 0;
+  box-shadow: none;
+  color: #f0f4f7;
+  text-shadow: none;
+  height: auto;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#outer #header ul.menu a:hover,
+#outer #header ul.menu a:focus,
+#outer #header ul.dropdown-menu a:hover,
+#outer #header ul.dropdown-menu a:focus,
+#outer #greeting ul.menu a:hover,
+#outer #greeting ul.menu a:focus,
+#outer #greeting ul.dropdown-menu a:hover,
+#outer #greeting ul.dropdown-menu a:focus {
+  background-color: rgba(166, 75, 63, 0.55);
+  background-image: none;
+  border-color: #d47a6e;
+  color: #ffffff;
+}
+
+#outer #header ul.menu,
+#outer #header ul.dropdown-menu,
+#outer #greeting ul.menu,
+#outer #greeting ul.dropdown-menu,
+#outer #header ul.menu li,
+#outer #header ul.dropdown-menu li,
+#outer #greeting ul.menu li,
+#outer #greeting ul.dropdown-menu li {
+  background-color: #121c2f;
+  background-image: none;
+  box-shadow: none;
+}
+
+#outer .listbox,
+#outer li.listbox,
+#outer .letter.listbox,
+#outer fieldset.listbox,
+#outer .listbox .index,
+#outer .listbox ul.index,
+#outer .listbox ol.index,
+#outer ul.tags.index,
+#outer ol.fandom.index,
+#outer .alphabet .listbox,
+#outer .media .listbox {
+  background-color: #152538;
+  background-image: none;
+  border: 1px solid #5c789e;
+  box-shadow: none;
+  color: #e8eef3;
+}
+
+#outer #main ul.alphabet.actions a,
+#outer #main ul.alphabet.actions a:link,
+#outer #main ul.alphabet.actions a:visited,
+#outer #main ul.alphabet a,
+#outer #main ul.alphabet a:link,
+#outer #main ul.alphabet a:visited,
+#outer #main .listbox .heading a,
+#outer #main .listbox .heading a:link,
+#outer #main .listbox .heading a:visited,
+#outer #main .letter .heading a,
+#outer #main .letter .heading a:link,
+#outer #main .letter .heading a:visited {
+  background-color: #152538;
+  background-image: none;
+  border: 1px solid #5c789e;
+  box-shadow: none;
+  color: #f0f4f7;
+  height: auto;
+}
+
+#outer #main ul.autocomplete,
+#outer #main .autocomplete ul,
+#outer .ui-autocomplete,
+#outer .ui-menu {
+  background-color: #121c2f;
+  background-image: none;
+  border: 1px solid #5c789e;
+  box-shadow: none;
+  color: #f0f4f7;
+}
+
+#outer #main ul.autocomplete a,
+#outer #main ul.autocomplete a:link,
+#outer #main ul.autocomplete a:visited,
+#outer #main .autocomplete ul a,
+#outer #main .autocomplete ul a:link,
+#outer .ui-menu a,
+#outer .ui-menu a:link,
+#outer .ui-menu a:visited {
+  background-color: #152538;
+  background-image: none;
+  border: 1px solid #3d5570;
+  box-shadow: none;
+  color: #f0f4f7;
 }
 
 /* List/search pages: page heading above work titles; blurbs stay capped below h4. */
