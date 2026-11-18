@@ -588,9 +588,11 @@ legend {
 }
 
 fieldset {
-  background-color: rgba(21, 37, 56, 0.82);
+  background-color: #152538;
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.4);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
   border-radius: 8px;
   padding: 0.85em 1.05em 1em 1.05em;
   margin: 0.65em 0;
@@ -1311,16 +1313,6 @@ body.skins-show #outer #main fieldset select {
   padding: 0.35em 0.65em;
 }
 
-#outer #main fieldset,
-#outer #main fieldset.work,
-#outer #main fieldset.list,
-#outer #main form fieldset,
-#outer #main fieldset fieldset {
-  background-color: rgba(21, 37, 56, 0.85);
-  color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.38);
-}
-
 #outer #main fieldset legend {
   color: #f0f4f7;
   background-color: rgba(8, 14, 24, 0.92);
@@ -1557,17 +1549,16 @@ body.skins-show #outer #main fieldset select {
 body.skins-edit #outer #inner #main fieldset,
 body.skins-new #outer #inner #main fieldset,
 body.skins-show #outer #inner #main fieldset,
-body.controller-skins #outer #main fieldset,
-#outer #main form fieldset,
 #outer #main fieldset#about,
 #outer #main fieldset#css,
 #outer #main fieldset#advanced,
 #outer #main fieldset#actions,
-#outer #main fieldset.actions,
 #outer #main fieldset.meta {
-  background-color: rgba(21, 37, 56, 0.94);
+  background-color: #152538;
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.42);
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
   padding: 1em 1.15em 1.1em 1.15em;
   margin: 0.75em 0;
 }
@@ -1612,7 +1603,6 @@ body.skins-edit #outer #inner #main fieldset#css textarea,
 body.skins-edit #outer #inner #main fieldset textarea,
 body.skins-new #outer #inner #main fieldset textarea,
 body.skins-show #outer #inner #main fieldset textarea,
-body.controller-skins #outer #inner #main fieldset#css textarea,
 #outer #inner #main fieldset#css textarea:focus,
 body.skins-edit #outer #main textarea:focus,
 body.skins-new #outer #main textarea:focus,
