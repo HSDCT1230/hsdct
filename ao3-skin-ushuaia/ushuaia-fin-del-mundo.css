@@ -813,3 +813,156 @@ body.skins-show #outer #main fieldset select {
 #outer #main li.research a:link {
   color: #f0f4f7;
 }
+
+#outer #main ol.pagination a,
+#outer #main ol.pagination a:link,
+#outer #main ol.pagination a:visited,
+#outer #main ul.pagination a,
+#outer #main ul.pagination a:link,
+#outer #main ul.pagination a:visited,
+#outer #main .pagination a,
+#outer #main .pagination a:link,
+#outer #main .pagination a:visited,
+#outer ol.navigation.pagination a,
+#outer ol.navigation.pagination a:link,
+#outer ol.pagination li.previous a,
+#outer ol.pagination li.next a,
+#outer ol.pagination li.forward a,
+#outer ol.pagination li.back a,
+#outer ol.pagination li.start a,
+#outer ol.pagination li.end a,
+#outer .pagination li.previous a,
+#outer .pagination li.next a,
+#outer form.pagination input[type="submit"],
+#outer form.pagination input.button,
+#outer .pagination input[type="submit"],
+#outer .pagination input.button,
+#outer ol.pagination.actions input,
+#outer ol.pagination.actions input[type="submit"],
+#outer p.jump input[type="submit"],
+#outer .jump input[type="submit"],
+#outer #main p.jump input[type="submit"],
+#outer #main form.pagination input[type="submit"] {
+  background-image: none;
+  background-color: #152538;
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.62);
+  border-radius: 6px;
+  padding: 0.28em 0.6em;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#outer #main ol.pagination a,
+#outer #main ul.pagination a,
+#outer #main .pagination a,
+#outer ol.pagination li.previous a,
+#outer ol.pagination li.next a,
+#outer .pagination li.previous a,
+#outer .pagination li.next a,
+#outer form.pagination input[type="submit"],
+#outer p.jump input[type="submit"] {
+  color: #f0f4f7;
+}
+
+#outer .pagination li,
+#outer ol.pagination li,
+#outer .pagination span,
+#outer .pagination .ellipsis,
+#outer ol.pagination .gap {
+  color: #e8eef3;
+}
+
+#outer #main p.jump input[type="text"],
+#outer #main form.pagination input[type="text"],
+#outer .pagination input[type="text"] {
+  background-color: rgba(8, 14, 24, 0.9);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.55);
+}
+
+#outer #header a.action,
+#outer #header ul.actions a,
+#outer #header ul.actions li a,
+#outer #header .actions a,
+#outer #header input[type="submit"],
+#outer #header input.button,
+#outer #dashboard ul.actions a,
+#outer #dashboard ul.actions li a,
+#outer #main ul.actions li a,
+#outer #main ul.actions li a.action,
+#outer #main p.actions a,
+#outer #main ul.navigation.actions li a,
+#outer #main ul.work.navigation.actions li a,
+#outer #main ul.work.navigation li a,
+#outer #main.works-show ul.actions li a,
+#outer #main.works-show ul.navigation.actions li a,
+#outer #main.works-show ul.work.navigation.actions li a,
+#outer #main.works-show ul.work.navigation li a,
+#outer #main.works-chapters-show ul.actions li a,
+#outer #main .download ul.actions li a,
+#outer #main .preface ul.actions li a,
+#outer #main .caution ul.actions li a,
+#outer #main .flash ul.actions li a,
+#outer #main .notice ul.actions li a,
+#outer #main .secondary ul.actions li a,
+#outer #main .actions a,
+#outer #main .actions input,
+#outer #main .actions button,
+#outer #main form .actions a,
+#outer #main form .actions input,
+#outer #main a.action,
+#outer #main a.button,
+#outer #main input[type="submit"],
+#outer #main input[type="button"],
+#outer #main input.button,
+#outer #main input.submit,
+#outer #main button,
+#outer .listbox ul.actions li a,
+#outer .filters ul.actions li a,
+#outer .dynamic ul.actions li a,
+#outer #main li.bookmark a,
+#outer #main li.download a,
+#outer #main li.kudos a,
+#outer #main li.subscribe a,
+#outer #main li.share a,
+#outer #main li.mark a {
+  background-image: none;
+  background-color: #152538;
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.62);
+  border-radius: 8px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#outer #header a.action:hover,
+#outer #header ul.actions a:hover,
+#outer #dashboard ul.actions a:hover,
+#outer #main ul.actions li a:hover,
+#outer #main ul.work.navigation.actions li a:hover,
+#outer #main a.action:hover,
+#outer #main .actions a:hover,
+#outer #main input[type="submit"]:hover,
+#outer #main input.button:hover,
+#outer #main button:hover,
+#outer .listbox ul.actions li a:hover {
+  background-color: rgba(166, 75, 63, 0.85);
+  color: #ffffff;
+  border-color: #d47a6e;
+}
+
+#outer #main ul.actions a,
+#outer #main ul.actions a:link,
+#outer #main ul.actions a:visited,
+#outer #main ul.work.navigation.actions a,
+#outer #main ul.work.navigation.actions a:link,
+#outer #main ul.work.navigation.actions a:visited,
+#outer #main ul.navigation.actions a,
+#outer #main ul.navigation.actions a:link,
+#outer #main a.action,
+#outer #main a.action:link,
+#outer #main a.button,
+#outer #main a.button:link {
+  color: #f0f4f7;
+}
