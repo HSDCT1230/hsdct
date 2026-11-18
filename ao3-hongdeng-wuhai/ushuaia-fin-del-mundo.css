@@ -52,17 +52,23 @@ html.javascript,
 }
 
 #inner {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 40em;
-  width: 100%;
-  padding: 0 0.65em 1.55em 0.65em;
+  width: calc(100% - 1.1em);
+  padding: 0 0 1em 0;
   border: none;
   box-shadow: none;
   border-radius: 12px;
   overflow: hidden;
-  background-color: rgba(21, 37, 56, 0.35);
+  background-color: rgba(21, 37, 56, 0.42);
   border: 1px solid rgba(184, 202, 217, 0.28);
   box-sizing: border-box;
+}
+
+#outer #inner.wrapper {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #header,
@@ -105,15 +111,20 @@ a:focus {
 }
 
 #header {
-  background-color: rgba(21, 37, 56, 0.78);
+  background-color: rgba(21, 37, 56, 0.88);
   color: #f0f4f7;
   text-align: center;
   margin-bottom: 0;
-  padding-bottom: 0.45em;
+  padding: 0.55em 0.85em 0.5em 0.85em;
   border: none;
   border-bottom: 1px solid rgba(184, 202, 217, 0.22);
   border-radius: 0;
   box-shadow: none;
+}
+
+#greeting {
+  margin: 0.35em 0 0.3em 0;
+  padding: 0;
 }
 
 #header .heading a,
@@ -127,13 +138,12 @@ a:focus {
 #header .primary {
   background-color: rgba(8, 14, 24, 0.72);
   background-image: none;
-  border-top: 1px solid rgba(184, 202, 217, 0.2);
-  border-radius: 8px;
-  margin-top: 0.55em;
-  margin-left: 0.45em;
-  margin-right: 0.45em;
-  margin-bottom: 0.35em;
+  border: 1px solid rgba(184, 202, 217, 0.22);
+  border-radius: 10px;
+  margin: 0.45em 0 0.35em 0;
+  padding: 0.4em 0.45em 0.45em 0.45em;
   text-align: center;
+  box-sizing: border-box;
 }
 
 #header .primary a {
@@ -141,8 +151,8 @@ a:focus {
   background-color: rgba(21, 37, 56, 0.65);
   border: 1px solid rgba(184, 202, 217, 0.55);
   border-radius: 8px;
-  margin: 0.08em 0.08em;
-  padding: 0.25em 0.55em;
+  margin: 0.12em 0.1em;
+  padding: 0.28em 0.58em;
   box-shadow: none;
   font-size: 0.92em;
 }
@@ -238,13 +248,13 @@ a:focus {
 
 #dashboard,
 #dashboard.own {
-  background-color: rgba(21, 37, 56, 0.75);
+  background-color: rgba(21, 37, 56, 0.82);
   color: #f0f4f7;
   border: none;
   border-bottom: 1px solid rgba(184, 202, 217, 0.22);
   border-radius: 0;
   box-shadow: none;
-  padding: 0.7em 1.1em 0.8em 1.1em;
+  padding: 0.7em 0.85em 0.8em 0.85em;
   margin: 0;
 }
 
@@ -268,8 +278,8 @@ a:focus {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  padding: 1.2em 1.1em 1.55em 1.1em;
-  margin: 0 0 0.65em 0;
+  padding: 1.1em 0.85em 1.45em 0.85em;
+  margin: 0;
   line-height: 1.75;
 }
 
@@ -478,14 +488,13 @@ select option {
 .flash,
 .notice,
 .caution {
-  background-color: rgba(8, 14, 24, 0.88);
+  background-color: rgba(8, 14, 24, 0.82);
   color: #f0f4f7;
-  border: 1px solid #a64b3f;
+  border: none;
+  border-bottom: 1px solid rgba(166, 75, 63, 0.38);
   border-radius: 0;
-  padding: 0.85em 1em;
+  padding: 0.6em 0.85em;
   margin: 0;
-  border-left: none;
-  border-right: none;
   width: 100%;
   box-sizing: border-box;
 }
@@ -498,22 +507,51 @@ select option {
 #header + .notice,
 #dashboard + .notice {
   border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+#inner > .flash:empty,
+#inner > .notice:empty,
+#inner > .caution:empty,
+#header + .flash:empty,
+#header + .notice:empty {
+  display: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  min-height: 0;
+}
+
+#main > .flash:first-child,
+#main > .notice:first-child,
+#main > .caution:first-child {
+  margin: -1.1em -0.85em 0.85em -0.85em;
+  padding: 0.6em 0.85em;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: auto;
 }
 
 #outer #search form,
 #header #search {
-  margin-left: 0.45em;
-  margin-right: 0.45em;
-  margin-bottom: 0.4em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.35em;
+  margin-bottom: 0.15em;
 }
 
 #footer {
   background-color: rgba(21, 37, 56, 0.78);
   color: #d8e2ea;
-  border: 1px solid rgba(184, 202, 217, 0.35);
-  border-radius: 12px;
-  margin-top: 0.65em;
-  padding: 1em 1.25em;
+  border: none;
+  border-top: 1px solid rgba(184, 202, 217, 0.22);
+  border-radius: 0;
+  margin: 0;
+  padding: 1em 0.85em 1.15em 0.85em;
 }
 
 #footer a {
@@ -1165,6 +1203,49 @@ body.skins-show #outer #main fieldset select {
   padding: 0.95em 1.05em 1.05em 1.05em;
   margin: 0.65em 0;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+#outer #main.splash .module,
+#outer #main.splash .news,
+#outer #main.splash .favorite,
+#outer #main.splash .browse {
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(8, 14, 24, 0.38);
+  margin: 0.75em 0;
+  box-sizing: border-box;
+}
+
+#outer #main.splash .module h2,
+#outer #main.splash .module h3,
+#outer #main.splash .news h3,
+#outer #main.splash .favorite h3,
+#outer #main.splash h3.landmark {
+  background-color: rgba(8, 14, 24, 0.65);
+  border: none;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.22);
+  border-radius: 0;
+  margin: 0;
+  padding: 0.55em 0.85em;
+  box-sizing: border-box;
+}
+
+#outer #main.splash .module h2 a,
+#outer #main.splash .module h3 a,
+#outer #main.splash .news h3 a,
+#outer #main.splash .favorite h3 a {
+  border-bottom: none;
+}
+
+#outer #main.splash .module .index,
+#outer #main.splash .module ul,
+#outer #main.splash .module ol,
+#outer #main.splash .news ul,
+#outer #main.splash .favorite ul {
+  margin: 0;
+  padding: 0.65em 0.85em 0.85em 0.85em;
 }
 
 #outer #main .listbox a.tag,
