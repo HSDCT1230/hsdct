@@ -38,8 +38,12 @@ AO3 **不会保存半份 CSS**。只要有一条数值不合法，点 **Update**
 **AO3 能用的外链**（经验证较稳）：`upload.wikimedia.org`、Imgur 直链（`i.imgur.com/xxxx.jpg`）、部分图床。  
 **常被拒绝**：`raw.githubusercontent.com`、`cdn.jsdelivr.net`（含 `@分支` 的地址）。
 
-默认 CSS 已使用你上传的灯塔照片直链：  
-`https://i.imgur.com/ARshGKAh.jpg`（相册页 [hfz9rOI](https://imgur.com/a/hfz9rOI) 不能写在 CSS 里，必须用 `i.imgur.com/…jpg`）。
+背景图写在 **`#outer` / `#outer.wrapper`**（不能只在 `body` 上，手机端 `#outer` 会铺白底把图盖住）。
+
+默认使用仓库里的同一张照片（大陆手机一般能打开，Imgur 常打不开）：  
+`https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg`（合并进 `main` 后可把路径里的分支名改成 `main`）
+
+Imgur 直链 `https://i.imgur.com/ARshGKAh.jpg` 在 AO3 里可以保存，但**国内很多网络加载不了**，所以浏览器里直开链接也看不到海图时，请改用上面 GitHub 直链。
 
 若以后换图：
 
