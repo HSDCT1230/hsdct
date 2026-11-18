@@ -61,7 +61,7 @@ html.javascript,
   border: none;
   box-shadow: none;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   background-color: rgba(21, 37, 56, 0.42);
   border: 1px solid rgba(184, 202, 217, 0.28);
   box-sizing: border-box;
@@ -72,7 +72,6 @@ html.javascript,
   padding-right: 0;
 }
 
-#header,
 #main,
 #dashboard,
 #footer,
@@ -81,6 +80,15 @@ html.javascript,
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+}
+
+#header {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 50;
 }
 
 h1,
@@ -119,13 +127,16 @@ a:focus {
   padding: 0.55em 0.85em 0.5em 0.85em;
   border: none;
   border-bottom: 1px solid rgba(184, 202, 217, 0.22);
-  border-radius: 0;
+  border-radius: 12px 12px 0 0;
   box-shadow: none;
 }
 
 #greeting {
   margin: 0.35em 0 0.3em 0;
   padding: 0;
+  position: relative;
+  z-index: 60;
+  overflow: visible;
 }
 
 #header .heading a,
@@ -145,6 +156,9 @@ a:focus {
   padding: 0.4em 0.45em 0.45em 0.45em;
   text-align: center;
   box-sizing: border-box;
+  position: relative;
+  z-index: 40;
+  overflow: visible;
 }
 
 #header .primary a {
@@ -187,6 +201,33 @@ a:focus {
   box-shadow: none;
   color: #f0f4f7;
   padding: 0.35em 0.25em;
+  z-index: 200;
+  overflow: visible;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#header li.dropdown,
+#greeting li.dropdown,
+#header li.dropdown.open,
+#greeting li.dropdown.open {
+  position: relative;
+  overflow: visible;
+}
+
+#header li.dropdown.open ul.menu,
+#greeting li.dropdown.open ul.menu,
+#header .open ul.menu,
+#greeting .open ul.menu {
+  position: relative;
+  display: block;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  margin-top: 0.35em;
+  margin-bottom: 0.45em;
+  padding-bottom: 0.45em;
 }
 
 #header .dropdown .menu li,
@@ -285,6 +326,8 @@ a:focus {
   overflow-x: hidden;
   max-width: 100%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 .userstuff {
@@ -529,7 +572,7 @@ select option {
   color: #d8e2ea;
   border: none;
   border-top: 1px solid rgba(184, 202, 217, 0.22);
-  border-radius: 0;
+  border-radius: 0 0 12px 12px;
   margin: 0;
   padding: 1em 0.85em 1.15em 0.85em;
 }
@@ -995,6 +1038,12 @@ body.skins-show #outer #main fieldset select {
   border: 1px solid rgba(184, 202, 217, 0.55);
 }
 
+#outer #header,
+#outer #greeting,
+#outer #header .primary {
+  overflow: visible;
+}
+
 #outer #header .menu,
 #outer #header .dropdown .menu,
 #outer #greeting .menu,
@@ -1002,6 +1051,18 @@ body.skins-show #outer #main fieldset select {
   background-color: rgba(8, 14, 24, 0.96);
   background-image: none;
   border: 1px solid rgba(184, 202, 217, 0.42);
+  overflow: visible;
+}
+
+#outer #header li.open ul.menu,
+#outer #greeting li.open ul.menu,
+#outer #header .dropdown.open ul.menu,
+#outer #greeting .dropdown.open ul.menu {
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 300;
+  margin-bottom: 0.45em;
 }
 
 #outer #header .dropdown .menu a,
