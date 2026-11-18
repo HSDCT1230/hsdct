@@ -336,16 +336,17 @@ a:focus {
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.4);
   border-radius: 6px;
-  margin: 0.22em 0;
-  padding: 0.45em 0.8em;
+  margin: 0.18em 0;
+  padding: 0.72em 0.9em;
   display: block;
   width: 100%;
   white-space: normal;
   word-wrap: break-word;
-  line-height: 1.55;
+  line-height: 1.75;
   box-sizing: border-box;
   text-align: left;
-  font-size: 0.92em;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 #header .dropdown .menu a:hover,
@@ -683,11 +684,17 @@ select option {
 
 #header .secondary,
 #header .secondary a,
-#header .menu a,
 #header .actions a,
 #greeting,
 #greeting a {
   color: #e8eef3;
+}
+
+#header ul.menu a,
+#header .dropdown ul.menu a,
+#greeting ul.menu a,
+#greeting .dropdown ul.menu a {
+  color: #f0f4f7;
 }
 
 #header .secondary a:hover,
@@ -1297,18 +1304,24 @@ body.skins-show #outer #main fieldset select {
 #outer #greeting .menu a {
   background-color: rgba(21, 37, 56, 0.9);
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.4);
-  padding: 0.45em 0.8em;
-  margin: 0.22em 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(184, 202, 217, 0.4);
+  padding-top: 0.72em;
+  padding-bottom: 0.72em;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  margin: 0.15em 0;
   white-space: normal;
   word-wrap: break-word;
-  line-height: 1.55;
+  line-height: 1.75;
   text-align: left;
   box-sizing: border-box;
   display: block;
   width: 100%;
-  font-size: 0.92em;
+  font-size: 1em;
   border-radius: 6px;
+  text-decoration: none;
 }
 
 #outer #header a.action,
@@ -2064,19 +2077,28 @@ body.skins-edit #outer #main li.error,
   box-sizing: border-box;
 }
 
+#outer #inner #header ul.menu a,
 #outer #inner #header ul.menu li a,
+#outer #inner #header li.dropdown ul.menu a,
 #outer #inner #header li.dropdown ul.menu li a,
+#outer #inner #header .primary li.dropdown ul.menu a,
 #outer #inner #header .primary li.dropdown ul.menu li a,
+#outer #inner #header ul.actions li.dropdown ul.menu a,
 #outer #inner #header ul.actions li.dropdown ul.menu li a,
+#outer #inner #greeting ul.menu a,
 #outer #inner #greeting ul.menu li a,
+#outer #inner #greeting li.dropdown ul.menu a,
 #outer #inner #greeting li.dropdown ul.menu li a {
   display: block;
   width: 100%;
-  padding: 0.5em 0.85em;
-  margin: 0.22em 0;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.9em;
+  padding-right: 0.9em;
+  margin: 0.15em 0;
   white-space: normal;
   word-wrap: break-word;
-  line-height: 1.55;
+  line-height: 1.75;
   text-align: left;
   box-sizing: border-box;
   font-size: 1em;
@@ -2086,4 +2108,13 @@ body.skins-edit #outer #main li.error,
   border-color: #5c789e;
   border-radius: 6px;
   color: #f0f4f7;
+  text-decoration: none;
+  height: auto;
+}
+
+#outer #inner #header ul.menu li,
+#outer #inner #greeting ul.menu li {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  line-height: normal;
 }
