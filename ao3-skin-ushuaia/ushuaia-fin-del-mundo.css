@@ -227,14 +227,25 @@ a:focus {
   box-sizing: border-box;
 }
 
-#header li.dropdown,
 #greeting li.dropdown,
-#header li.dropdown.open,
-#greeting li.dropdown.open {
+#header .actions li.dropdown,
+#header .secondary li.dropdown {
   position: relative;
   overflow: visible;
 }
 
+#header ul.primary > li.dropdown,
+#header .primary > li.dropdown,
+#header ul.menu.navigation.actions.primary > li.dropdown,
+#header ul.navigation.actions.primary > li.dropdown,
+#header ul.primary > li.dropdown.open,
+#header ul.menu.navigation.actions.primary > li.dropdown.open {
+  position: static;
+  overflow: visible;
+}
+
+#header .primary li.dropdown > ul.menu,
+#header ul.primary li.dropdown > ul.menu,
 #header li.dropdown > ul.menu,
 #header .dropdown ul.menu,
 #header #small_login ul.menu,
@@ -246,7 +257,7 @@ a:focus {
   left: 0;
   right: 0;
   min-width: 100%;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
@@ -270,10 +281,7 @@ a:focus {
 
 #header #small_login,
 #header li.user,
-#greeting li.user,
-#greeting li.dropdown,
-#header .actions li.dropdown,
-#header .secondary li.dropdown {
+#greeting li.user {
   position: relative;
   overflow: visible;
 }
@@ -2116,7 +2124,9 @@ body.skins-edit #outer #main li.error,
 }
 
 #outer #inner #header ul.navigation.actions.primary,
-#outer #inner #header ul.menu.navigation.actions.primary {
+#outer #inner #header ul.menu.navigation.actions.primary,
+#outer #inner #header ul.primary,
+#outer #inner #header .primary {
   position: relative;
   display: block;
   width: 100%;
@@ -2149,7 +2159,13 @@ body.skins-edit #outer #main li.error,
 }
 
 #outer #inner #greeting li.dropdown,
-#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown {
+#outer #inner #greeting li.dropdown.open,
+#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown,
+#outer #inner #header ul.navigation.actions.primary > li.dropdown,
+#outer #inner #header ul.primary > li.dropdown,
+#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown.open,
+#outer #inner #header ul.navigation.actions.primary > li.dropdown.open,
+#outer #inner #header ul.primary > li.dropdown.open {
   position: static;
 }
 
@@ -2159,6 +2175,15 @@ body.skins-edit #outer #main li.error,
   clear: both;
 }
 
+/* AO3 adds .open on touch; never shrink dropdown to trigger width */
+#outer #inner #header ul.primary li.dropdown,
+#outer #inner #header ul.primary li.dropdown.open {
+  position: static;
+}
+
+#outer #inner #header .primary li.dropdown > ul.menu,
+#outer #inner #header ul.primary li.dropdown > ul.menu,
+#outer #inner #header ul.navigation.actions.primary li.dropdown > ul.menu,
 #outer #inner #header li.dropdown > ul.menu,
 #outer #inner #greeting li.dropdown > ul.menu,
 #outer #inner #header #small_login ul.menu {
