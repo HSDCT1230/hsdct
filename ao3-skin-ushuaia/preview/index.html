@@ -10,8 +10,8 @@
       --ushuaia-bg-image: url("/assets/les-eclaireurs-bg.jpg");
     }
     @media (max-width: 640px) {
-      #inner.wrapper { margin: 0 3%; }
-      #main.works-show { padding: 1em 1.15em 1.5em 1.15em; }
+      #inner.wrapper { padding: 0 0.55em 2em 0.55em; }
+      #header { min-height: 5.5em; }
     }
     .preview-banner {
       background: var(--ushuaia-deep);
@@ -20,13 +20,20 @@
       padding: 0.45em;
       font-size: 0.85em;
       letter-spacing: 0.12em;
-      border-bottom: 1px solid var(--ushuaia-lighthouse);
     }
     .mock-ao3 { min-height: 100vh; }
+    .preview-feed-title {
+      color: #e8eef3;
+      text-align: center;
+      font-size: 0.9em;
+      letter-spacing: 0.15em;
+      margin: 0.5em 0 1em;
+      text-shadow: 0 1px 3px rgba(21, 37, 56, 0.9);
+    }
   </style>
 </head>
 <body class="logged-in">
-  <div class="preview-banner">本地预览 · 南极灯塔极简文艺</div>
+  <div class="preview-banner">卡片流 · 顶栏横幅 · 侧景固定海图</div>
   <div id="outer" class="wrapper mock-ao3">
     <div id="inner" class="wrapper">
       <header id="header" class="region">
@@ -44,8 +51,11 @@
         </nav>
       </header>
 
+      <p class="preview-feed-title">作品页（分卡）</p>
+
       <main id="main" class="works-show region">
-        <h2 class="heading">作品示例 · 红灯在雾海尽头</h2>
+        <h2 class="heading" style="color:#e8eef3;text-shadow:0 1px 3px rgba(21,37,56,0.85);margin:0 0 1em 0.25em;">红灯在雾海尽头</h2>
+
         <div class="work meta group">
           <h3 class="landmark heading">Metadata</h3>
           <dl class="meta">
@@ -55,30 +65,35 @@
           <ul class="tags commas">
             <li><a class="tag" href="#">南极</a></li>
             <li><a class="tag" href="#">灯塔</a></li>
-            <li><a class="tag" href="#">极简</a></li>
           </ul>
         </div>
 
         <div class="preface group">
           <h3 class="landmark heading">Summary</h3>
           <blockquote class="userstuff">
-            <p>风暴过去之后，海峡只剩下灰与一点红。皮肤把界面收成白与冷灰，只在边缘留住灯塔的颜色。</p>
+            <p>海图在两侧摊开，正文落在圆角卡片里——照片参与页眉与留白，而不是只垫底。</p>
           </blockquote>
         </div>
 
         <div id="chapters" class="userstuff">
           <h3 class="landmark heading">Chapter Text</h3>
-          <p>她不被脚步声惊动。冰山在远处缓慢转折，像一枚安静搁浅的字母；灯塔旋转的光环落在水面，碎成无法拼合的短句。</p>
-          <p>极简不是空，是把多余的框线、阴影、渐变都收走。正文用宋体系，行距略开，字距略松——像诗集里的版式，而不是信息流里的卡片。背景可以是你的南极灯塔摄影，也可以是水墨处理过的风景；字始终在近乎纯白的面板上，冷而清楚。</p>
-          <p>若你觉得酷一些，可以把面板再调白一点、把链接的蓝再压低；若红灯太亮，CSS 里有一组 `--ushuaia-lighthouse` 变量，改成更暗的锈红即可。</p>
+          <p>顶栏裁切云海，固定背景让浪潮留在水槽两侧；像 Tumblr 的窄栏，也像小红书的笔记卡片。</p>
+          <p>元数据、简介、正文分成三张卡片，层与层之间露出你的灯塔与雪山。字号与行距仍按中文长文习惯设置。</p>
         </div>
-
-        <ul class="actions">
-          <li><a href="#">Kudos</a></li>
-          <li><a href="#">Comments</a></li>
-          <li><input type="submit" value="Subscribe" /></li>
-        </ul>
       </main>
+
+      <p class="preview-feed-title">检索流（分条卡片）</p>
+
+      <ol class="work index group">
+        <li class="blurb work blurb group">
+          <h4 class="heading"><a href="#">另一篇 · 甲板上的灰光</a></h4>
+          <p class="userstuff">短摘要演示列表页：每条作品独立圆角卡片，悬浮时可强调灯塔红描边。</p>
+        </li>
+        <li class="blurb work blurb group">
+          <h4 class="heading"><a href="#">笔记体 · 世界尽头的气象局</a></h4>
+          <p class="userstuff">卡片间距统一，背景图在缝间连续可见。</p>
+        </li>
+      </ol>
 
       <footer id="footer" class="region">
         <p>Customize · Default · Revert skin</p>
