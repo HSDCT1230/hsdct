@@ -34,7 +34,7 @@
 
 1. 把 `les-eclaireurs-bg.jpg` 上传到 [Imgur](https://imgur.com/)（无需登录也可上传）。
 2. 在图片页点右键 **复制图片地址**，得到形如 `https://i.imgur.com/xxxxxxxx.jpg` 的链接。
-3. 在 CSS 里只改 **`#outer.wrapper`** 中的这一行：  
+3. 在 CSS 里改 **`body` / `body.logged-in`** 区块中的这一行：  
    `background-image: url("你的链接.jpg");`  
    **不要**写在 `:root` 里，**不要**再给 `#header` 加 `background-image`（顶栏用半透明色叠在海图上即可）。
 4. 重新 **Submit** / **Update**。
