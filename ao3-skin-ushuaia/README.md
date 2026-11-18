@@ -30,14 +30,18 @@
 **AO3 能用的外链**（经验证较稳）：`upload.wikimedia.org`、Imgur 直链（`i.imgur.com/xxxx.jpg`）、部分图床。  
 **常被拒绝**：`raw.githubusercontent.com`、`cdn.jsdelivr.net`（含 `@分支` 的地址）。
 
-默认 CSS 使用维基 Commons 红灯塔图；**换成你的那张照片**：
+默认 CSS 已使用你上传的灯塔照片直链：  
+`https://i.imgur.com/ARshGKAh.jpg`（相册页 [hfz9rOI](https://imgur.com/a/hfz9rOI) 不能写在 CSS 里，必须用 `i.imgur.com/…jpg`）。
 
-1. 把 `les-eclaireurs-bg.jpg` 上传到 [Imgur](https://imgur.com/)（无需登录也可上传）。
-2. 在图片页点右键 **复制图片地址**，得到形如 `https://i.imgur.com/xxxxxxxx.jpg` 的链接。
-3. 在 CSS 里改 **`body` / `body.logged-in`** 区块中的这一行：  
-   `background-image: url("你的链接.jpg");`  
-   **不要**写在 `:root` 里，**不要**再给 `#header` 加 `background-image`（顶栏用半透明色叠在海图上即可）。
-4. 重新 **Submit** / **Update**。
+若以后换图：
+
+1. 上传到 [Imgur](https://imgur.com/)，在单张图页 **复制图片地址**（形如 `https://i.imgur.com/xxxxxxxx.jpg`）。
+2. 只改 **`body` / `body.logged-in`** 里的  
+   `background-image: url("…");`  
+   **不要**写在 `:root` 里，**不要**再给 `#header` 加 `background-image`。
+3. **Update** 后在编辑器搜索 `background-image`，确认 AO3 没有删掉该行。
+
+备用（维基）：`https://upload.wikimedia.org/wikipedia/commons/3/3e/Faro_Les_Eclaireurs_Ushuaia.jpg`
 
 ## 配色说明（与照片一致）
 

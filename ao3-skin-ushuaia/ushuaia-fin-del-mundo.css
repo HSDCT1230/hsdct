@@ -31,7 +31,7 @@
   --ushuaia-shell-radius: 16px;
   --ushuaia-shell-shadow: 0 6px 18px rgba(8, 16, 28, 0.22);
   /* 背景：只能写在 #outer.wrapper 的 background-image（勿用 :root 变量）
-   * AO3 常拒绝 github / jsdelivr；自定义图请用 imgur 或维基直链 .jpg */
+   * AO3 常拒绝 github / jsdelivr；须用 i.imgur.com 直链 .jpg（勿用 imgur.com/a/ 相册页） */
 }
 
 /* ── 界面字体 ── */
@@ -125,7 +125,7 @@ html {
 body,
 body.logged-in {
   background-color: var(--ushuaia-abyss);
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Faro_Les_Eclaireurs_Ushuaia.jpg");
+  background-image: url("https://i.imgur.com/ARshGKAh.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -737,4 +737,104 @@ input[type="submit"] {
   min-height: 2.25em;
   padding: 0.45em 0.95em;
   letter-spacing: 0.04em;
+}
+
+/* ── 手机列表页：统一按钮 + 搜索框 + 标题（避免浅灰碎块）── */
+
+#main.works-index > h2,
+#main.works-index > h2.heading,
+#main.bookmarks-index > h2,
+#main.collections-index > h2,
+#main.works-index > .landmark {
+  font-size: 1.05em;
+  line-height: 1.55;
+  text-align: left;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0.03em;
+  margin-top: 0.35em;
+  margin-bottom: 0.85em;
+  padding-bottom: 0.45em;
+}
+
+#outer #main .actions a,
+#outer #main .actions button,
+#outer #main .actions input,
+#outer #main ul.actions a,
+#outer #main ol.actions a,
+#outer .filters .actions a,
+#outer .sort .actions a,
+#outer ol.pagination a,
+#outer .pagination a {
+  background: rgba(21, 37, 56, 0.84);
+  color: var(--ushuaia-frost);
+  border: 1px solid rgba(184, 202, 217, 0.52);
+  border-radius: 8px;
+  border-bottom: none;
+  box-shadow: none;
+  font-size: 0.9em;
+  padding: 0.4em 0.7em;
+  min-height: auto;
+}
+
+#outer #main .actions a.current,
+#outer ol.pagination .current,
+#outer .pagination .current,
+#outer .pagination a.current {
+  background: rgba(166, 75, 63, 0.75);
+  color: #ffffff;
+  border-color: var(--ushuaia-lighthouse-glow);
+}
+
+#header input,
+#header textarea,
+#header select,
+#search input,
+#search input[type="text"],
+#search input[type="search"],
+#small_search input {
+  background: rgba(8, 14, 24, 0.82);
+  color: var(--ushuaia-frost);
+  border: 1px solid rgba(184, 202, 217, 0.55);
+  border-radius: 8px;
+  min-height: 2em;
+}
+
+#search .text input,
+#search .text {
+  background: transparent;
+}
+
+#search .button,
+#header #search .button,
+#small_search .button {
+  background: rgba(21, 37, 56, 0.84);
+  color: var(--ushuaia-frost);
+  border: 1px solid rgba(184, 202, 217, 0.52);
+  border-radius: 8px;
+}
+
+li.blurb h4,
+li.blurb h4.heading,
+li.blurb h4 a,
+.blurb .heading a {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 1em;
+  line-height: 1.55;
+  color: var(--ushuaia-link);
+  border-bottom-color: rgba(168, 204, 224, 0.35);
+}
+
+li.blurb .datetime,
+li.blurb .stats,
+li.blurb dl.meta,
+li.blurb .tags {
+  font-size: 0.88em;
+  line-height: 1.55;
+  color: var(--ushuaia-ink-muted);
+}
+
+.flash + #main,
+.caution + #main,
+.notice + #main {
+  padding-top: 1em;
 }
