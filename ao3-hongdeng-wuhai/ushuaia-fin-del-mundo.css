@@ -4445,3 +4445,165 @@ body.javascript #outer #inner #main form.filters,
   padding-bottom: 0;
   padding-left: 0;
 }
+
+/*
+ * White frames come back from AO3: .actions a:link border #bbb,
+ * .listbox box-shadow 0 0 0 1px #fff, autocomplete dropdown border #eee,
+ * and .ui-sortable li border #ddd. Menu rows stay filled blocks with no
+ * stroke. Fandom and Character tag bars stay inside the filter border.
+ */
+html body #outer #header ul.menu,
+html body #outer #header ul.menu li,
+html body #outer #header ul.dropdown-menu,
+html body #outer #header ul.dropdown-menu li,
+html body #outer #greeting ul.menu,
+html body #outer #greeting ul.menu li,
+html body #outer #greeting ul.dropdown-menu,
+html body #outer #greeting ul.dropdown-menu li,
+html body #outer #header li[id^="medium_"],
+html body #outer #header ul.menu a,
+html body #outer #header ul.menu a:link,
+html body #outer #header ul.menu a:visited,
+html body #outer #header ul.menu a:hover,
+html body #outer #header ul.menu a:focus,
+html body #outer #header ul.dropdown-menu a,
+html body #outer #header ul.dropdown-menu a:link,
+html body #outer #header ul.dropdown-menu a:visited,
+html body #outer #header ul.dropdown-menu a:hover,
+html body #outer #header ul.dropdown-menu a:focus,
+html body #outer #greeting ul.menu a,
+html body #outer #greeting ul.menu a:link,
+html body #outer #greeting ul.menu a:visited,
+html body #outer #greeting ul.menu a:hover,
+html body #outer #greeting ul.menu a:focus,
+html body #outer #greeting ul.dropdown-menu a,
+html body #outer #greeting ul.dropdown-menu a:link,
+html body #outer #greeting ul.dropdown-menu a:visited,
+html body #outer #header li[id^="medium_"] a,
+html body #outer #header li[id^="medium_"] a:link,
+html body #outer #header li[id^="medium_"] a:visited,
+html body #outer #header li[id^="medium_"] a:hover,
+html body #outer #header li[id^="medium_"] a:focus {
+  background-color: #152538;
+  background-image: none;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  box-shadow: none;
+  color: #f0f4f7;
+  box-sizing: border-box;
+}
+
+html body #outer #header ul.menu,
+html body #outer #greeting ul.menu,
+html body #outer #header ul.dropdown-menu,
+html body #outer #greeting ul.dropdown-menu {
+  background-color: #121c2f;
+}
+
+html body #outer #header ul.menu a:hover,
+html body #outer #header ul.menu a:focus,
+html body #outer #header ul.dropdown-menu a:hover,
+html body #outer #header ul.dropdown-menu a:focus,
+html body #outer #greeting ul.menu a:hover,
+html body #outer #greeting ul.menu a:focus,
+html body #outer #header li[id^="medium_"] a:hover,
+html body #outer #header li[id^="medium_"] a:focus {
+  background-color: #6b2a26;
+  background-image: none;
+  color: #ffffff;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  box-shadow: none;
+}
+
+html body #outer .listbox,
+html body #outer li.listbox,
+html body #outer .listbox .index,
+html body #outer fieldset,
+html body #outer .secondary,
+html body #outer .toggled form,
+html body #outer .dynamic form,
+html body #outer .autocomplete div.dropdown ul,
+html body #outer .ui-sortable li,
+html body #outer .autocomplete li.added,
+html body #outer #main form.filters input,
+html body #outer #main form.filters select,
+html body #outer #main form.filters textarea,
+html body #outer #main form.filters dd.fandom,
+html body #outer #main form.filters dd.character,
+html body #outer #main form.filters dd.relationship,
+html body #outer #main form.filters dd.freeform,
+html body #outer #main form.filters dt.fandom,
+html body #outer #main form.filters dt.character {
+  box-shadow: none;
+  background-image: none;
+}
+
+html body #outer .listbox,
+html body #outer li.listbox,
+html body #outer fieldset,
+html body #outer .secondary,
+html body #outer .autocomplete div.dropdown ul {
+  border-color: #5c789e;
+  background-color: #152538;
+}
+
+html body #outer .ui-sortable li,
+html body #outer .autocomplete li.added,
+html body #outer .post .meta dd ul li.added {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  background-color: #152538;
+  background-image: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+}
+
+html body #outer #inner #main form.filters fieldset {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+html body #outer #inner #main form.filters dd.fandom,
+html body #outer #inner #main form.filters dd.character,
+html body #outer #inner #main form.filters dd.relationship,
+html body #outer #inner #main form.filters dd.freeform,
+html body #outer #inner #main form.filters dd.tags,
+html body #outer #inner #main form.filters dd.fandom input,
+html body #outer #inner #main form.filters dd.character input,
+html body #outer #inner #main form.filters dd.relationship input,
+html body #outer #inner #main form.filters dd.freeform input,
+html body #outer #inner #main form.filters dd.tags input,
+html body #outer #inner #main form.filters .autocomplete,
+html body #outer #inner #main form.filters .autocomplete input,
+html body #outer #inner #main form.filters .autocomplete li,
+html body #outer #inner #main form.filters .autocomplete li.added,
+html body #outer #inner #main form.filters .ui-sortable,
+html body #outer #inner #main form.filters .ui-sortable li,
+html body #outer #main form .autocomplete input,
+html body #outer #main form .autocomplete .dropdown,
+html body #outer #main form .autocomplete .dropdown ul,
+html body #outer #main form .autocomplete .dropdown ul li {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  float: none;
+  box-shadow: none;
+}
