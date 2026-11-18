@@ -1440,12 +1440,27 @@ body.skins-show #outer #main fieldset select {
 }
 
 #outer #main input:focus,
-#outer #main textarea:focus,
 #outer #main select:focus,
 #outer #header input:focus,
 #outer #search input:focus {
   border-color: #d47a6e;
   outline: none;
+}
+
+#outer #main textarea,
+#outer #main textarea:focus,
+#outer #main textarea:focus-visible {
+  background-color: rgba(8, 14, 24, 0.98);
+  color: #dce8f0;
+  -webkit-text-fill-color: #dce8f0;
+  caret-color: #f0f4f7;
+}
+
+#outer #main textarea:focus,
+#outer #main textarea:focus-visible {
+  border-color: #d47a6e;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 #outer #main h2.heading a:hover,
@@ -1529,11 +1544,38 @@ body.skins-show #outer #main textarea,
 #outer #main textarea#content,
 #outer #main textarea.large {
   background-color: rgba(8, 14, 24, 0.96);
-  color: #eef2f6;
+  color: #dce8f0;
+  -webkit-text-fill-color: #dce8f0;
+  caret-color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.58);
   padding: 0.75em 0.85em;
   line-height: 1.65;
   box-sizing: border-box;
+}
+
+body.skins-edit #outer #inner #main fieldset#css textarea,
+body.skins-edit #outer #inner #main fieldset textarea,
+body.skins-new #outer #inner #main fieldset textarea,
+body.skins-show #outer #inner #main fieldset textarea,
+body.controller-skins #outer #inner #main fieldset#css textarea,
+#outer #inner #main fieldset#css textarea:focus,
+#outer #inner #main fieldset#css textarea:focus-visible,
+body.skins-edit #outer #main textarea:focus,
+body.skins-edit #outer #main textarea:focus-visible,
+body.skins-new #outer #main textarea:focus,
+body.skins-show #outer #main textarea:focus,
+#outer #main fieldset#css textarea:focus,
+#outer #main fieldset#css textarea:focus-visible,
+#outer #main textarea#content:focus,
+#outer #main textarea#content:focus-visible,
+#outer #main textarea.large:focus,
+#outer #main textarea.large:focus-visible {
+  background-color: #0c1520;
+  color: #dce8f0;
+  -webkit-text-fill-color: #dce8f0;
+  border-color: #d47a6e;
+  outline: none;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 body.skins-edit #outer #main fieldset input,
