@@ -21,7 +21,10 @@ body {
 #outer,
 #outer.wrapper {
   background-color: transparent;
-  background-image: none;
+  background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center 32%;
+  background-size: cover;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
