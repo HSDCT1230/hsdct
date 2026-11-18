@@ -242,31 +242,13 @@ a:focus {
   position: absolute;
   top: 100%;
   left: 0;
-  right: auto;
-  min-width: 12em;
-  width: 16em;
+  right: 0;
+  min-width: 100%;
+  width: auto;
   max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
   box-sizing: border-box;
-}
-
-#header .primary li.dropdown > ul.menu {
-  left: 0;
-  right: 0;
-  min-width: 0;
-  width: auto;
-  max-width: 100%;
-}
-
-#greeting li.dropdown > ul.menu,
-#greeting li.dropdown.open > ul.menu,
-#greeting li.open > ul.menu {
-  left: auto;
-  right: 0;
-  min-width: 12em;
-  width: 15em;
-  max-width: 100%;
 }
 
 #header .dropdown:hover ul.menu,
@@ -288,20 +270,10 @@ a:focus {
 #header li.user,
 #greeting li.user,
 #greeting li.dropdown,
-#header .primary li.dropdown,
 #header .actions li.dropdown,
 #header .secondary li.dropdown {
   position: relative;
   overflow: visible;
-}
-
-#greeting li.open > ul.menu,
-#greeting li.dropdown.open > ul.menu,
-#header li.user.open ul.menu,
-#header li.user ul.menu,
-#header .actions li.user ul.menu {
-  right: 0;
-  left: auto;
 }
 
 #header .actions,
@@ -1217,41 +1189,18 @@ body.skins-show #outer #main fieldset select {
 #outer #header .dropdown ul.menu,
 #outer #header #small_login ul.menu,
 #outer #header li.user ul.menu,
+#outer #greeting li.dropdown > ul.menu,
 #outer #header .actions li.dropdown ul.menu {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 12em;
-  width: 16em;
+  right: 0;
+  min-width: 100%;
+  width: auto;
   max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
   box-sizing: border-box;
-}
-
-#outer #header .primary li.dropdown > ul.menu {
-  left: 0;
-  right: 0;
-  min-width: 0;
-  width: auto;
-  max-width: 100%;
-}
-
-#outer #greeting li.dropdown > ul.menu,
-#outer #greeting li.dropdown.open > ul.menu {
-  left: 0;
-  right: 0;
-  width: 14em;
-  min-width: 11em;
-  max-width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#outer #greeting li.open ul.menu,
-#outer #greeting li.dropdown.open ul.menu {
-  right: 0;
-  left: auto;
 }
 
 #outer #header li.dropdown.open ul.menu,
@@ -1273,18 +1222,11 @@ body.skins-show #outer #main fieldset select {
 #outer #header #small_login ul.menu,
 #outer #header li.user ul.menu,
 #outer #header .actions li.dropdown ul.menu {
-  position: absolute;
-  top: 100%;
   left: 0;
-  min-width: 16em;
-  width: 18em;
-  z-index: 500;
-}
-
-#outer #header li.user ul.menu,
-#outer #header li.user.open ul.menu {
   right: 0;
-  left: auto;
+  min-width: 100%;
+  width: auto;
+  max-width: 100%;
 }
 
 #outer #main form .autocomplete,
@@ -1368,7 +1310,7 @@ body.skins-show #outer #main fieldset select {
   padding-bottom: 0.72em;
   padding-left: 0.9em;
   padding-right: 0.9em;
-  margin: 0.15em 0;
+  margin: 0;
   white-space: normal;
   word-wrap: break-word;
   line-height: 1.75;
@@ -2143,136 +2085,19 @@ body.skins-edit #outer #main li.error,
   border-radius: 6px;
 }
 
-#outer #inner #header li.dropdown > ul.menu,
-#outer #inner #header .primary li.dropdown > ul.menu,
-#outer #inner #header ul.actions li.dropdown > ul.menu,
-#outer #inner #greeting li.dropdown > ul.menu,
-#outer #inner #header #small_login ul.menu,
-#outer #inner #header li.user ul.menu {
-  min-width: 0;
-  width: 100%;
-  max-width: 100%;
-  padding: 0.45em 0.5em 0.55em 0.5em;
-  box-sizing: border-box;
-  display: block;
-  list-style: none;
-  height: auto;
-}
-
-#outer #inner #greeting li.dropdown > ul.menu,
-#outer #inner #header li.user ul.menu {
-  min-width: 12em;
-  width: 100%;
-  max-width: 100%;
-}
-
-#outer #inner #header li.dropdown ul.menu li,
-#outer #inner #greeting li.dropdown ul.menu li {
-  display: block;
-  width: 100%;
-  float: none;
-  clear: both;
-  margin: 0 0 0.35em 0;
-  padding: 0;
-  box-sizing: border-box;
-  position: static;
-  height: auto;
-  min-height: 0;
-  overflow: visible;
-}
-
-#outer #inner #header li.dropdown ul.menu a,
-#outer #inner #header li.dropdown ul.menu li a,
-#outer #inner #header .primary li.dropdown ul.menu a,
-#outer #inner #header .primary li.dropdown ul.menu li a,
-#outer #inner #header ul.actions li.dropdown ul.menu a,
-#outer #inner #header ul.actions li.dropdown ul.menu li a,
-#outer #inner #greeting li.dropdown ul.menu a,
-#outer #inner #greeting li.dropdown ul.menu li a,
-#outer #inner #header #small_login ul.menu a,
-#outer #inner #header li.user ul.menu a {
-  display: block;
-  width: 100%;
-  padding: 0.65em 0.85em;
-  margin: 0;
-  white-space: normal;
-  word-wrap: break-word;
-  line-height: 1.75;
-  text-align: left;
-  box-sizing: border-box;
-  font-size: 16px;
-  background-color: #152538;
-  border: 1px solid #5c789e;
-  border-radius: 6px;
-  color: #f0f4f7;
-  text-decoration: none;
-  height: auto;
-  min-height: 2.6em;
-  position: static;
-  float: none;
-  vertical-align: baseline;
-}
-
-#outer #inner #header li.dropdown ul.menu li:last-child a,
-#outer #inner #greeting li.dropdown ul.menu li:last-child a {
-  margin-bottom: 0;
-}
-
-#outer #inner #header ul.menu.navigation.actions.primary > li,
-#outer #inner #header ul.navigation.actions.primary > li {
-  display: inline-block;
-  width: auto;
-  float: none;
-  margin: 0.12em 0.1em;
-  vertical-align: top;
-}
-
 /*
- * Mobile-friendly header: greeting row + primary capsule + dropdown panels.
- * AO3 uses ul.menu for both the primary bar AND dropdown panels; keep them separate.
+ * Header dropdown panels — single source of truth (AO3 mobile + desktop).
+ * Only li.dropdown > ul.menu are panels; ul.menu.navigation.primary is the nav bar.
  */
-#outer #inner #header ul.navigation.actions.primary,
-#outer #inner #header ul.menu.navigation.actions.primary {
+#outer #inner #header {
   position: relative;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  left: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0.45em;
-  padding-right: 0.45em;
-  box-sizing: border-box;
   overflow: visible;
-}
-
-#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown {
-  position: static;
-}
-
-#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown > ul.menu,
-#outer #inner #header ul.navigation.actions.primary > li.dropdown > ul.menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  width: auto;
-  min-width: 100%;
-  max-width: 100%;
-  margin-top: 0.15em;
-  z-index: 560;
-}
-
-#outer #inner #header ul.menu.navigation.actions.primary > li:not(.dropdown) > a,
-#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown > a {
-  display: inline-block;
-  width: auto;
-  float: none;
-  white-space: nowrap;
+  box-sizing: border-box;
 }
 
 #outer #inner #greeting,
 #outer #inner #header #greeting {
+  position: relative;
   display: block;
   width: 100%;
   max-width: 100%;
@@ -2282,55 +2107,71 @@ body.skins-edit #outer #main li.error,
   overflow: visible;
   box-sizing: border-box;
   margin: 0.35em 0 0.4em 0;
+  padding: 0 0.45em;
+  list-style: none;
+}
+
+#outer #inner #header ul.navigation.actions.primary,
+#outer #inner #header ul.menu.navigation.actions.primary {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  margin: 0.45em 0 0.35em 0;
+  padding: 0.4em 0.45em 0.45em 0.45em;
+  box-sizing: border-box;
+  overflow: visible;
+  list-style: none;
 }
 
 #outer #inner #greeting > li,
-#outer #inner #greeting.user > li,
-#outer #inner #header #greeting > li {
+#outer #inner #header ul.menu.navigation.actions.primary > li {
   display: inline-block;
   float: none;
   width: auto;
-  position: relative;
   vertical-align: middle;
   margin: 0.1em 0.08em;
 }
 
-#outer #inner #greeting li.dropdown,
-#outer #inner #greeting li.open {
-  position: relative;
-}
-
-#outer #inner #greeting li.dropdown > a,
 #outer #inner #greeting > li > a,
-#outer #inner #greeting p.icon a {
+#outer #inner #greeting li.dropdown > a,
+#outer #inner #greeting p.icon a,
+#outer #inner #header ul.menu.navigation.actions.primary > li > a {
   display: inline-block;
   width: auto;
   float: none;
   white-space: nowrap;
 }
 
-#outer #inner #greeting li.dropdown > ul.menu {
+#outer #inner #greeting li.dropdown,
+#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown {
+  position: static;
+}
+
+#outer #inner #header li.dropdown > ul.menu,
+#outer #inner #greeting li.dropdown > ul.menu,
+#outer #inner #header #small_login ul.menu {
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  width: 14em;
-  min-width: 11em;
-  max-width: 96%;
-  margin-top: 0.15em;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 620;
+  width: auto;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0.2em 0 0 0;
+  padding: 0.45em 0.5em 0.55em 0.5em;
   box-sizing: border-box;
-}
-
-#outer #inner #header .primary li.dropdown > ul.menu,
-#outer #inner #header li.dropdown > ul.menu {
+  z-index: 600;
   display: none;
-}
-
-#outer #inner #greeting li.dropdown > ul.menu {
-  display: none;
+  float: none;
+  list-style: none;
+  height: auto;
+  overflow: visible;
+  background-color: #080e18;
+  background-image: none;
+  border: 1px solid rgba(184, 202, 217, 0.48);
+  border-radius: 8px;
 }
 
 #outer #inner #header li.dropdown:hover > ul.menu,
@@ -2338,8 +2179,68 @@ body.skins-edit #outer #main li.error,
 #outer #inner #header li.open > ul.menu,
 #outer #inner #greeting li.dropdown:hover > ul.menu,
 #outer #inner #greeting li.dropdown.open > ul.menu,
-#outer #inner #greeting li.open > ul.menu {
+#outer #inner #greeting li.open > ul.menu,
+#outer #inner #header #small_login:hover ul.menu,
+#outer #inner #header #small_login.open ul.menu {
   display: block;
+}
+
+#outer #inner #header li.dropdown ul.menu li,
+#outer #inner #greeting li.dropdown ul.menu li {
+  display: block;
+  width: 100%;
+  float: none;
+  clear: both;
+  margin: 0 0 0.4em 0;
+  padding: 0;
+  position: static;
+  height: auto;
+  background: transparent;
+  background-image: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+#outer #inner #header li.dropdown ul.menu li:last-child,
+#outer #inner #greeting li.dropdown ul.menu li:last-child {
+  margin-bottom: 0;
+}
+
+#outer #inner #header li.dropdown ul.menu a,
+#outer #inner #header li.dropdown ul.menu li a,
+#outer #inner #greeting li.dropdown ul.menu a,
+#outer #inner #greeting li.dropdown ul.menu li a,
+#outer #inner #header #small_login ul.menu a {
+  display: block;
+  width: 100%;
+  float: none;
+  position: static;
+  margin: 0;
+  padding: 0.7em 0.85em;
+  line-height: 1.6;
+  font-size: 15px;
+  min-height: 2.75em;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: left;
+  background-color: #152538;
+  background-image: none;
+  border: 1px solid #5c789e;
+  border-radius: 6px;
+  color: #f0f4f7;
+  text-decoration: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#outer #inner #header li.dropdown ul.menu a:hover,
+#outer #inner #header li.dropdown ul.menu a:focus,
+#outer #inner #greeting li.dropdown ul.menu a:hover,
+#outer #inner #greeting li.dropdown ul.menu a:focus {
+  background-color: rgba(166, 75, 63, 0.58);
+  color: #ffffff;
+  border-color: #d47a6e;
 }
 
 /* List/search pages: page heading above work titles; blurbs stay capped below h4. */
