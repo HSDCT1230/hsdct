@@ -2726,6 +2726,177 @@ body.skins-edit #outer #main li.error,
   color: #f0f4f7;
 }
 
+/*
+ * Header rows: title, then icon + Hi / Post / Log Out, then Fandoms.
+ * AO3 floats the logo left, the greeting right, and the icon right, which
+ * piles those controls onto the primary bar. Submenu rows keep their box
+ * (padding, width, background) but drop the extra drawn edges.
+ */
+#outer #header h1.heading,
+#outer #header .heading {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+#outer #header #greeting {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 0.35em 0 0.2em 0;
+  padding: 0;
+}
+
+#outer #header #greeting p.icon,
+#outer #header #greeting .icon {
+  float: none;
+  clear: none;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 0.1em 0.2em;
+  padding: 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+#outer #header #greeting ul.user,
+#outer #header #greeting ul.user.navigation.actions {
+  display: inline;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#outer #header #greeting ul.user > li,
+#outer #header #greeting ul.user.navigation.actions > li {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  max-width: 100%;
+  margin: 0.12em 0.15em;
+  vertical-align: middle;
+  position: static;
+}
+
+#outer #header ul.primary,
+#outer #header ul.primary.navigation.actions {
+  clear: both;
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.4em;
+  text-align: center;
+}
+
+#outer #header ul.primary > li,
+#outer #header ul.primary.navigation.actions > li,
+#outer #header li.search {
+  display: inline-block;
+  float: none;
+  clear: none;
+  width: auto;
+  vertical-align: middle;
+}
+
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu > li,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu.dropdown-menu > li,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu > li,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu > li,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu.dropdown-menu > li,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu > li,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"],
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu li[id^="medium_"] {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:hover,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu a:focus,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.dropdown-menu a:visited,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:link,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.menu a:visited,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:link,
+#outer #header #greeting ul.user.navigation.actions li.dropdown > ul.dropdown-menu a:visited,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:link,
+#outer #header ul.primary.navigation.actions li.dropdown > ul.menu li[id^="medium_"] > a:visited,
+#outer #header ul.menu a,
+#outer #header ul.menu a:link,
+#outer #header ul.menu a:visited,
+#outer #greeting ul.menu a,
+#outer #greeting ul.menu a:link,
+#outer #greeting ul.menu a:visited {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  padding: 0.65em 0.85em;
+  box-sizing: border-box;
+}
+
+#outer #header #search input.text,
+#outer #header #search input[type="text"],
+#outer #header form.search input[type="text"],
+#outer #search input.text,
+#outer #search input[type="text"],
+#outer #main form.search input[type="text"],
+#outer #main #search input[type="text"] {
+  background-color: #6b2a26;
+  background-image: none;
+  color: #f8ecea;
+  border: 1px solid #d47a6e;
+}
+
+#outer #header #search input.button,
+#outer #header #search input[type="submit"],
+#outer #header #search .button,
+#outer #search input[type="submit"],
+#outer #search .button,
+#outer #main form.search input[type="submit"],
+#outer #main #search input[type="submit"] {
+  background-color: #8f3d36;
+  background-image: none;
+  color: #ffffff;
+  border: 1px solid #e08a80;
+}
+
+#outer #header #search input[type="text"]:focus,
+#outer #search input[type="text"]:focus,
+#outer #main #search input[type="text"]:focus {
+  background-color: #7a322c;
+  border-color: #f0b2a8;
+  color: #ffffff;
+}
+
 /* List/search pages: page heading above work titles; blurbs stay capped below h4. */
 #outer #main.works-index > h2,
 #outer #main.works-index > h2.heading,
