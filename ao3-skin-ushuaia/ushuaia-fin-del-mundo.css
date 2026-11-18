@@ -112,24 +112,64 @@ a:focus {
   border-bottom-color: var(--ushuaia-lighthouse);
 }
 
-/* ── 全页海图（侧缘连续）── */
+/* ── 全页海图 + 防止手机横向灰边 ── */
+/* 保存后请在「编辑皮肤」里确认下面 url 还在；若被 AO3 删掉只剩纯色，请换 Imgur 直链 */
 
-#outer.wrapper {
+html {
+  background-color: var(--ushuaia-abyss);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body,
+body.logged-in {
   background-color: var(--ushuaia-abyss);
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Faro_Les_Eclaireurs_Ushuaia.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
+  width: 100%;
+  max-width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
+}
+
+#outer.wrapper {
+  background-color: transparent;
+  background-image: none;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 #inner.wrapper {
   margin: 0 auto;
   max-width: 40em;
-  padding: 0 0.85em 2em 0.85em;
+  width: 100%;
+  padding: 0 0.65em 1.75em 0.65em;
   background: transparent;
   border: none;
   box-shadow: none;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#header,
+#main,
+#footer,
+#dashboard,
+.flash,
+ol.work.index,
+.listbox {
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* ── 顶栏：画幅上缘（与 #main 拼接）── */
@@ -167,9 +207,10 @@ a:focus {
 #header ul.primary a {
   border: 1px solid rgba(184, 202, 217, 0.4);
   border-radius: 999px;
-  margin: 0.12em 0.15em;
-  padding: 0.3em 0.75em;
+  margin: 0.08em 0.1em;
+  padding: 0.25em 0.55em;
   box-shadow: none;
+  font-size: 0.92em;
 }
 
 #header .actions a,
