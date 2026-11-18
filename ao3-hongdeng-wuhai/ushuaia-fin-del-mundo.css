@@ -4315,3 +4315,64 @@ html body #outer.wrapper header#header.region > nav#greeting > ul.user.navigatio
   color: #ffffff;
   text-shadow: none;
 }
+
+/*
+ * Filter tag rows (Work Tags → Fandom, and the rows under Characters)
+ * were stretched with the form's negative side margins, so they crossed
+ * the inner border on both ends. Keep the form inside that border.
+ * The rows stay full width of the fieldset's padding box.
+ */
+#outer #inner #main form.filters,
+#outer #inner #main form#work-filters.filters,
+body.javascript #outer #inner #main form.filters,
+#outer.filtering #inner #main form.filters {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+#outer #inner #main form.filters fieldset,
+#outer #inner #main form#work-filters.filters fieldset {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 0.75em;
+  padding-right: 0.75em;
+  padding-bottom: 0.75em;
+  padding-left: 0.75em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5c789e;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#outer #inner #main form.filters dt,
+#outer #inner #main form.filters dd,
+#outer #inner #main form.filters li,
+#outer #inner #main form.filters label,
+#outer #inner #main form.filters dt.filter-toggle,
+#outer #inner #main form.filters dt.fandom,
+#outer #inner #main form.filters dt.character,
+#outer #inner #main form.filters dd.fandom,
+#outer #inner #main form.filters dd.character,
+#outer #inner #main form.filters dd.tags li,
+#outer #inner #main form.filters dd.tags label {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  float: none;
+  position: static;
+}
