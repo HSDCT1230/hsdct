@@ -472,15 +472,17 @@ select option {
 }
 
 legend {
-  color: #0f1e30;
-  background-color: #d8e2ea;
-  border: 1px solid #5c7894;
+  color: #f0f4f7;
+  background-color: rgba(8, 14, 24, 0.9);
+  border: 1px solid rgba(184, 202, 217, 0.48);
   padding: 0.12em 0.55em;
   border-radius: 6px;
 }
 
 fieldset {
-  border: 1px solid rgba(184, 202, 217, 0.48);
+  background-color: rgba(21, 37, 56, 0.82);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.4);
   border-radius: 8px;
 }
 
@@ -975,8 +977,10 @@ body.skins-show #outer #main fieldset select {
 #outer #main .listbox .index,
 #outer #main .listbox .index ol,
 #outer #main .listbox .index ul {
-  background-color: rgba(21, 37, 56, 0.72);
+  background-color: rgba(21, 37, 56, 0.82);
   color: #e8eef3;
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  border-radius: 8px;
 }
 
 #outer #main .alphabet a,
