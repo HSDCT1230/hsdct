@@ -1,6 +1,6 @@
 # AO3 站点皮肤 · 南极灯塔 · 极简文艺
 
-**半透明画幅 + 浅色字**。正文写法对齐一份已在 AO3 生效的皮肤：规则挂在 `#workskin` 上，字体栈为「微软雅黑、苹方、Noto Sans SC、sans-serif」，行距 2、段距 1.5em。海图写在 `html` 和 `body` 上，`#outer` / `#inner` 保持透明，避免被默认白底挡住。
+**半透明画幅 + 浅色字**。正文用 **站点皮肤** 选择器 **`.userstuff` / `#chapters .userstuff`**（不要用 `#workskin`，那是**作品皮肤**专用，写进站点皮肤会报 *no rules for #workskin h3*）。字体名须**全小写**，否则 `font-family` 会被整段删掉：`"microsoft yahei", "pingfang sc", "noto sans sc", sans-serif`。海图画在 `#outer` 上。
 
 ## 文件
 

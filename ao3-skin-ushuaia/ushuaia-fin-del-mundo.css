@@ -5,7 +5,7 @@ html {
 body {
   background-color: transparent;
   color: #e8eef3;
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 16px;
   line-height: 1.75;
 }
@@ -41,7 +41,7 @@ h4,
 h5,
 h6,
 .heading {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-weight: 400;
   line-height: 1.55;
   word-break: normal;
@@ -156,28 +156,32 @@ a:focus {
   line-height: 1.75;
 }
 
-#workskin {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff,
+#chapters .userstuff,
+div.userstuff {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1.15em;
   line-height: 2;
   color: #eef2f6;
   letter-spacing: 0.05em;
 }
 
-#workskin p {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff p,
+#chapters .userstuff p {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1em;
   line-height: 2;
   margin-top: 0;
   margin-bottom: 1.5em;
   text-align: justify;
   letter-spacing: 0.05em;
-  word-break: break-word;
+  word-wrap: break-word;
   color: #eef2f6;
 }
 
-#workskin h1 {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff h1,
+#chapters .userstuff h1 {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1.6em;
   line-height: 1.6;
   text-align: center;
@@ -186,8 +190,9 @@ a:focus {
   color: #f0f4f7;
 }
 
-#workskin h2 {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff h2,
+#chapters .userstuff h2 {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1.35em;
   line-height: 1.6;
   margin-top: 1.4em;
@@ -197,8 +202,9 @@ a:focus {
   color: #f0f4f7;
 }
 
-#workskin h3 {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff h3,
+#chapters .userstuff h3 {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1.2em;
   line-height: 1.6;
   margin-top: 1.2em;
@@ -206,18 +212,22 @@ a:focus {
   color: #f0f4f7;
 }
 
-#workskin h4,
-#workskin h5,
-#workskin h6 {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff h4,
+.userstuff h5,
+.userstuff h6,
+#chapters .userstuff h4,
+#chapters .userstuff h5,
+#chapters .userstuff h6 {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   line-height: 1.6;
   margin-top: 1em;
   margin-bottom: 0.5em;
   color: #f0f4f7;
 }
 
-#workskin blockquote {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+.userstuff blockquote,
+#chapters .userstuff blockquote {
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   margin: 1em 0 1em 0;
   padding: 0.5em 0 0.5em 1em;
   border-left: 3px solid #a64b3f;
@@ -225,14 +235,16 @@ a:focus {
   background-color: rgba(255, 255, 255, 0.06);
 }
 
-#workskin a,
-#workskin a:link,
-#workskin a:visited {
+.userstuff a,
+.userstuff a:link,
+.userstuff a:visited,
+#chapters .userstuff a {
   color: #a8cce0;
   border-bottom: 1px solid rgba(168, 204, 224, 0.45);
 }
 
-#workskin hr {
+.userstuff hr,
+#chapters .userstuff hr {
   border: none;
   border-top: 1px solid rgba(184, 202, 217, 0.45);
   margin: 1.5em auto;
@@ -242,7 +254,7 @@ a:focus {
 #main.works-show > h2,
 #main.works-show > h2.heading,
 h2.title {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   color: #f0f4f7;
   text-align: center;
   font-size: 1.35em;
@@ -258,7 +270,7 @@ h2.title {
 #main.works-index > h2.heading,
 #main.bookmarks-index > h2,
 #main.collections-index > h2 {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1.05em;
   line-height: 1.55;
   text-align: left;
@@ -271,7 +283,7 @@ li.blurb h4,
 li.blurb h4 a,
 .blurb .heading,
 .blurb .heading a {
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1em;
   line-height: 1.55;
   color: #a8cce0;
@@ -312,7 +324,7 @@ input[type="submit"] {
   border: 1px solid rgba(184, 202, 217, 0.52);
   border-radius: 8px;
   box-shadow: none;
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 0.9em;
   padding: 0.4em 0.7em;
 }
@@ -331,7 +343,7 @@ select {
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.55);
   border-radius: 8px;
-  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-family: "microsoft yahei", "pingfang sc", "noto sans sc", sans-serif;
   font-size: 1em;
   line-height: 1.75;
 }
