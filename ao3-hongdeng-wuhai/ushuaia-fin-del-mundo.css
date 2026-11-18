@@ -235,8 +235,6 @@ a:focus {
 
 #header li.dropdown > ul.menu,
 #header .dropdown ul.menu,
-#greeting li.dropdown ul.menu,
-#greeting .dropdown ul.menu,
 #header #small_login ul.menu,
 #header li.user ul.menu,
 #header .actions li.dropdown ul.menu,
@@ -245,8 +243,8 @@ a:focus {
   top: 100%;
   left: 0;
   right: auto;
-  min-width: 0;
-  width: 100%;
+  min-width: 12em;
+  width: 16em;
   max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
@@ -254,27 +252,30 @@ a:focus {
 }
 
 #header .primary li.dropdown > ul.menu {
+  left: 0;
+  right: 0;
   min-width: 0;
-  width: 100%;
+  width: auto;
   max-width: 100%;
 }
 
-#greeting li.dropdown ul.menu,
-#greeting .dropdown ul.menu,
-#greeting li.open ul.menu,
-#greeting li.dropdown.open ul.menu {
+#greeting li.dropdown > ul.menu,
+#greeting li.dropdown.open > ul.menu,
+#greeting li.open > ul.menu {
+  left: auto;
+  right: 0;
   min-width: 12em;
-  width: 100%;
+  width: 15em;
   max-width: 100%;
 }
 
-#header .dropdown:hover .menu,
-#header .dropdown:hover .current + .menu,
-#header li.dropdown.open .menu,
-#header li.open .menu,
-#greeting .dropdown:hover .menu,
-#greeting li.dropdown.open .menu,
-#greeting li.open .menu,
+#header .dropdown:hover ul.menu,
+#header .dropdown:hover .current + ul.menu,
+#header li.dropdown.open ul.menu,
+#header li.open ul.menu,
+#greeting .dropdown:hover ul.menu,
+#greeting li.dropdown.open ul.menu,
+#greeting li.open ul.menu,
 #header #small_login:hover ul.menu,
 #header #small_login.open ul.menu,
 #header li.user.open ul.menu,
@@ -294,8 +295,8 @@ a:focus {
   overflow: visible;
 }
 
-#greeting li.open .menu,
-#greeting li.dropdown.open .menu,
+#greeting li.open > ul.menu,
+#greeting li.dropdown.open > ul.menu,
 #header li.user.open ul.menu,
 #header li.user ul.menu,
 #header .actions li.user ul.menu {
@@ -1213,17 +1214,15 @@ body.skins-show #outer #main fieldset select {
 }
 
 #outer #header li.dropdown > ul.menu,
-#outer #greeting li.dropdown ul.menu,
 #outer #header .dropdown ul.menu,
-#outer #greeting .dropdown ul.menu,
 #outer #header #small_login ul.menu,
 #outer #header li.user ul.menu,
 #outer #header .actions li.dropdown ul.menu {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 0;
-  width: 100%;
+  min-width: 12em;
+  width: 16em;
   max-width: 100%;
   margin: 0.15em 0 0 0;
   z-index: 500;
@@ -1231,16 +1230,22 @@ body.skins-show #outer #main fieldset select {
 }
 
 #outer #header .primary li.dropdown > ul.menu {
+  left: 0;
+  right: 0;
   min-width: 0;
-  width: 100%;
+  width: auto;
   max-width: 100%;
 }
 
-#outer #greeting li.dropdown ul.menu,
-#outer #greeting .dropdown ul.menu {
-  min-width: 12em;
-  width: 100%;
-  max-width: 100%;
+#outer #greeting li.dropdown > ul.menu,
+#outer #greeting li.dropdown.open > ul.menu {
+  left: 0;
+  right: 0;
+  width: 14em;
+  min-width: 11em;
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #outer #greeting li.open ul.menu,
@@ -2213,20 +2218,8 @@ body.skins-edit #outer #main li.error,
   margin-bottom: 0;
 }
 
-/* Do not apply dropdown panel layout to the horizontal primary nav bar (it is also ul.menu). */
-#outer #inner #header ul.navigation.primary,
-#outer #inner #header ul.menu.navigation.actions.primary {
-  display: block;
-  list-style: none;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  height: auto;
-  text-align: center;
-}
-
-#outer #inner #header ul.navigation.primary > li,
-#outer #inner #header ul.menu.navigation.actions.primary > li {
+#outer #inner #header ul.menu.navigation.actions.primary > li,
+#outer #inner #header ul.navigation.actions.primary > li {
   display: inline-block;
   width: auto;
   float: none;
@@ -2234,38 +2227,119 @@ body.skins-edit #outer #main li.error,
   vertical-align: top;
 }
 
-/* Primary nav capsule: full viewport width (no horizontal overflow). */
-#outer #inner #header ul.navigation.primary,
-#outer #inner #header ul.primary.navigation,
-#outer #inner #header ul.menu.navigation.primary {
+/*
+ * Mobile-friendly header: greeting row + primary capsule + dropdown panels.
+ * AO3 uses ul.menu for both the primary bar AND dropdown panels; keep them separate.
+ */
+#outer #inner #header ul.navigation.actions.primary,
+#outer #inner #header ul.menu.navigation.actions.primary {
   position: relative;
-  width: 100vw;
+  display: block;
+  width: 100%;
   max-width: 100%;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0.45em;
+  padding-right: 0.45em;
   box-sizing: border-box;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  overflow: visible;
 }
 
-/* Dropdown panels span the full capsule bar, not a fixed narrow column. */
-#outer #inner #header ul.navigation.primary > li.dropdown,
-#outer #inner #header ul.primary.navigation > li.dropdown,
-#outer #inner #header ul.menu.navigation.primary > li.dropdown {
+#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown {
   position: static;
 }
 
-#outer #inner #header ul.navigation.primary > li.dropdown > ul.menu,
-#outer #inner #header ul.primary.navigation > li.dropdown > ul.menu,
-#outer #inner #header ul.menu.navigation.primary > li.dropdown > ul.menu,
-#outer #inner #header ul.navigation.primary li.dropdown ul.menu,
-#outer #inner #header .primary li.dropdown ul.menu {
+#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown > ul.menu,
+#outer #inner #header ul.navigation.actions.primary > li.dropdown > ul.menu {
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
   width: auto;
-  min-width: 0;
+  min-width: 100%;
   max-width: 100%;
+  margin-top: 0.15em;
+  z-index: 560;
+}
+
+#outer #inner #header ul.menu.navigation.actions.primary > li:not(.dropdown) > a,
+#outer #inner #header ul.menu.navigation.actions.primary > li.dropdown > a {
+  display: inline-block;
+  width: auto;
+  float: none;
+  white-space: nowrap;
+}
+
+#outer #inner #greeting,
+#outer #inner #header #greeting {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  float: none;
+  clear: both;
+  text-align: center;
+  overflow: visible;
+  box-sizing: border-box;
+  margin: 0.35em 0 0.4em 0;
+}
+
+#outer #inner #greeting > li,
+#outer #inner #greeting.user > li,
+#outer #inner #header #greeting > li {
+  display: inline-block;
+  float: none;
+  width: auto;
+  position: relative;
+  vertical-align: middle;
+  margin: 0.1em 0.08em;
+}
+
+#outer #inner #greeting li.dropdown,
+#outer #inner #greeting li.open {
+  position: relative;
+}
+
+#outer #inner #greeting li.dropdown > a,
+#outer #inner #greeting > li > a,
+#outer #inner #greeting p.icon a {
+  display: inline-block;
+  width: auto;
+  float: none;
+  white-space: nowrap;
+}
+
+#outer #inner #greeting li.dropdown > ul.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 14em;
+  min-width: 11em;
+  max-width: 96%;
+  margin-top: 0.15em;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 620;
+  box-sizing: border-box;
+}
+
+#outer #inner #header .primary li.dropdown > ul.menu,
+#outer #inner #header li.dropdown > ul.menu {
+  display: none;
+}
+
+#outer #inner #greeting li.dropdown > ul.menu {
+  display: none;
+}
+
+#outer #inner #header li.dropdown:hover > ul.menu,
+#outer #inner #header li.dropdown.open > ul.menu,
+#outer #inner #header li.open > ul.menu,
+#outer #inner #greeting li.dropdown:hover > ul.menu,
+#outer #inner #greeting li.dropdown.open > ul.menu,
+#outer #inner #greeting li.open > ul.menu {
+  display: block;
 }
 
 /* List/search pages: page heading above work titles; blurbs stay capped below h4. */
