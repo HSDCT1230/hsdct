@@ -163,6 +163,69 @@ a:focus {
   border-radius: 999px;
 }
 
+#header .menu,
+#header .dropdown .menu,
+#header li.dropdown.open .menu,
+#header .dropdown:hover .current + .menu,
+#greeting .menu,
+#greeting .dropdown .menu,
+#greeting li.dropdown.open .menu {
+  background-color: rgba(8, 14, 24, 0.96);
+  background-image: none;
+  border: 1px solid rgba(184, 202, 217, 0.42);
+  box-shadow: none;
+  color: #f0f4f7;
+  padding: 0.35em 0.25em;
+}
+
+#header .dropdown .menu li,
+#header .menu li,
+#greeting .dropdown .menu li {
+  background-color: transparent;
+  background-image: none;
+  border-bottom: none;
+  margin: 0;
+}
+
+#header .dropdown .menu a,
+#header .menu a,
+#header .dropdown .menu a:visited,
+#header .menu a:visited,
+#greeting .dropdown .menu a,
+#greeting .dropdown .menu a:visited,
+#greeting .menu a,
+#greeting .menu a:visited {
+  background-color: rgba(21, 37, 56, 0.9);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.4);
+  border-radius: 8px;
+  margin: 0.18em 0.3em;
+  display: block;
+}
+
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:focus,
+#header .menu a:hover,
+#header .menu a:focus,
+#greeting .dropdown .menu a:hover,
+#greeting .dropdown .menu a:focus,
+#greeting .menu a:hover,
+#greeting .menu a:focus {
+  background-color: rgba(166, 75, 63, 0.58);
+  color: #ffffff;
+  border-color: #d47a6e;
+}
+
+#header .icon,
+#header .icon img,
+#greeting .icon,
+#greeting .icon img {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+}
+
 #greeting,
 #greeting a,
 #header .user,
@@ -910,6 +973,24 @@ body.skins-show #outer #main fieldset select {
   background-color: rgba(8, 14, 24, 0.9);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.55);
+}
+
+#outer #header .menu,
+#outer #header .dropdown .menu,
+#outer #greeting .menu,
+#outer #greeting .dropdown .menu {
+  background-color: rgba(8, 14, 24, 0.96);
+  background-image: none;
+  border: 1px solid rgba(184, 202, 217, 0.42);
+}
+
+#outer #header .dropdown .menu a,
+#outer #header .menu a,
+#outer #greeting .dropdown .menu a,
+#outer #greeting .menu a {
+  background-color: rgba(21, 37, 56, 0.9);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.4);
 }
 
 #outer #header a.action,
