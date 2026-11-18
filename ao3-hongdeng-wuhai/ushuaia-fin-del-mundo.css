@@ -113,6 +113,17 @@ a:visited {
   border-bottom: 1px solid rgba(168, 204, 224, 0.35);
 }
 
+#header ul.menu a,
+#header ul.menu a:link,
+#header ul.menu a:visited,
+#greeting ul.menu a,
+#greeting ul.menu a:link,
+#greeting ul.menu a:visited,
+#header .primary li.dropdown ul.menu a,
+#header li.dropdown ul.menu a {
+  border: 1px solid #5c789e;
+}
+
 a:hover,
 a:focus {
   color: #e8a8a0;
@@ -336,8 +347,8 @@ a:focus {
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.4);
   border-radius: 6px;
-  margin: 0.18em 0;
-  padding: 0.72em 0.9em;
+  margin: 0 0 0.35em 0;
+  padding: 0.65em 0.85em;
   display: block;
   width: 100%;
   white-space: normal;
@@ -345,8 +356,10 @@ a:focus {
   line-height: 1.75;
   box-sizing: border-box;
   text-align: left;
-  font-size: 1em;
+  font-size: 16px;
   text-decoration: none;
+  position: static;
+  float: none;
 }
 
 #header .dropdown .menu a:hover,
@@ -2058,6 +2071,9 @@ body.skins-edit #outer #main li.error,
   width: 26em;
   padding: 0.45em 0.5em 0.55em 0.5em;
   box-sizing: border-box;
+  display: block;
+  list-style: none;
+  height: auto;
 }
 
 #outer #inner #greeting ul.menu,
@@ -2072,9 +2088,12 @@ body.skins-edit #outer #main li.error,
   width: 100%;
   float: none;
   clear: both;
-  margin: 0;
+  margin: 0 0 0.35em 0;
   padding: 0;
   box-sizing: border-box;
+  position: static;
+  height: auto;
+  overflow: visible;
 }
 
 #outer #inner #header ul.menu a,
@@ -2091,30 +2110,26 @@ body.skins-edit #outer #main li.error,
 #outer #inner #greeting li.dropdown ul.menu li a {
   display: block;
   width: 100%;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
-  padding-left: 0.9em;
-  padding-right: 0.9em;
-  margin: 0.15em 0;
+  padding: 0.65em 0.85em;
+  margin: 0;
   white-space: normal;
   word-wrap: break-word;
   line-height: 1.75;
   text-align: left;
   box-sizing: border-box;
-  font-size: 1em;
+  font-size: 16px;
   background-color: #152538;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #5c789e;
+  border: 1px solid #5c789e;
   border-radius: 6px;
   color: #f0f4f7;
   text-decoration: none;
   height: auto;
+  position: static;
+  float: none;
+  vertical-align: baseline;
 }
 
-#outer #inner #header ul.menu li,
-#outer #inner #greeting ul.menu li {
-  padding-top: 0.1em;
-  padding-bottom: 0.1em;
-  line-height: normal;
+#outer #inner #header ul.navigation.primary li.dropdown ul.menu li:last-child a,
+#outer #inner #greeting ul.menu li:last-child a {
+  margin-bottom: 0;
 }
