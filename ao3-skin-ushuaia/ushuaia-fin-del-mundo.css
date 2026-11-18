@@ -979,27 +979,34 @@ body.skins-show #outer #main fieldset select {
   color: #e8eef3;
 }
 
-#outer #main ol.index a,
-#outer #main ul.index a,
-#outer #main ol.group.index a,
-#outer #main ul.group.index a,
-#outer #main ol.index li a,
-#outer #main ul.index li a,
 #outer #main .alphabet a,
 #outer #main ol.navigation.index a,
 #outer #main ul.navigation.index a,
 #outer #main ol.letters a,
 #outer #main ul.letters a,
-#outer #main.media ol.index a,
-#outer #main.fandoms ol.index a {
+#outer #main > ol.index.group > li > a,
+#outer #main > ul.index.group > li > a {
   background-image: none;
-  background-color: #152538;
+  background-color: rgba(21, 37, 56, 0.9);
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.62);
+  border: 1px solid rgba(184, 202, 217, 0.5);
   border-radius: 6px;
   padding: 0.22em 0.5em;
   box-shadow: none;
   text-shadow: none;
+}
+
+#outer #main ol.index.group ol li a,
+#outer #main ul.index.group ul li a,
+#outer #main .listbox ol.index li a,
+#outer #main .listbox ul.index li a {
+  background-image: none;
+  background-color: rgba(8, 14, 24, 0.78);
+  color: #e8eef3;
+  border: 1px solid rgba(184, 202, 217, 0.38);
+  border-radius: 999px;
+  padding: 0.18em 0.55em;
+  box-shadow: none;
 }
 
 #outer #main ol.index li,
@@ -1014,29 +1021,114 @@ body.skins-show #outer #main fieldset select {
 #outer #main h4.landmark,
 #outer #main .landmark.heading,
 #outer #main .listbox .landmark {
-  background-color: rgba(21, 37, 56, 0.72);
+  background-color: rgba(8, 14, 24, 0.5);
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.35);
+  border: none;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.32);
+  border-radius: 0;
+  padding: 0.35em 0.45em;
 }
 
 #outer #main p.landmark a,
 #outer #main h3.landmark a,
 #outer #main h4.landmark a,
-#outer #main .landmark a,
 #outer #main .landmark a.action,
-#outer #main .landmark.heading a {
+#outer #main .landmark a.top {
   background-image: none;
-  background-color: #152538;
+  background-color: rgba(21, 37, 56, 0.88);
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.62);
+  border: 1px solid rgba(184, 202, 217, 0.5);
   border-radius: 6px;
-  padding: 0.15em 0.45em;
+  padding: 0.12em 0.4em;
   box-shadow: none;
 }
 
-#outer #main .listbox a.tag,
-#outer #main .listbox li a,
-#outer #main ol.index li a.tag {
-  background-color: rgba(8, 14, 24, 0.82);
+#outer #main .listbox {
+  background-color: rgba(21, 37, 56, 0.8);
+  border: 1px solid rgba(184, 202, 217, 0.3);
+  border-radius: 10px;
   color: #e8eef3;
+}
+
+#outer #main .listbox a.tag,
+#outer #main ol.index li a.tag {
+  background-color: rgba(8, 14, 24, 0.72);
+  color: #e8eef3;
+}
+
+#outer #main h1,
+#outer #main h2,
+#outer #main h2.heading,
+#outer #main h3.heading,
+#outer #main h4.heading,
+#outer #main .heading,
+#outer #main li.blurb h4,
+#outer #main li.blurb .heading {
+  color: #f0f4f7;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#outer #main h1 a,
+#outer #main h2 a,
+#outer #main h2.heading a,
+#outer #main h3 a,
+#outer #main h3.heading a,
+#outer #main h4 a,
+#outer #main h4.heading a,
+#outer #main li.blurb h4 a,
+#outer #main li.blurb .heading a,
+#outer #main li.blurb h4.heading a,
+#outer #main .heading a,
+#outer #main ol.breadcrumb a,
+#outer #main .breadcrumb a {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  color: #b8d8ec;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.4);
+}
+
+#outer #main h2.heading a:hover,
+#outer #main li.blurb h4 a:hover,
+#outer #main .heading a:hover,
+#outer #main ol.breadcrumb a:hover {
+  color: #e8a8a0;
+  background-color: transparent;
+  border-bottom-color: #a64b3f;
+}
+
+#outer #main li.blurb .datetime,
+#outer #main li.blurb dl.stats,
+#outer #main li.blurb dl.stats dd,
+#outer #main li.blurb .stats {
+  color: #b4c2ce;
+}
+
+#outer #main li.blurb dl.stats a,
+#outer #main li.blurb .stats a {
+  background-color: rgba(8, 14, 24, 0.55);
+  color: #d8e2ea;
+  border: 1px solid rgba(184, 202, 217, 0.35);
+  border-radius: 6px;
+  padding: 0.08em 0.35em;
+  font-size: 0.9em;
+}
+
+#outer #main li.blurb .summary {
+  color: #e8eef3;
+}
+
+#outer #main li.blurb p.actions a,
+#outer #main li.blurb ul.actions a {
+  background-color: #152538;
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.58);
+  border-radius: 8px;
+  padding: 0.35em 0.65em;
 }
