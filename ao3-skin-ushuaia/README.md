@@ -1,36 +1,10 @@
-# AO3 站点皮肤 · 红灯雾海
+# AO3 站点皮肤「红灯雾海」
 
-半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图**只写在 `#outer`**（含 `body.javascript #outer`）。手机清晰方案：`no-repeat` + `100% auto`（按屏宽缩放一张，约 768×1024 原图）；向下滚动露出 `html` 深海色 `#1b2e4b`。**不要**对这张图 `repeat-y`：竖图会每隔一屏重复灯塔，又糊又乱。若要全程铺海需另备「可平铺」海天纹理图。`cover` 会整体放大变糊。
+本皮肤已迁到独立仓库，便于单独收藏与在 AO3 中引用固定 `raw` 链接：
 
-## 文件
+**https://github.com/HSDCT1230/ao3-hongdeng-wuhai**
 
-| 文件 | 说明 |
-|------|------|
-| `ushuaia-fin-del-mundo.css` | 粘贴到 AO3 站点皮肤的完整 CSS |
-| `preview/index.html` | 本地结构预览（非 AO3 页面） |
-| `assets/les-eclaireurs-bg.jpg` | 灯塔背景原图 |
+- CSS（Raw）：<https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/ushuaia-fin-del-mundo.css>
+- 背景图（Raw）：<https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/assets/les-eclaireurs-bg.jpg>
 
-## 设置步骤
-
-1. AO3 → **Skins** → 编辑皮肤 **红灯雾海**（或新建 Site Skin）。
-2. CSS 框 **全选删除**，从下面链接复制**整份**新 CSS 粘贴：  
-   https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/ushuaia-fin-del-mundo.css  
-3. **Update**（成功会回到皮肤列表）→ **Use**。
-4. 站点皮肤请用 **`.userstuff`**，不要用 `#workskin`（那是作品皮肤）。`font-family` 里的字体名须**全小写**。
-
-## 背景图
-
-- 写在 `#outer` / `#outer.wrapper` 的 `background-image`。
-- 默认：  
-  `https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg`
-- 想更透、更看清海图：搜 `background-color: rgba(21, 37, 56` 把 alpha 数字调小（例如 `#main` 的 `0.24`）。
-- 想图更靠灯塔：改 `#outer` 的 `background-position`（默认 `center 32%`）。
-
-## AO3 保存注意
-
-- 小数点后最多 **3** 位（例：`1.06em` 可以，`1.0625em` 不行）。
-- 不要加 CSS 注释；不要用 `var()` / `:root` 变量。
-
-## 许可
-
-CSS 可自由修改；背景图请遵守图源版权。
+此目录为历史开发副本；请以独立仓库为准。

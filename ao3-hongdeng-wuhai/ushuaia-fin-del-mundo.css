@@ -1,0 +1,395 @@
+html {
+  background-color: #1b2e4b;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: transparent;
+  color: #e8eef3;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 16px;
+  line-height: 1.75;
+  letter-spacing: normal;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#outer,
+#outer.wrapper,
+body.javascript #outer,
+body.javascript #outer.wrapper {
+  background-color: transparent;
+  background-image: url("https://raw.githubusercontent.com/HSDCT1230/ao3-hongdeng-wuhai/main/assets/les-eclaireurs-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body.javascript,
+html.javascript,
+.javascript {
+  background-color: #1b2e4b;
+  background-image: none;
+}
+
+#inner,
+#inner.wrapper {
+  background-color: transparent;
+  background-image: none;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#inner {
+  margin: 0 auto;
+  max-width: 40em;
+  width: 100%;
+  padding: 0 0.5em 1.5em 0.5em;
+  border: none;
+  box-shadow: none;
+}
+
+#header,
+#main,
+#dashboard,
+#footer,
+.flash {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: normal;
+}
+
+a,
+a:link,
+a:visited {
+  color: #a8cce0;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(168, 204, 224, 0.35);
+}
+
+a:hover,
+a:focus {
+  color: #e8a8a0;
+  border-bottom-color: #a64b3f;
+}
+
+#header {
+  background-color: rgba(21, 37, 56, 0.18);
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0.45em;
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  border-bottom: 1px solid rgba(184, 202, 217, 0.22);
+  border-radius: 12px 12px 0 0;
+  box-shadow: none;
+}
+
+#header .heading a,
+#header h1 a {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(21, 37, 56, 0.85);
+  letter-spacing: normal;
+  border-bottom: none;
+}
+
+#header .primary {
+  background-color: rgba(21, 37, 56, 0.22);
+  background-image: none;
+  border-top: 1px solid rgba(184, 202, 217, 0.2);
+  border-radius: 6px;
+  margin-top: 0.55em;
+  text-align: center;
+}
+
+#header .primary a {
+  color: #e8eef3;
+  border: 1px solid rgba(184, 202, 217, 0.4);
+  border-radius: 8px;
+  margin: 0.08em 0.08em;
+  padding: 0.25em 0.55em;
+  box-shadow: none;
+  font-size: 0.92em;
+}
+
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a {
+  color: #ffffff;
+  background-color: rgba(166, 75, 63, 0.3);
+}
+
+#header .current,
+#header .primary .current a {
+  color: #ffffff;
+  background-color: rgba(166, 75, 63, 0.78);
+  border: 1px solid #d47a6e;
+  border-radius: 999px;
+}
+
+#greeting {
+  color: #d8e2ea;
+}
+
+#dashboard,
+#dashboard.own {
+  background-color: rgba(21, 37, 56, 0.22);
+  color: #eef2f6;
+  border: 1px solid rgba(184, 202, 217, 0.32);
+  border-top: 1px solid rgba(184, 202, 217, 0.22);
+  border-bottom: 1px solid rgba(184, 202, 217, 0.22);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.65em 1em 0.75em 1em;
+  margin: 0;
+}
+
+#dashboard a,
+#dashboard a:visited {
+  color: #c5d2de;
+  border-bottom: none;
+}
+
+#dashboard .current a,
+#dashboard a.current {
+  color: #ffffff;
+  background-color: rgba(166, 75, 63, 0.55);
+  border: 1px solid #d47a6e;
+  border-radius: 6px;
+}
+
+#main {
+  background-color: rgba(21, 37, 56, 0.14);
+  color: #eef2f6;
+  border: 1px solid rgba(184, 202, 217, 0.25);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: none;
+  padding: 1.15em 0.85em 1.5em 0.85em;
+  margin: 0 0 0.65em 0;
+  line-height: 1.75;
+}
+
+.userstuff {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.12em;
+  line-height: 1.9;
+  color: #eef2f6;
+  letter-spacing: normal;
+}
+
+.userstuff p {
+  font-size: 1em;
+  line-height: 1.9;
+  margin-top: 0;
+  margin-bottom: 1.35em;
+  text-align: justify;
+  word-wrap: break-word;
+  letter-spacing: normal;
+  color: #eef2f6;
+}
+
+.userstuff h1,
+.userstuff h2,
+.userstuff h3,
+.userstuff h4,
+.userstuff h5,
+.userstuff h6 {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-weight: 400;
+  color: #f0f4f7;
+  line-height: 1.6;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+.userstuff h2 {
+  font-size: 1.35em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.45);
+}
+
+.userstuff blockquote {
+  margin: 1em 0;
+  padding: 0.5em 0 0.5em 1em;
+  border-left: 3px solid #a64b3f;
+  color: #c5d2de;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.userstuff a,
+.userstuff a:link,
+.userstuff a:visited {
+  color: #a8cce0;
+  border-bottom: 1px solid rgba(168, 204, 224, 0.45);
+}
+
+#main.works-show > h2,
+#main.works-show > h2.heading,
+h2.title {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  color: #f0f4f7;
+  text-align: center;
+  font-size: 1.35em;
+  line-height: 1.55;
+  letter-spacing: normal;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.28);
+  padding-bottom: 0.65em;
+  margin-bottom: 1em;
+}
+
+#main.works-index > h2,
+#main.works-index > h2.heading,
+#main.bookmarks-index > h2,
+#main.collections-index > h2 {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.05em;
+  line-height: 1.55;
+  text-align: left;
+  color: #f0f4f7;
+  margin-top: 0.35em;
+  margin-bottom: 0.85em;
+}
+
+li.blurb h4,
+li.blurb h4 a,
+.blurb .heading,
+.blurb .heading a {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1em;
+  line-height: 1.55;
+  color: #a8cce0;
+}
+
+#main,
+li.blurb,
+.blurb .summary,
+.blurb blockquote {
+  letter-spacing: normal;
+}
+
+li.blurb {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.28);
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  padding: 1em 0;
+}
+
+li.blurb .datetime,
+li.blurb .stats,
+li.blurb .tags {
+  font-size: 0.88em;
+  line-height: 1.55;
+  color: #9fadb9;
+}
+
+.tags a.tag,
+a.tag {
+  border: 1px solid rgba(184, 202, 217, 0.28);
+  border-radius: 999px;
+  padding: 0.12em 0.5em;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #c5d2de;
+}
+
+.actions a,
+button,
+input[type="submit"] {
+  background-color: rgba(21, 37, 56, 0.84);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.52);
+  border-radius: 8px;
+  box-shadow: none;
+  font-family: "source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif;
+  font-size: 0.9em;
+  letter-spacing: normal;
+  padding: 0.4em 0.7em;
+}
+
+.pagination .current,
+a.current {
+  background-color: rgba(166, 75, 63, 0.75);
+  color: #ffffff;
+  border-color: #d47a6e;
+}
+
+input,
+textarea,
+select {
+  background-color: rgba(8, 14, 24, 0.82);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.55);
+  border-radius: 8px;
+  font-family: "songti sc", "stsong", "georgia", serif;
+  font-size: 1em;
+  line-height: 1.75;
+  letter-spacing: normal;
+}
+
+#header #search input,
+#search input {
+  background-color: rgba(8, 14, 24, 0.82);
+  color: #f0f4f7;
+}
+
+#search .button,
+#header #search .button {
+  background-color: rgba(21, 37, 56, 0.84);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.52);
+  border-radius: 8px;
+}
+
+.flash,
+.notice,
+.caution {
+  background-color: rgba(21, 37, 56, 0.45);
+  color: #f0f4f7;
+  border: 1px solid #a64b3f;
+  border-radius: 8px;
+  padding: 0.85em 1em;
+  margin: 0.5em 0 0.65em 0;
+}
+
+#footer {
+  background-color: rgba(21, 37, 56, 0.32);
+  color: #a8b6c4;
+  border: 1px solid rgba(184, 202, 217, 0.35);
+  border-radius: 16px;
+  margin-top: 0.65em;
+  padding: 1em 1.25em;
+}
+
+#footer a {
+  color: #b8cad9;
+  border-bottom: none;
+}
