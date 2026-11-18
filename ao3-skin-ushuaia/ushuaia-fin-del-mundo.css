@@ -240,16 +240,16 @@ a:focus {
 }
 
 #header .primary li.dropdown ul.menu {
-  min-width: 18em;
-  width: 22em;
+  min-width: 20em;
+  width: 24em;
 }
 
 #greeting .menu,
 #greeting .dropdown .menu,
 #greeting li.open .menu,
 #greeting li.dropdown.open .menu {
-  min-width: 14em;
-  width: 18em;
+  min-width: 16em;
+  width: 20em;
 }
 
 #header .dropdown:hover .menu,
@@ -298,11 +298,25 @@ a:focus {
 
 #header .dropdown .menu li,
 #header .menu li,
-#greeting .dropdown .menu li {
+#greeting .dropdown .menu li,
+#header ul.menu li,
+#greeting ul.menu li {
   background-color: transparent;
   background-image: none;
   border-bottom: none;
   margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#header ul.menu,
+#greeting ul.menu,
+#header .dropdown ul.menu,
+#greeting .dropdown ul.menu {
+  padding: 0.35em 0.4em 0.45em 0.4em;
+  box-sizing: border-box;
 }
 
 #header .dropdown .menu a,
@@ -312,20 +326,25 @@ a:focus {
 #greeting .dropdown .menu a,
 #greeting .dropdown .menu a:visited,
 #greeting .menu a,
-#greeting .menu a:visited {
+#greeting .menu a:visited,
+#header .primary ul.menu a,
+#header .actions ul.menu a,
+#header ul.navigation.actions ul.menu a,
+#greeting ul.actions ul.menu a {
   background-color: rgba(21, 37, 56, 0.9);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.4);
-  border-radius: 8px;
-  margin: 0.2em 0.28em;
-  padding: 0.38em 0.65em;
+  border-radius: 6px;
+  margin: 0.22em 0;
+  padding: 0.45em 0.8em;
   display: block;
-  width: auto;
+  width: 100%;
   white-space: normal;
   word-wrap: break-word;
-  line-height: 1.5;
+  line-height: 1.55;
   box-sizing: border-box;
   text-align: left;
+  font-size: 0.92em;
 }
 
 #header .dropdown .menu a:hover,
@@ -1151,14 +1170,14 @@ body.skins-show #outer #main fieldset select {
 }
 
 #outer #header .primary li.dropdown ul.menu {
-  min-width: 18em;
-  width: 22em;
+  min-width: 20em;
+  width: 24em;
 }
 
 #outer #greeting .menu,
 #outer #greeting .dropdown .menu {
-  min-width: 14em;
-  width: 18em;
+  min-width: 16em;
+  width: 20em;
 }
 
 #outer #greeting li.open ul.menu,
@@ -1260,6 +1279,14 @@ body.skins-show #outer #main fieldset select {
   overflow: visible;
 }
 
+#outer #header ul.actions ul.menu li a,
+#outer #header ul.actions li.dropdown ul.menu li a,
+#outer #header .primary ul.menu li a,
+#outer #header .dropdown ul.menu li a,
+#outer #header ul.menu li a,
+#outer #greeting ul.menu li a,
+#outer #greeting ul.actions ul.menu li a,
+#outer #greeting .dropdown ul.menu li a,
 #outer #header .dropdown .menu a,
 #outer #header .menu a,
 #outer #greeting .dropdown .menu a,
@@ -1267,12 +1294,17 @@ body.skins-show #outer #main fieldset select {
   background-color: rgba(21, 37, 56, 0.9);
   color: #f0f4f7;
   border: 1px solid rgba(184, 202, 217, 0.4);
-  padding: 0.38em 0.65em;
+  padding: 0.45em 0.8em;
+  margin: 0.22em 0;
   white-space: normal;
   word-wrap: break-word;
-  line-height: 1.5;
+  line-height: 1.55;
   text-align: left;
   box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-size: 0.92em;
+  border-radius: 6px;
 }
 
 #outer #header a.action,
