@@ -9,6 +9,11 @@
 | `ushuaia-fin-del-mundo.css` | 粘贴到 AO3「创建站点皮肤」的完整 CSS |
 | `preview/index.html` | 本地预览（模拟 AO3 结构，非官方页面） |
 
+## 为什么预览像「啥都没了」？
+
+AO3 保存皮肤时会**删掉所有 CSS 注释**，有时连注释旁边的规则一起删；`--变量` / `var()` 若未通过校验，**整段配色也会失效**，页面上就只剩默认红白站 + 零星几条（例如搜索框发黑）。  
+本仓库里的 `ushuaia-fin-del-mundo.css` 已做成 **无注释、颜色全部写成具体色值** 的版本，请**整份重新粘贴**后 Update，再 **重新打开编辑页** 对照：保存后的 CSS 应仍有大量 `{` 规则（约 80 段），并能看到 `background-image: url("https://i.imgur.com/ARshGKAh.jpg")`。
+
 ## 如何设置（AO3）
 
 1. 登录 [AO3](https://archiveofourown.org/)，点击顶栏 **Hi, [用户名]!** → **My Dashboard**（我的仪表盘）。
