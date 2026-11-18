@@ -2133,3 +2133,37 @@ body.skins-edit #outer #main li.error,
 #outer #inner #greeting ul.menu li:last-child a {
   margin-bottom: 0;
 }
+
+/* Primary nav capsule: full viewport width (no horizontal overflow). */
+#outer #inner #header ul.navigation.primary,
+#outer #inner #header ul.primary.navigation,
+#outer #inner #header ul.menu.navigation.primary {
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+/* Dropdown panels span the full capsule bar, not a fixed narrow column. */
+#outer #inner #header ul.navigation.primary > li.dropdown,
+#outer #inner #header ul.primary.navigation > li.dropdown,
+#outer #inner #header ul.menu.navigation.primary > li.dropdown {
+  position: static;
+}
+
+#outer #inner #header ul.navigation.primary > li.dropdown > ul.menu,
+#outer #inner #header ul.primary.navigation > li.dropdown > ul.menu,
+#outer #inner #header ul.menu.navigation.primary > li.dropdown > ul.menu,
+#outer #inner #header ul.navigation.primary li.dropdown ul.menu,
+#outer #inner #header .primary li.dropdown ul.menu {
+  left: 0;
+  right: 0;
+  width: auto;
+  min-width: 0;
+  max-width: 100%;
+}
