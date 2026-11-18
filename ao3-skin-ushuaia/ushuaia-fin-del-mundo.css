@@ -264,7 +264,7 @@ h2.title {
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   color: #f0f4f7;
   text-align: center;
-  font-size: 1.35em;
+  font-size: 1.48em;
   line-height: 1.55;
   letter-spacing: normal;
   background-color: transparent;
@@ -291,9 +291,9 @@ li.blurb h4 a,
 .blurb .heading,
 .blurb .heading a {
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
-  font-size: 1em;
+  font-size: 1.12em;
   line-height: 1.55;
-  color: #a8cce0;
+  color: #e8eef3;
 }
 
 #main,
@@ -723,9 +723,9 @@ td {
 body.skins-edit #outer #main fieldset,
 body.skins-new #outer #main fieldset,
 body.skins-show #outer #main fieldset {
-  background-color: #d5dde6;
-  color: #0f1e30;
-  border: 1px solid #6a849e;
+  background-color: rgba(21, 37, 56, 0.9);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.42);
 }
 
 body.skins-edit #outer #main fieldset label,
@@ -743,15 +743,15 @@ body.skins-new #outer #main fieldset small,
 body.skins-show #outer #main fieldset label,
 body.skins-show #outer #main fieldset dt,
 body.skins-show #outer #main fieldset dd {
-  color: #0f1e30;
+  color: #d8e2ea;
 }
 
 body.skins-edit #outer #main fieldset legend,
 body.skins-new #outer #main fieldset legend,
 body.skins-show #outer #main fieldset legend {
-  color: #0f1e30;
-  background-color: #bec9d4;
-  border: 1px solid #5c7894;
+  color: #f0f4f7;
+  background-color: rgba(8, 14, 24, 0.92);
+  border: 1px solid rgba(184, 202, 217, 0.5);
 }
 
 body.skins-edit #outer #main fieldset input,
@@ -1135,4 +1135,135 @@ body.skins-show #outer #main fieldset select {
   border: 1px solid rgba(184, 202, 217, 0.58);
   border-radius: 8px;
   padding: 0.35em 0.65em;
+}
+
+#outer #main fieldset,
+#outer #main fieldset.work,
+#outer #main fieldset.list,
+#outer #main form fieldset,
+#outer #main fieldset fieldset {
+  background-color: rgba(21, 37, 56, 0.85);
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.38);
+}
+
+#outer #main fieldset legend {
+  color: #f0f4f7;
+  background-color: rgba(8, 14, 24, 0.92);
+  border: 1px solid rgba(184, 202, 217, 0.48);
+}
+
+#outer #main fieldset.actions,
+#outer #main fieldset fieldset.actions,
+#outer #main form fieldset.actions,
+#outer #main p.actions,
+#outer #main ul.actions,
+#outer #main .navigation.actions,
+#outer #main ul.navigation.actions {
+  background-color: rgba(21, 37, 56, 0.72);
+  border: 1px solid rgba(184, 202, 217, 0.3);
+  border-radius: 8px;
+}
+
+#outer #main fieldset ol,
+#outer #main fieldset ul,
+#outer #main fieldset ol li,
+#outer #main fieldset ul li,
+#outer #main form.edit fieldset ol li,
+#outer #main .work.list li,
+#outer #main fieldset .work.index li {
+  background-color: rgba(8, 14, 24, 0.42);
+  border-color: rgba(184, 202, 217, 0.22);
+  color: #eef2f6;
+}
+
+#outer #main fieldset label,
+#outer #main fieldset dt,
+#outer #main form label,
+#outer #main form dt,
+#outer #main form dd,
+#outer #main form p.instructions,
+#outer #main form small {
+  color: #d8e2ea;
+}
+
+#outer #main input[type="checkbox"],
+#outer #main input[type="radio"] {
+  background-color: rgba(8, 14, 24, 0.9);
+  border: 1px solid rgba(184, 202, 217, 0.55);
+}
+
+#outer #main form table,
+#outer #main fieldset table,
+#outer #main table.edit {
+  background-color: rgba(21, 37, 56, 0.65);
+  color: #eef2f6;
+}
+
+#outer #main ul.navigation.actions a.current,
+#outer #main ul.actions a.current,
+#outer #main p.actions a.current {
+  background-color: rgba(166, 75, 63, 0.85);
+  color: #ffffff;
+  border-color: #d47a6e;
+}
+
+#outer #main ul.navigation.actions a,
+#outer #main p.actions a,
+#outer #main fieldset.actions a,
+#outer #main fieldset.actions input {
+  background-color: #152538;
+  color: #f0f4f7;
+  border: 1px solid rgba(184, 202, 217, 0.58);
+}
+
+#outer #main.works-show h2.title,
+#outer #main.works-show > h2.title {
+  font-size: 1.48em;
+  color: #f0f4f7;
+}
+
+#outer #main.works-show h3.byline,
+#outer #main.works-show h3.byline a,
+#outer #main.works-show .byline,
+#outer #main.works-show .byline a,
+#outer #main.works-show a[rel="author"],
+#outer #main.works-show dl.meta a[rel="author"],
+#outer #main .preface .byline a,
+#outer #main .preface a[rel="author"] {
+  font-size: 1.02em;
+  color: #b0bec8;
+  border-bottom: 1px solid rgba(176, 190, 200, 0.38);
+}
+
+#outer #main.works-show h3.byline a:hover,
+#outer #main.works-show a[rel="author"]:hover,
+#outer #main .preface a[rel="author"]:hover {
+  color: #d8e2ea;
+  border-bottom-color: rgba(184, 202, 217, 0.55);
+}
+
+#outer #main li.blurb h4.heading a,
+#outer #main li.blurb h4 a:not([rel="author"]) {
+  font-size: 1.12em;
+  color: #e8eef3;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.45);
+}
+
+#outer #main li.blurb h4 a[rel="author"],
+#outer #main li.blurb .heading a[rel="author"] {
+  font-size: 0.96em;
+  color: #b0bec8;
+  border-bottom: 1px solid rgba(176, 190, 200, 0.35);
+}
+
+#outer #main li.blurb h4 a[rel="author"]:hover,
+#outer #main li.blurb .heading a[rel="author"]:hover {
+  color: #d8e2ea;
+}
+
+#outer #main li.news h4.heading a,
+#outer #main li.news h4 a:not([rel="author"]) {
+  font-size: 1.12em;
+  color: #e8eef3;
 }
