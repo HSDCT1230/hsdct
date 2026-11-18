@@ -1,6 +1,6 @@
 # AO3 站点皮肤 · 红灯雾海
 
-半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图**只写在 `#outer`**（含 `body.javascript #outer`）。当前：`background-size: 100% auto` + `repeat-y` 纵向拼接，避免 `cover` 把手机端拉糊；会随页面向下滚动。若图又消失，改回 `no-repeat` + `cover` + `center 32%`。
+半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图**只写在 `#outer`**（含 `body.javascript #outer`）。手机清晰方案：`no-repeat` + `100% auto`（按屏宽缩放一张，约 768×1024 原图）；向下滚动露出 `html` 深海色 `#1b2e4b`。**不要**对这张图 `repeat-y`：竖图会每隔一屏重复灯塔，又糊又乱。若要全程铺海需另备「可平铺」海天纹理图。`cover` 会整体放大变糊。
 
 ## 文件
 

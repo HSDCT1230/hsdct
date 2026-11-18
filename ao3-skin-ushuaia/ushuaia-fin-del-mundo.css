@@ -24,7 +24,7 @@ body.javascript #outer,
 body.javascript #outer.wrapper {
   background-color: transparent;
   background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
   width: 100%;
