@@ -4376,3 +4376,72 @@ body.javascript #outer #inner #main form.filters,
   float: none;
   position: static;
 }
+
+/*
+ * Filter repairs must not restyle the rest of the archive.
+ * Blurbs, tables, and footer links keep the earlier look.
+ */
+#outer #main li.blurb,
+#outer #main li.blurb.own,
+#outer #main li.blurb.draft,
+#outer #main li.blurb.unread,
+#outer #main li.work.own,
+#outer #main li.work.draft {
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(184, 202, 217, 0.28);
+  box-shadow: none;
+  width: auto;
+  max-width: 100%;
+}
+
+#outer #main .listbox,
+#outer #main li.letter.listbox {
+  background-color: rgba(21, 37, 56, 0.8);
+  background-image: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(184, 202, 217, 0.3);
+  border-radius: 10px;
+  box-shadow: none;
+  padding-top: 0.95em;
+  padding-right: 1.05em;
+  padding-bottom: 1.05em;
+  padding-left: 1.05em;
+}
+
+#outer #main table th,
+#outer #main table td {
+  background-color: rgba(21, 37, 56, 0.35);
+  background-image: none;
+  color: #eef2f6;
+  width: auto;
+}
+
+#outer #main table th {
+  background-color: rgba(8, 14, 24, 0.55);
+}
+
+#outer #footer a,
+#outer #footer a:link,
+#outer #footer a:visited,
+#outer #footer li,
+#outer #footer ul.menu,
+#outer #footer ul.navigation.actions {
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  box-shadow: none;
+  width: auto;
+  max-width: 100%;
+  display: inline;
+  float: none;
+  color: #f0f4f7;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
