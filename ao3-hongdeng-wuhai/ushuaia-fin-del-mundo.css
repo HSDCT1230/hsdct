@@ -2305,8 +2305,12 @@ body.skins-edit #outer #main li.error,
 }
 
 #outer #header #greeting ul.user.navigation.actions > li.dropdown > ul.menu a,
+#outer #header #greeting ul.user.navigation.actions > li.dropdown > ul.menu a:link,
+#outer #header #greeting ul.user.navigation.actions > li.dropdown > ul.menu a:visited,
 #outer #header #greeting ul.user.navigation.actions > li.dropdown > ul.menu li a,
 #outer #header ul.primary.navigation.actions > li.dropdown > ul.menu a,
+#outer #header ul.primary.navigation.actions > li.dropdown > ul.menu a:link,
+#outer #header ul.primary.navigation.actions > li.dropdown > ul.menu a:visited,
 #outer #header ul.primary.navigation.actions > li.dropdown > ul.menu li a {
   display: block;
   width: 100%;
@@ -2495,6 +2499,93 @@ body.skins-edit #outer #main li.error,
   border: 1px solid #3d5570;
   box-shadow: none;
   color: #f0f4f7;
+}
+
+/*
+ * Light text sits on these AO3 defaults: Post's menu, the new-work form,
+ * download/share panels, letter listboxes, tables, drafts, and comments.
+ * Each one is forced onto the same navy so the text stays readable.
+ */
+#outer .secondary,
+#outer .work.navigation .download,
+#outer .work.navigation .download .secondary,
+#outer .own,
+#outer .draft,
+#outer .unread,
+#outer .child,
+#outer .unwrangled,
+#outer .unreviewed,
+#outer dl.index dd,
+#outer li.relationships a,
+#outer li.relationships a:link,
+#outer li.relationships a:visited,
+#outer .listbox,
+#outer .listbox .index,
+#outer .listbox .heading,
+#outer dd.listbox,
+#outer .comment h4.byline,
+#outer .thread .even,
+#outer .annotation,
+#outer table,
+#outer thead td,
+#outer th,
+#outer tr:hover,
+#outer td,
+#outer .statistics .index li:nth-of-type(even),
+#outer #main form,
+#outer #main fieldset,
+#outer #main form dd,
+#outer #main form dt,
+#outer #main .notice,
+#outer #main .required.notice {
+  background-color: #152538;
+  background-image: none;
+  box-shadow: none;
+  color: #eef2f6;
+}
+
+#outer .secondary,
+#outer .work.navigation .download,
+#outer .work.navigation .download .secondary,
+#outer .annotation,
+#outer dd.listbox,
+#outer .listbox {
+  border: 1px solid #5c789e;
+}
+
+#outer .secondary a,
+#outer .secondary a:link,
+#outer .secondary a:visited,
+#outer .work.navigation .download a,
+#outer .work.navigation .download a:link,
+#outer .work.navigation .download a:visited,
+#outer li.relationships a,
+#outer li.relationships a:link,
+#outer li.relationships a:visited,
+#outer #main form .actions a,
+#outer #main form .actions a:link,
+#outer #main form .actions a:visited,
+#outer #main fieldset .actions a,
+#outer #main fieldset .actions a:link,
+#outer #main fieldset .actions a:visited,
+#outer #main form input[type="submit"],
+#outer #main form button {
+  background-color: #152538;
+  background-image: none;
+  border: 1px solid #5c789e;
+  box-shadow: none;
+  color: #f0f4f7;
+  height: auto;
+}
+
+#outer #main form input,
+#outer #main form textarea,
+#outer #main form select,
+#outer #main form option {
+  background-color: #0c1520;
+  background-image: none;
+  color: #f0f4f7;
+  border: 1px solid #5c789e;
 }
 
 /* List/search pages: page heading above work titles; blurbs stay capped below h4. */
