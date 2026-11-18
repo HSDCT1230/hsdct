@@ -155,8 +155,14 @@ a:focus {
   border-radius: 999px;
 }
 
-#greeting {
-  color: #d8e2ea;
+#greeting,
+#greeting a,
+#header .user,
+#header .user a,
+#header li.user,
+#header li.user a,
+#header .menu .user a {
+  color: #f0f4f7;
 }
 
 #dashboard,
