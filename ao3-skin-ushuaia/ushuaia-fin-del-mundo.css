@@ -19,7 +19,9 @@ body {
 }
 
 #outer,
-#outer.wrapper {
+#outer.wrapper,
+body.javascript #outer,
+body.javascript #outer.wrapper {
   background-color: transparent;
   background-image: url("https://raw.githubusercontent.com/HSDCT1230/hsdct/cursor/ao3-ushuaia-skin-8314/ao3-skin-ushuaia/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat;
@@ -30,6 +32,13 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+body.javascript,
+html.javascript,
+.javascript {
+  background-color: #1b2e4b;
+  background-image: none;
 }
 
 #inner,

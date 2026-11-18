@@ -1,6 +1,6 @@
 # AO3 站点皮肤 · 红灯雾海
 
-半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图**只写在 `#outer`**。经测试能稳定显示的组合是：`no-repeat` + `background-size: cover` + `background-position: center 32%`。**不要**改用 `html` 铺图、`repeat-y` 或 `100% auto`，手机 AO3 上容易整图消失。
+半透明深蓝栏 + 浅色字。正文宋体/衬线：`"source han serif sc", "songti sc", "stsong", "georgia", "times new roman", serif`（接近图二示例）。海图**只写在 `#outer`**。稳定组合：`no-repeat` + `cover` + `center 32%`。手机端 AO3 会给 `body.javascript` 铺灰底 `#ddd`；皮肤里已用 `body.javascript #outer` 盖回海图。若仍灰底无图：保存后确认 `background-image` 还在；大陆网络可试把 url 换成 `https://i.imgur.com/ARshGKAh.jpg`（需能打开该链接）。
 
 ## 文件
 
