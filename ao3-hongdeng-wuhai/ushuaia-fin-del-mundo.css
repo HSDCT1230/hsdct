@@ -5318,10 +5318,10 @@ body.home #outer #inner.wrapper {
 #outer:has(#main.splash),
 body.home #outer,
 body.home #outer.wrapper {
-  background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 52%, rgba(27, 46, 75, 0.35) 72%, rgba(27, 46, 75, 0.85) 88%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/hsdct/5c9621713aef2325f7aae7d893cec2b5d65282cf/ao3-hongdeng-wuhai/assets/les-eclaireurs-bg.jpg");
+  background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 48%, rgba(27, 46, 75, 0.22) 64%, rgba(27, 46, 75, 0.72) 82%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/hsdct/5c9621713aef2325f7aae7d893cec2b5d65282cf/ao3-hongdeng-wuhai/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center top, center top;
-  background-size: 100% 160vw, 100% auto;
+  background-position: center top, center 12%;
+  background-size: 100% 170vw, 100% auto;
 }
 
 #outer #main.docs.index,
@@ -5421,15 +5421,15 @@ body.home #outer #main .browse h3.heading {
   border-bottom: none;
   border-radius: 0;
   box-shadow: none;
-  color: #8f3d36;
+  color: #a33a34;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
-  font-size: 1.85em;
+  font-size: 1.9em;
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: normal;
-  margin: 0 0 0.35em 0;
+  margin: 0 0 0.4em 0;
   padding: 0;
-  text-shadow: none;
+  text-shadow: 0 1px 2px rgba(8, 14, 24, 0.35);
 }
 
 #outer #main.docs.index .splash .browse.module p.note,
@@ -5477,20 +5477,20 @@ body.home #outer #main .browse li {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  color: #8f3d36;
+  color: #a33a34;
   display: list-item;
   float: left;
   font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
-  list-style-type: square;
+  list-style-type: none;
   list-style-position: outside;
-  margin: 0 0 0.4em 0;
-  padding: 0 0.4em 0 0;
+  margin: 0 0 0.45em 0;
+  padding: 0 0.35em 0 0;
   width: 46%;
   margin-left: 4%;
   box-sizing: border-box;
 }
 
-/* Drop AO3's default red » so only the square marker shows */
+/* Keep AO3's red » markers over the lighthouse (match reference) */
 #outer #main.docs.index .splash .browse.module li a:before,
 #outer #main .splash .browse.module li a:before,
 #outer #main.splash .browse li a:before,
@@ -5498,9 +5498,10 @@ body.home #outer #main .browse li a:before,
 #outer #main.docs.index .splash .favorite.module li a:before,
 #outer #main .splash .favorite.module li a:before,
 #outer #main.splash .favorite li a:before {
-  content: none;
-  color: #8f3d36;
-  padding: 0;
+  content: "» ";
+  color: #a33a34;
+  font-weight: 700;
+  padding-right: 0.15em;
 }
 
 #outer #main.docs.index .splash .favorite.module li a,
@@ -5541,7 +5542,7 @@ body.home #outer #main .browse li a:hover,
   border-bottom: 1px solid #a64b3f;
 }
 
-/* News: textured navy block under the hero */
+/* News: seamless navy under the hero (no white cards) */
 #outer #main.docs.index .splash .latest.news.module,
 #outer #main.docs.index .splash .news.module,
 #outer #main .splash .latest.news.module,
@@ -5551,15 +5552,15 @@ body.home #outer #main .browse li a:hover,
 #outer #main.splash .news,
 body.home #outer #main .latest.news.module,
 body.home #outer #main .news.module {
-  background-color: #121c2f;
-  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 3px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.012) 0, rgba(255, 255, 255, 0.012) 1px, transparent 1px, transparent 4px), linear-gradient(to bottom, #152538 0%, #121c2f 38%, #0c1422 100%);
+  background-color: transparent;
+  background-image: none;
   border: none;
   border-radius: 0;
   box-shadow: none;
   clear: both;
   float: none;
-  margin: 0 0 1em 0;
-  padding: 1em 0.85em 1.15em 0.85em;
+  margin: 0.35em 0 1em 0;
+  padding: 0.85em 0.15em 1.15em 0.15em;
   overflow: visible;
   width: 100%;
 }
@@ -5574,12 +5575,12 @@ body.home #outer #main .news h3.heading {
   background-color: transparent;
   background-image: none;
   border: none;
-  border-bottom: 1px solid rgba(184, 216, 236, 0.55);
+  border-bottom: 1px solid rgba(220, 230, 240, 0.45);
   border-radius: 0;
   box-shadow: none;
-  color: #8f3d36;
+  color: #a33a34;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
-  font-size: 1.75em;
+  font-size: 1.8em;
   font-weight: 400;
   line-height: 1.3;
   margin: 0 0 0.75em 0;
@@ -5591,7 +5592,7 @@ body.home #outer #main .news h3.heading {
 #outer #main .splash .latest.news.module h3.heading .title,
 #outer #main.splash .news h3 .title,
 body.home #outer #main .news h3 .title {
-  color: #8f3d36;
+  color: #a33a34;
   float: left;
 }
 
@@ -5649,7 +5650,7 @@ body.home #outer #main .news li.post {
   background-color: transparent;
   background-image: none;
   border: none;
-  border-bottom: 1px solid rgba(184, 202, 217, 0.28);
+  border-bottom: 1px solid rgba(220, 230, 240, 0.35);
   border-radius: 0;
   box-shadow: none;
   margin: 0 0 0.95em 0;
@@ -5825,7 +5826,7 @@ body.home #outer #main .social h3.heading {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(184, 216, 236, 0.4);
-  color: #8f3d36;
+  color: #a33a34;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1.45em;
   margin: 0 0 0.55em 0;
