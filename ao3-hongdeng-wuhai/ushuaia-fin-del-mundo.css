@@ -576,11 +576,11 @@ li.blurb .tags {
 
 .tags a.tag,
 a.tag {
-  border: 1px solid rgba(184, 202, 217, 0.45);
+  border: none;
   border-radius: 999px;
   padding: 0.12em 0.5em;
-  background-color: rgba(8, 14, 24, 0.72);
-  color: #e8eef3;
+  background-color: #152538;
+  color: #dce6f0;
 }
 
 .actions a,
@@ -603,9 +603,9 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
   background-image: none;
-  background-color: rgba(21, 37, 56, 0.92);
+  background-color: #152538;
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.58);
+  border: none;
   border-radius: 8px;
   box-shadow: none;
   text-shadow: none;
@@ -622,9 +622,9 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover {
-  background-color: rgba(166, 75, 63, 0.82);
+  background-color: #6b2a26;
   color: #ffffff;
-  border-color: #d47a6e;
+  border: none;
 }
 
 .pagination .current,
@@ -1391,7 +1391,7 @@ body.skins-show #outer #main fieldset select {
   background-image: none;
   background-color: #152538;
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.62);
+  border: none;
   border-radius: 8px;
   box-shadow: none;
   text-shadow: none;
@@ -1410,9 +1410,9 @@ body.skins-show #outer #main fieldset select {
 #outer #main input.button:hover,
 #outer #main button:hover,
 #outer .listbox ul.actions li a:hover {
-  background-color: rgba(166, 75, 63, 0.85);
+  background-color: #6b2a26;
   color: #ffffff;
-  border-color: #d47a6e;
+  border: none;
 }
 
 #outer #main ul.actions a,
@@ -1452,9 +1452,9 @@ body.skins-show #outer #main fieldset select {
 #outer #main > ol.index.group > li > a,
 #outer #main > ul.index.group > li > a {
   background-image: none;
-  background-color: rgba(21, 37, 56, 0.9);
+  background-color: #152538;
   color: #f0f4f7;
-  border: 1px solid rgba(184, 202, 217, 0.5);
+  border: none;
   border-radius: 6px;
   padding: 0.22em 0.5em;
   box-shadow: none;
@@ -1466,9 +1466,9 @@ body.skins-show #outer #main fieldset select {
 #outer #main .listbox ol.index li a,
 #outer #main .listbox ul.index li a {
   background-image: none;
-  background-color: rgba(8, 14, 24, 0.78);
-  color: #e8eef3;
-  border: 1px solid rgba(184, 202, 217, 0.38);
+  background-color: #152538;
+  color: #dce6f0;
+  border: none;
   border-radius: 999px;
   padding: 0.18em 0.55em;
   box-shadow: none;
@@ -5895,4 +5895,238 @@ body.dashboard #outer #main {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------
+ * Replace wireframe text borders with solid fills / link color.
+ * Tags, fandom chips, listbox headings, action pills, dashboard,
+ * pagination: no thin light outlines. Form inputs keep borders.
+ * ------------------------------------------------------------------ */
+
+/* Tags and fandom chips */
+#outer a.tag,
+#outer .tags a.tag,
+#outer #main a.tag,
+#outer #main .tags a.tag,
+#outer #main .listbox a.tag,
+#outer #main ol.index li a.tag,
+#outer #main ul.index li a.tag,
+#outer #main .listbox ol.index li a,
+#outer #main .listbox ul.index li a,
+#outer #main .listbox .index li a,
+#outer #main ol.index.group ol li a,
+#outer #main ul.index.group ul li a,
+#outer #main .media.fandom.index a.tag,
+#outer #main .tags.index a {
+  background-image: none;
+  background-color: #152538;
+  color: #dce6f0;
+  border: none;
+  border-bottom: none;
+  border-radius: 999px;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0.18em 0.6em;
+}
+
+#outer a.tag:hover,
+#outer a.tag:focus,
+#outer .tags a.tag:hover,
+#outer #main a.tag:hover,
+#outer #main .listbox a.tag:hover,
+#outer #main .listbox .index li a:hover,
+#outer #main .listbox ul.index li a:hover,
+#outer #main ol.index.group ol li a:hover,
+#outer #main ul.index.group ul li a:hover {
+  background-color: #6b2a26;
+  color: #ffffff;
+  border: none;
+  border-bottom: none;
+}
+
+/* Category / section titles inside listboxes — color, not a wire box */
+#outer #main .listbox > .heading,
+#outer #main .listbox h3.heading,
+#outer #main .listbox h4.heading,
+#outer #main li.listbox > .heading,
+#outer #main li.listbox h3.heading {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.2em 0 0.35em 0;
+  margin: 0 0 0.45em 0;
+}
+
+#outer #main .listbox > .heading a,
+#outer #main .listbox h3.heading a,
+#outer #main .listbox h4.heading a,
+#outer #main li.listbox > .heading a,
+#outer #main li.listbox h3.heading a,
+#outer #main .listbox .heading a.tag,
+#outer #main h3.heading a.tag {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #e8a8a0;
+  padding: 0;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.05em;
+}
+
+#outer #main .listbox > .heading a:hover,
+#outer #main .listbox h3.heading a:hover,
+#outer #main li.listbox h3.heading a:hover {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #a64b3f;
+}
+
+/* Landmark / “jump” chips: solid fill, no outline */
+#outer #main p.landmark a,
+#outer #main h3.landmark a,
+#outer #main h4.landmark a,
+#outer #main .landmark a.action,
+#outer #main .landmark a.top,
+#outer #main .alphabet a,
+#outer #main ol.navigation.index a,
+#outer #main ul.navigation.index a,
+#outer #main ol.letters a,
+#outer #main ul.letters a,
+#outer #main > ol.index.group > li > a,
+#outer #main > ul.index.group > li > a {
+  background-image: none;
+  background-color: #152538;
+  color: #f0f4f7;
+  border: none;
+  border-bottom: none;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* Content / dashboard / pagination action pills */
+#outer #dashboard a,
+#outer #dashboard a:link,
+#outer #dashboard a:visited,
+#outer #dashboard ul li a,
+#outer #dashboard ul.actions a,
+#outer #main ul.actions a,
+#outer #main ul.actions a:link,
+#outer #main ul.actions a:visited,
+#outer #main ul.actions li a,
+#outer #main ul.actions li a.action,
+#outer #main p.actions a,
+#outer #main p.actions a:link,
+#outer #main ul.navigation.actions a,
+#outer #main ul.navigation.actions li a,
+#outer #main ul.work.navigation.actions li a,
+#outer #main a.action,
+#outer #main a.action:link,
+#outer #main a.button,
+#outer #main a.button:link,
+#outer #main .actions a,
+#outer #main .actions input,
+#outer #main .actions button,
+#outer #main form .actions a,
+#outer #main form .actions input,
+#outer #main input[type="submit"],
+#outer #main input[type="button"],
+#outer #main input.button,
+#outer #main button,
+#outer .listbox ul.actions li a,
+#outer .listbox .actions a,
+#outer .filters ul.actions li a,
+#outer .filters .actions a,
+#outer .dynamic ul.actions li a,
+#outer .pagination a,
+#outer .pagination li a,
+#outer ol.pagination a,
+#outer ul.pagination a,
+#outer .navigation.pagination a {
+  background-image: none;
+  background-color: #152538;
+  color: #f0f4f7;
+  border: none;
+  border-bottom: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#outer #dashboard a:hover,
+#outer #dashboard a:focus,
+#outer #dashboard ul.actions a:hover,
+#outer #main ul.actions a:hover,
+#outer #main ul.actions li a:hover,
+#outer #main p.actions a:hover,
+#outer #main a.action:hover,
+#outer #main a.button:hover,
+#outer #main .actions a:hover,
+#outer #main input[type="submit"]:hover,
+#outer #main button:hover,
+#outer .listbox ul.actions li a:hover,
+#outer .filters .actions a:hover,
+#outer .pagination a:hover,
+#outer .pagination li a:hover {
+  background-color: #6b2a26;
+  color: #ffffff;
+  border: none;
+  border-bottom: none;
+}
+
+#outer #dashboard .current a,
+#outer #dashboard a.current,
+#outer #dashboard .current,
+#outer .pagination .current,
+#outer .pagination .current a,
+#outer a.current {
+  background-color: #6b2a26;
+  color: #ffffff;
+  border: none;
+}
+
+/* Blurb / work meta tags stay filled chips */
+#outer #main li.blurb .tags a.tag,
+#outer #main li.blurb a.tag,
+#outer #main .blurb .tags a {
+  background-color: #152538;
+  color: #dce6f0;
+  border: none;
+  border-radius: 999px;
+}
+
+#outer #main li.blurb .tags a.tag:hover,
+#outer #main li.blurb a.tag:hover {
+  background-color: #6b2a26;
+  color: #ffffff;
+}
+
+/* Soften global link underline so it does not read as a wire box */
+#outer #main a,
+#outer #main a:link,
+#outer #main a:visited {
+  border-bottom-color: transparent;
+}
+
+#outer #main a:hover,
+#outer #main a:focus {
+  border-bottom-color: #a64b3f;
+}
+
+/* Keep real form fields outlined for usability */
+#outer #main input[type="text"],
+#outer #main input[type="password"],
+#outer #main input[type="email"],
+#outer #main input[type="number"],
+#outer #main input[type="search"],
+#outer #main input[type="url"],
+#outer #main textarea,
+#outer #main select,
+#outer #header #search input[type="text"],
+#outer #header #search input.text {
+  border: 1px solid rgba(184, 202, 217, 0.45);
 }
