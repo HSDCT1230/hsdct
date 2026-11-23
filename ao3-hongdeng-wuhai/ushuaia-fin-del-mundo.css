@@ -31,8 +31,8 @@ body.javascript #outer.wrapper {
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
-  padding-left: 0.55em;
-  padding-right: 0.55em;
+  padding-left: 0;
+  padding-right: 0;
   box-sizing: border-box;
 }
 
@@ -55,14 +55,14 @@ html.javascript,
 
 #inner {
   margin: 0 auto;
-  max-width: 40em;
+  max-width: 42em;
   width: 100%;
   padding: 0 0 1em 0;
   border: none;
   box-shadow: none;
   border-radius: 12px;
   overflow: visible;
-  background-color: rgba(21, 37, 56, 0.42);
+  background-color: rgba(21, 37, 56, 0.88);
   border: 1px solid rgba(184, 202, 217, 0.28);
   box-sizing: border-box;
 }
@@ -5831,4 +5831,68 @@ body.home #outer #main .social h3.heading {
   font-size: 1.45em;
   margin: 0 0 0.55em 0;
   padding: 0 0 0.3em 0;
+}
+
+/* ------------------------------------------------------------------
+ * Desktop middle-column gutter fix.
+ * AO3 leaves #dashboard floated + #main margin-left for a sidebar.
+ * We stack dashboard above #main, so that leftover margin shows the
+ * lighthouse through the left edge of the content card. Clear it.
+ * ------------------------------------------------------------------ */
+#outer #inner,
+#outer #inner.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 42em;
+  box-sizing: border-box;
+}
+
+#outer #dashboard,
+#outer #dashboard.own,
+#outer #inner #dashboard,
+#outer #inner #dashboard.own {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0.85em;
+  padding-right: 0.85em;
+  box-sizing: border-box;
+}
+
+#outer #main,
+#outer #inner #main,
+#outer #dashboard + #main,
+#outer #inner #dashboard + #main,
+#outer #main.dashboard,
+#outer #inner #main.dashboard,
+.dashboard #outer #main,
+body.dashboard #outer #main {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0.85em;
+  padding-right: 0.85em;
+  box-sizing: border-box;
+}
+
+#outer #footer,
+#outer #footer .wrapper {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
