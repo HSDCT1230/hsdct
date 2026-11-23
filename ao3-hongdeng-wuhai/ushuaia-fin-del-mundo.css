@@ -74,11 +74,18 @@ html.javascript,
 
 #main,
 #dashboard,
-#footer,
 .flash {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+#footer {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  overflow-x: visible;
   box-sizing: border-box;
 }
 
@@ -698,13 +705,15 @@ select option {
 }
 
 #footer {
-  background-color: rgba(21, 37, 56, 0.78);
+  background-color: #152538;
+  background-image: none;
   color: #d8e2ea;
   border: none;
   border-top: 1px solid rgba(184, 202, 217, 0.22);
-  border-radius: 0 0 12px 12px;
+  border-radius: 0;
   margin: 0;
-  padding: 1em 0.85em 1.15em 0.85em;
+  padding: 1.1em 1em 1.35em 1em;
+  overflow: visible;
 }
 
 #footer a {
@@ -3857,6 +3866,7 @@ body.javascript #outer #main form.search,
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
+  overflow: visible;
   background-color: #152538;
   background-image: none;
   color: #f0f4f7;
@@ -3866,7 +3876,19 @@ body.javascript #outer #main form.search,
 #outer #footer li,
 #outer #footer .module,
 #outer #footer .menu,
-#outer #footer .heading,
+#outer #footer .heading {
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  background-image: none;
+  color: #f0f4f7;
+}
+
 #outer #footer a,
 #outer #footer button {
   float: none;
@@ -3877,6 +3899,7 @@ body.javascript #outer #main form.search,
   white-space: normal;
   word-wrap: break-word;
   word-break: break-word;
+  overflow-wrap: break-word;
   background-image: none;
   color: #f0f4f7;
 }
@@ -4031,15 +4054,29 @@ body.javascript #outer #inner #main form.filters,
   background-image: none;
 }
 
-#outer #footer,
+#outer #footer {
+  float: none;
+  position: static;
+  clear: both;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  margin: 0;
+  padding: 1.15em 1em 1.45em 1em;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+}
+
 #outer #footer ul,
 #outer #footer ol,
 #outer #footer li,
 #outer #footer .module,
 #outer #footer .menu,
-#outer #footer .heading,
-#outer #footer a,
-#outer #footer button {
+#outer #footer .heading {
   float: none;
   position: static;
   top: auto;
@@ -4054,7 +4091,23 @@ body.javascript #outer #inner #main form.filters,
   white-space: normal;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  background-color: #152538;
+  word-break: break-word;
+  background-image: none;
+  color: #f0f4f7;
+}
+
+#outer #footer a,
+#outer #footer button {
+  float: none;
+  position: static;
+  max-width: 100%;
+  min-width: 0;
+  height: auto;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
   background-image: none;
   color: #f0f4f7;
 }
@@ -4427,7 +4480,25 @@ body.javascript #outer #inner #main form.filters,
 
 #outer #footer a,
 #outer #footer a:link,
-#outer #footer a:visited,
+#outer #footer a:visited {
+  background-color: transparent;
+  background-image: none;
+  border-width: 0;
+  box-shadow: none;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  float: none;
+  color: #f0f4f7;
+  padding-top: 0.15em;
+  padding-right: 0;
+  padding-bottom: 0.15em;
+  padding-left: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 #outer #footer li,
 #outer #footer ul.menu,
 #outer #footer ul.navigation.actions {
@@ -4435,15 +4506,10 @@ body.javascript #outer #inner #main form.filters,
   background-image: none;
   border-width: 0;
   box-shadow: none;
-  width: auto;
+  width: 100%;
   max-width: 100%;
-  display: inline;
   float: none;
   color: #f0f4f7;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
 }
 
 /*
@@ -6129,4 +6195,216 @@ body.dashboard #outer #main {
 #outer #header #search input[type="text"],
 #outer #header #search input.text {
   border: 1px solid rgba(184, 202, 217, 0.45);
+}
+
+/* ------------------------------------------------------------------
+ * Footer + Follow us: solid bar, no seascape bleed; wrap long buttons
+ * on phone; keep desktop columns readable inside the navy strip.
+ * Also harden desktop #inner/#main against leftover sidebar gutters.
+ * ------------------------------------------------------------------ */
+#outer #footer,
+#outer #footer.region,
+#outer.wrapper #footer {
+  clear: both;
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 1.2em 1em 1.6em 1em;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: #152538;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: #f0f4f7;
+}
+
+#outer #footer .landmark,
+#outer #footer h3.landmark {
+  background-color: transparent;
+  border: none;
+}
+
+#outer #footer .module,
+#outer #footer li.module,
+#outer #footer .module.group {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 42em;
+  margin: 0 auto 1em auto;
+  padding: 0.85em 0.75em;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: #121c2f;
+  background-image: none;
+  border: none;
+  border-radius: 10px;
+}
+
+#outer #footer .module .heading,
+#outer #footer .module h3.heading,
+#outer #footer .module h4.heading {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  color: #a33a34;
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+  font-size: 1.35em;
+  margin: 0 0 0.45em 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  white-space: normal;
+}
+
+#outer #footer .module p,
+#outer #footer .module .userstuff,
+#outer #footer .module .userstuff p {
+  color: #f0f4f7;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 0.75em 0;
+  padding: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: visible;
+}
+
+#outer #footer .module ul.actions,
+#outer #footer .module ul.menu,
+#outer #footer .module .actions,
+#outer #footer ul.navigation.actions,
+#outer #footer ul.menu {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: visible;
+  text-align: left;
+}
+
+#outer #footer .module ul.actions > li,
+#outer #footer .module ul.menu > li,
+#outer #footer ul.navigation.actions > li,
+#outer #footer ul.menu > li {
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 0.45em 0;
+  padding: 0;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+#outer #footer .module ul.actions a,
+#outer #footer .module ul.actions a:link,
+#outer #footer .module ul.actions a:visited,
+#outer #footer .module a.action,
+#outer #footer .module a.button,
+#outer #footer .actions a,
+#outer #footer a.bluesky,
+#outer #footer a.tumblr {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0.55em 0.75em;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.4;
+  text-align: left;
+  background-image: none;
+  background-color: #1d4f91;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+#outer #footer a.tumblr,
+#outer #footer .module a.tumblr {
+  background-color: #2a3548;
+  color: #ffffff;
+}
+
+#outer #footer .module ul.actions a:hover,
+#outer #footer .module a.action:hover,
+#outer #footer a.bluesky:hover,
+#outer #footer a.tumblr:hover {
+  background-color: #6b2a26;
+  color: #ffffff;
+  border: none;
+}
+
+#outer #footer ul.navigation.actions > li > a,
+#outer #footer ul.menu > li > a,
+#outer #footer .menu a,
+#outer #footer li a {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.2em 0;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background-color: transparent;
+  color: #f0f4f7;
+  border: none;
+}
+
+/* Desktop: keep middle column flush; no leftover sidebar gutter */
+#outer #inner,
+#outer #inner.wrapper {
+  overflow: visible;
+}
+
+#outer #dashboard + #main,
+#outer #inner #dashboard + #main,
+#outer #main.dashboard {
+  margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#outer #header,
+#outer #header .primary,
+#outer #greeting {
+  max-width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+#outer #main,
+#outer #inner #main {
+  overflow-x: hidden;
+  overflow-y: visible;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#outer #main img,
+#outer #main svg,
+#outer #main pre,
+#outer #main code,
+#outer #footer img,
+#outer #footer svg {
+  max-width: 100%;
+  height: auto;
 }
