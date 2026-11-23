@@ -6408,3 +6408,335 @@ body.dashboard #outer #main {
   max-width: 100%;
   height: auto;
 }
+
+/* ------------------------------------------------------------------
+ * Popups / dialogs / tooltips / autocomplete menus.
+ * AO3 and jQuery UI often append these to body OUTSIDE #outer, so
+ * #outer-scoped navy rules never reach them — white panels keep light
+ * inherited text and become unreadable. Cover both body and #outer.
+ * QR codes stay white elsewhere so they remain scannable.
+ * ------------------------------------------------------------------ */
+
+html body .ui-dialog,
+html body .ui-dialog.ui-widget,
+html body .ui-dialog .ui-widget-content,
+html body .ui-dialog .ui-dialog-content,
+html body .ui-dialog .ui-dialog-buttonpane,
+html body .ui-dialog .ui-dialog-titlebar,
+html body .ui-dialog .ui-widget-header,
+html body .ui-widget-content,
+html body .ui-widget-header,
+html body .ui-front,
+html body #modal,
+html body #tos_prompt,
+html body #ui-datepicker-div,
+html body .ui-datepicker,
+html body .ui-datepicker .ui-widget-content,
+html body .ui-datepicker table,
+html body .ui-datepicker td,
+html body .ui-datepicker th,
+html body .ui-autocomplete,
+html body .ui-menu,
+html body .ui-menu .ui-menu-item,
+html body [role="dialog"],
+html body [role="alertdialog"],
+html body [role="tooltip"],
+html body .qtip,
+html body .qtip-content,
+html body .qtip-titlebar,
+html body #outer #modal,
+html body #outer #tos_prompt,
+html body #outer #ui-datepicker-div,
+html body #outer .ui-dialog,
+html body #outer .ui-widget-content,
+html body #outer .ui-autocomplete,
+html body #outer .ui-menu,
+html body #outer .secondary,
+html body #outer .toggled form,
+html body #outer .dynamic form,
+html body #outer div.dynamic,
+html body #outer .work.navigation .download,
+html body #outer .work.navigation .download .secondary,
+html body #outer .search [role="tooltip"],
+html body #outer .autocomplete div.dropdown ul,
+html body #outer .autocomplete .dropdown,
+html body #outer .autocomplete .dropdown ul {
+  background-color: #121c2f;
+  background-image: none;
+  color: #f0f4f7;
+  border-color: #3d5570;
+  box-shadow: none;
+}
+
+html body .ui-dialog,
+html body #modal,
+html body #tos_prompt,
+html body #ui-datepicker-div,
+html body .ui-autocomplete,
+html body .ui-menu,
+html body [role="dialog"],
+html body [role="alertdialog"] {
+  border: 1px solid #3d5570;
+}
+
+html body .ui-dialog .ui-dialog-titlebar,
+html body .ui-dialog .ui-widget-header,
+html body .ui-widget-header,
+html body .ui-datepicker .ui-datepicker-header,
+html body .qtip-titlebar,
+html body #modal .heading,
+html body #modal h1,
+html body #modal h2,
+html body #modal h3,
+html body #tos_prompt .heading,
+html body #outer #modal .heading,
+html body #outer .secondary .heading,
+html body #outer .download .heading {
+  background-color: #152538;
+  background-image: none;
+  color: #e8a8a0;
+  border: none;
+  border-bottom: 1px solid #3d5570;
+}
+
+html body .ui-dialog,
+html body .ui-dialog .ui-dialog-content,
+html body .ui-dialog .ui-dialog-buttonpane,
+html body .ui-widget-content,
+html body #modal,
+html body #modal p,
+html body #modal li,
+html body #modal label,
+html body #modal span,
+html body #modal dd,
+html body #modal dt,
+html body #tos_prompt,
+html body #tos_prompt p,
+html body #tos_prompt li,
+html body #tos_prompt label,
+html body [role="dialog"],
+html body [role="dialog"] p,
+html body [role="dialog"] li,
+html body [role="dialog"] label,
+html body [role="tooltip"],
+html body .qtip-content,
+html body .ui-datepicker,
+html body .ui-datepicker td,
+html body .ui-datepicker th,
+html body .ui-datepicker a,
+html body .ui-menu .ui-menu-item,
+html body .ui-menu .ui-menu-item-wrapper,
+html body .ui-autocomplete .ui-menu-item,
+html body #outer #modal,
+html body #outer #modal p,
+html body #outer #modal li,
+html body #outer #modal label,
+html body #outer .secondary,
+html body #outer .secondary p,
+html body #outer .secondary li,
+html body #outer .secondary label,
+html body #outer .dynamic,
+html body #outer .dynamic p,
+html body #outer .toggled form,
+html body #outer .autocomplete .dropdown,
+html body #outer .autocomplete .dropdown li,
+html body #outer .autocomplete .dropdown a {
+  color: #f0f4f7;
+}
+
+html body .ui-dialog a,
+html body .ui-dialog a:link,
+html body .ui-dialog a:visited,
+html body #modal a,
+html body #modal a:link,
+html body #modal a:visited,
+html body #tos_prompt a,
+html body #tos_prompt a:link,
+html body #tos_prompt a:visited,
+html body [role="dialog"] a,
+html body [role="dialog"] a:link,
+html body [role="dialog"] a:visited,
+html body .ui-datepicker a,
+html body .ui-datepicker a:link,
+html body .ui-menu a,
+html body .ui-menu a:link,
+html body .ui-menu a:visited,
+html body .ui-autocomplete a,
+html body .ui-autocomplete a:link,
+html body #outer #modal a,
+html body #outer #modal a:link,
+html body #outer .secondary a,
+html body #outer .secondary a:link,
+html body #outer .secondary a:visited,
+html body #outer .download a,
+html body #outer .download a:link,
+html body #outer .autocomplete .dropdown a,
+html body #outer .autocomplete .dropdown a:link {
+  background-color: transparent;
+  background-image: none;
+  color: #b8d8ec;
+  border-bottom: none;
+}
+
+html body .ui-dialog a:hover,
+html body #modal a:hover,
+html body #tos_prompt a:hover,
+html body [role="dialog"] a:hover,
+html body .ui-menu a:hover,
+html body .ui-autocomplete a:hover,
+html body #outer #modal a:hover,
+html body #outer .secondary a:hover,
+html body #outer .autocomplete .dropdown a:hover {
+  color: #e8a8a0;
+  background-color: rgba(166, 75, 63, 0.35);
+}
+
+html body .ui-dialog .ui-dialog-buttonpane button,
+html body .ui-dialog .ui-button,
+html body .ui-button,
+html body #modal .actions a,
+html body #modal .actions button,
+html body #modal input[type="submit"],
+html body #modal button,
+html body #tos_prompt .actions a,
+html body #tos_prompt button,
+html body #tos_prompt input[type="submit"],
+html body [role="dialog"] button,
+html body [role="dialog"] .actions a,
+html body #outer #modal .actions a,
+html body #outer #modal button,
+html body #outer .secondary .actions a,
+html body #outer .secondary button,
+html body #outer .download .actions a {
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+html body .ui-dialog .ui-dialog-buttonpane button:hover,
+html body .ui-button:hover,
+html body #modal .actions a:hover,
+html body #modal button:hover,
+html body #tos_prompt button:hover,
+html body [role="dialog"] button:hover,
+html body #outer #modal .actions a:hover,
+html body #outer .secondary .actions a:hover {
+  background-color: #6b2a26;
+  color: #ffffff;
+}
+
+html body .ui-dialog input,
+html body .ui-dialog textarea,
+html body .ui-dialog select,
+html body #modal input,
+html body #modal textarea,
+html body #modal select,
+html body #tos_prompt input,
+html body #tos_prompt textarea,
+html body #tos_prompt select,
+html body [role="dialog"] input,
+html body [role="dialog"] textarea,
+html body [role="dialog"] select,
+html body #outer #modal input,
+html body #outer #modal textarea,
+html body #outer #modal select,
+html body #outer .secondary input,
+html body #outer .secondary textarea,
+html body #outer .secondary select,
+html body #outer .dynamic input,
+html body #outer .dynamic textarea,
+html body #outer .toggled form input,
+html body #outer .toggled form textarea {
+  background-color: #0c1520;
+  background-image: none;
+  color: #f0f4f7;
+  border: 1px solid #3d5570;
+  box-shadow: none;
+}
+
+html body .ui-state-default,
+html body .ui-widget-content .ui-state-default,
+html body .ui-widget-header .ui-state-default,
+html body .ui-datepicker .ui-state-default {
+  background-color: #152538;
+  background-image: none;
+  color: #f0f4f7;
+  border-color: #3d5570;
+}
+
+html body .ui-state-hover,
+html body .ui-widget-content .ui-state-hover,
+html body .ui-state-focus,
+html body .ui-state-active,
+html body .ui-datepicker .ui-state-hover,
+html body .ui-datepicker .ui-state-active,
+html body .ui-menu .ui-state-active,
+html body .ui-menu .ui-state-focus {
+  background-color: #6b2a26;
+  background-image: none;
+  color: #ffffff;
+  border-color: #a64b3f;
+}
+
+html body .ui-icon,
+html body .ui-dialog .ui-icon,
+html body .ui-datepicker .ui-icon {
+  background-image: none;
+  color: #f0f4f7;
+}
+
+html body #modal-bg,
+html body .ui-widget-overlay,
+html body .ui-dialog-overlay {
+  background-color: rgba(8, 14, 24, 0.72);
+  background-image: none;
+  opacity: 1;
+}
+
+/* Notices / alerts that still inherit light-on-white */
+html body .flash,
+html body .notice,
+html body .caution,
+html body .error,
+html body .warning,
+html body .success,
+html body #outer .flash,
+html body #outer .notice,
+html body #outer .caution,
+html body #outer .error,
+html body #outer .warning,
+html body #outer #main .flash,
+html body #outer #main .notice,
+html body #outer #main .caution,
+html body #outer #main .error,
+html body #outer #main .required.notice {
+  background-color: #121c2f;
+  background-image: none;
+  color: #f0f4f7;
+  border-color: #3d5570;
+  box-shadow: none;
+}
+
+html body .flash a,
+html body .notice a,
+html body .caution a,
+html body .error a,
+html body #outer .flash a,
+html body #outer .notice a,
+html body #outer .caution a,
+html body #outer .error a {
+  color: #b8d8ec;
+  border-bottom: none;
+}
+
+html body .flash a:hover,
+html body .notice a:hover,
+html body .caution a:hover,
+html body #outer .flash a:hover,
+html body #outer .notice a:hover {
+  color: #e8a8a0;
+}
