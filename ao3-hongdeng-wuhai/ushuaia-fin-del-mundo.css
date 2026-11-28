@@ -7174,3 +7174,253 @@ textarea:focus,
     box-sizing: border-box;
   }
 }
+
+/* ------------------------------------------------------------------
+ * Follow us / footer modules: fix too-small centered card + offset.
+ * Full-bleed within footer padding on both phone and desktop; social
+ * buttons sit side-by-side on wide screens and stack on narrow ones.
+ * ------------------------------------------------------------------ */
+#outer #footer,
+#outer #footer.region,
+#outer.wrapper #footer {
+  text-align: left;
+  padding-top: 1.25em;
+  padding-right: 1em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+}
+
+#outer #footer > ul.navigation.actions,
+#outer #footer ul.navigation.actions {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+#outer #footer .module,
+#outer #footer li.module,
+#outer #footer .module.group,
+#outer #footer ul.navigation.actions > li.module,
+#outer #footer ul.navigation.actions > li {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  box-sizing: border-box;
+  overflow: visible;
+  text-align: left;
+  background-color: #121c2f;
+  background-image: none;
+  border: none;
+  border-radius: 10px;
+  position: static;
+  left: auto;
+  right: auto;
+}
+
+#outer #footer .module .heading,
+#outer #footer .module h3.heading,
+#outer #footer .module h4.heading,
+#outer #footer li.module .heading {
+  text-align: left;
+  font-size: 1.45em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  color: #c96b63;
+  background-color: transparent;
+  border: none;
+}
+
+#outer #footer .module p,
+#outer #footer .module .userstuff,
+#outer #footer .module .userstuff p {
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.55;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 0.85em 0;
+}
+
+#outer #footer .module ul.actions,
+#outer #footer .module ul.menu,
+#outer #footer .module .actions {
+  float: none;
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+#outer #footer .module ul.actions > li,
+#outer #footer .module ul.menu > li {
+  float: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 0.55em 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#outer #footer .module ul.actions a,
+#outer #footer .module ul.actions a:link,
+#outer #footer .module ul.actions a:visited,
+#outer #footer .module a.action,
+#outer #footer .module a.button,
+#outer #footer a.bluesky,
+#outer #footer a.tumblr {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0.7em 0.9em;
+  box-sizing: border-box;
+  font-size: 1em;
+  line-height: 1.45;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: visible;
+  background-color: #1d4f91;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+}
+
+#outer #footer a.tumblr,
+#outer #footer .module a.tumblr {
+  background-color: #2a3548;
+  color: #ffffff;
+}
+
+/* Plain footer nav links (Customize / Default / …) stay text, not big buttons */
+#outer #footer ul.navigation.actions > li:not(.module) > a,
+#outer #footer ul.menu > li > a,
+#outer #footer .menu a {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  padding: 0.25em 0;
+  text-align: left;
+  background-color: transparent;
+  color: #f0f4f7;
+  border: none;
+  border-radius: 0;
+}
+
+@media only screen and (min-width: 42em) {
+  #outer #footer,
+  #outer #footer.region {
+    padding-top: 1.35em;
+    padding-right: 1.5em;
+    padding-bottom: 1.75em;
+    padding-left: 1.5em;
+  }
+
+  #outer #footer .module,
+  #outer #footer li.module,
+  #outer #footer .module.group,
+  #outer #footer ul.navigation.actions > li.module {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1.15em;
+    padding-right: 1.25em;
+    padding-bottom: 1.15em;
+    padding-left: 1.25em;
+  }
+
+  /* Bluesky + Tumblr side by side, equal width, no offset */
+  #outer #footer .module ul.actions {
+    font-size: 0;
+  }
+
+  #outer #footer .module ul.actions > li {
+    display: inline-block;
+    width: 49%;
+    max-width: 49%;
+    margin-top: 0;
+    margin-bottom: 0.35em;
+    margin-right: 2%;
+    margin-left: 0;
+    vertical-align: top;
+    font-size: 16px;
+  }
+
+  #outer #footer .module ul.actions > li:last-child {
+    margin-right: 0;
+  }
+
+  #outer #footer .module ul.actions a,
+  #outer #footer a.bluesky,
+  #outer #footer a.tumblr {
+    font-size: 1em;
+    padding: 0.8em 1em;
+  }
+}
+
+@media only screen and (max-width: 41.99em) {
+  #outer #footer,
+  #outer #footer.region {
+    padding-top: 1em;
+    padding-right: 0.75em;
+    padding-bottom: 1.25em;
+    padding-left: 0.75em;
+  }
+
+  #outer #footer .module,
+  #outer #footer li.module,
+  #outer #footer .module.group,
+  #outer #footer ul.navigation.actions > li.module {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 0.9em;
+    padding-right: 0.75em;
+    padding-bottom: 0.9em;
+    padding-left: 0.75em;
+    border-radius: 8px;
+  }
+
+  #outer #footer .module ul.actions > li {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  #outer #footer .module ul.actions a,
+  #outer #footer a.bluesky,
+  #outer #footer a.tumblr {
+    font-size: 0.98em;
+    padding: 0.75em 0.8em;
+    text-align: left;
+  }
+}
