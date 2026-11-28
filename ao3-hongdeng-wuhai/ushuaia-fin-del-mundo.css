@@ -7004,4 +7004,173 @@ textarea:focus,
   body.home #outer {
     background-size: 100% 48em, cover;
   }
+
+  /* Phone: keep dashboard stacked above main */
+  #outer #dashboard,
+  #outer #dashboard.own,
+  #outer #inner #dashboard {
+    float: none;
+    clear: both;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  #outer #dashboard + #main,
+  #outer #inner #dashboard + #main,
+  #outer #main.dashboard {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* ------------------------------------------------------------------
+ * Restore desktop left sidebar (#dashboard).
+ * Earlier gutter fixes stacked it full-width; bring the classic AO3
+ * sidebar back on wider screens with visible navy + light links.
+ * ------------------------------------------------------------------ */
+@media only screen and (min-width: 42em) {
+  #outer #inner,
+  #outer #inner.wrapper {
+    max-width: 62em;
+    overflow: visible;
+  }
+
+  #outer #dashboard,
+  #outer #dashboard.own,
+  #outer #inner #dashboard,
+  #outer #inner #dashboard.own {
+    float: left;
+    clear: none;
+    display: block;
+    width: 11.5em;
+    max-width: 11.5em;
+    min-width: 0;
+    margin-top: 0.35em;
+    margin-right: 0;
+    margin-bottom: 1em;
+    margin-left: 0;
+    padding-top: 0.55em;
+    padding-right: 0.45em;
+    padding-bottom: 0.75em;
+    padding-left: 0.45em;
+    box-sizing: border-box;
+    overflow: visible;
+    text-align: left;
+    background-color: #121c2f;
+    background-image: none;
+    color: #f0f4f7;
+    border: none;
+    border-right: 1px solid rgba(184, 202, 217, 0.28);
+    border-radius: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  #outer #dashboard ul,
+  #outer #dashboard ul.navigation,
+  #outer #dashboard ul.menu,
+  #outer #dashboard ul.actions,
+  #outer #inner #dashboard ul {
+    float: none;
+    clear: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0.65em 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  #outer #dashboard li,
+  #outer #dashboard ul > li,
+  #outer #inner #dashboard li {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0.3em 0;
+    padding: 0;
+    text-align: left;
+    position: static;
+  }
+
+  #outer #dashboard a,
+  #outer #dashboard a:link,
+  #outer #dashboard a:visited,
+  #outer #dashboard ul li a,
+  #outer #dashboard ul.actions a,
+  #outer #dashboard span,
+  #outer #inner #dashboard a {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0.4em 0.55em;
+    box-sizing: border-box;
+    text-align: left;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: #152538;
+    background-image: none;
+    color: #f0f4f7;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+
+  #outer #dashboard a:hover,
+  #outer #dashboard a:focus,
+  #outer #dashboard ul li a:hover {
+    background-color: #6b2a26;
+    color: #ffffff;
+    border: none;
+  }
+
+  #outer #dashboard .current,
+  #outer #dashboard .current a,
+  #outer #dashboard a.current {
+    background-color: #6b2a26;
+    color: #ffffff;
+    border: none;
+  }
+
+  #outer #dashboard h3,
+  #outer #dashboard h4,
+  #outer #dashboard .heading,
+  #outer #dashboard .landmark {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #c96b63;
+    background-color: transparent;
+    border: none;
+    margin: 0 0 0.35em 0;
+    padding: 0.15em 0.35em;
+    font-size: 0.95em;
+  }
+
+  #outer #dashboard + #main,
+  #outer #inner #dashboard + #main,
+  #outer #main.dashboard,
+  #outer #inner #main.dashboard,
+  .dashboard #outer #main,
+  body.dashboard #outer #main {
+    float: none;
+    clear: none;
+    display: block;
+    width: auto;
+    max-width: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 12.25em;
+    padding-left: 0.85em;
+    padding-right: 0.85em;
+    box-sizing: border-box;
+  }
 }
