@@ -26,7 +26,7 @@ body.javascript #outer.wrapper {
   background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 46%, rgba(27, 46, 75, 0.28) 68%, rgba(27, 46, 75, 0.72) 84%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/hsdct/5c9621713aef2325f7aae7d893cec2b5d65282cf/ao3-hongdeng-wuhai/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center top;
-  background-size: 100% 133vw, 100% auto;
+  background-size: 100% 56em, cover;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -55,14 +55,14 @@ html.javascript,
 
 #inner {
   margin: 0 auto;
-  max-width: 42em;
+  max-width: 48em;
   width: 100%;
   padding: 0 0 1em 0;
   border: none;
   box-shadow: none;
   border-radius: 12px;
   overflow: visible;
-  background-color: rgba(21, 37, 56, 0.88);
+  background-color: rgba(21, 37, 56, 0.92);
   border: 1px solid rgba(184, 202, 217, 0.28);
   box-sizing: border-box;
 }
@@ -1882,7 +1882,8 @@ body.skins-show #outer #main fieldset select {
 #outer #header input:focus,
 #outer #search input:focus {
   border-color: #d47a6e;
-  outline: none;
+  outline: 2px solid #d47a6e;
+  outline-offset: 1px;
 }
 
 #outer #main textarea,
@@ -1893,7 +1894,8 @@ body.skins-show #outer #main fieldset select {
 
 #outer #main textarea:focus {
   border-color: #d47a6e;
-  outline: none;
+  outline: 2px solid #d47a6e;
+  outline-offset: 1px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -2059,7 +2061,8 @@ body.skins-show #outer #main textarea:focus,
   background-color: #0c1520;
   color: #dce8f0;
   border-color: #d47a6e;
-  outline: none;
+  outline: 2px solid #d47a6e;
+  outline-offset: 1px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
@@ -5375,7 +5378,7 @@ body.home #outer #inner.wrapper {
   border: none;
   box-shadow: none;
   border-radius: 0;
-  max-width: 42em;
+  max-width: 48em;
 }
 
 /* Keep the lighthouse clearer through the favorites zone on home only */
@@ -5384,10 +5387,10 @@ body.home #outer #inner.wrapper {
 #outer:has(#main.splash),
 body.home #outer,
 body.home #outer.wrapper {
-  background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 48%, rgba(27, 46, 75, 0.22) 64%, rgba(27, 46, 75, 0.72) 82%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/hsdct/5c9621713aef2325f7aae7d893cec2b5d65282cf/ao3-hongdeng-wuhai/assets/les-eclaireurs-bg.jpg");
+  background-image: linear-gradient(to bottom, rgba(27, 46, 75, 0) 0%, rgba(27, 46, 75, 0) 42%, rgba(27, 46, 75, 0.28) 62%, rgba(27, 46, 75, 0.78) 82%, rgba(27, 46, 75, 1) 100%), url("https://raw.githubusercontent.com/HSDCT1230/hsdct/5c9621713aef2325f7aae7d893cec2b5d65282cf/ao3-hongdeng-wuhai/assets/les-eclaireurs-bg.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center top, center 12%;
-  background-size: 100% 170vw, 100% auto;
+  background-position: center top, center top;
+  background-size: 100% 62em, cover;
 }
 
 #outer #main.docs.index,
@@ -5487,7 +5490,7 @@ body.home #outer #main .browse h3.heading {
   border-bottom: none;
   border-radius: 0;
   box-shadow: none;
-  color: #a33a34;
+  color: #c96b63;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1.9em;
   font-weight: 400;
@@ -5543,7 +5546,7 @@ body.home #outer #main .browse li {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  color: #a33a34;
+  color: #c96b63;
   display: list-item;
   float: left;
   font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
@@ -5565,7 +5568,7 @@ body.home #outer #main .browse li a:before,
 #outer #main .splash .favorite.module li a:before,
 #outer #main.splash .favorite li a:before {
   content: "» ";
-  color: #a33a34;
+  color: #c96b63;
   font-weight: 700;
   padding-right: 0.15em;
 }
@@ -5644,7 +5647,7 @@ body.home #outer #main .news h3.heading {
   border-bottom: 1px solid rgba(220, 230, 240, 0.45);
   border-radius: 0;
   box-shadow: none;
-  color: #a33a34;
+  color: #c96b63;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1.8em;
   font-weight: 400;
@@ -5658,7 +5661,7 @@ body.home #outer #main .news h3.heading {
 #outer #main .splash .latest.news.module h3.heading .title,
 #outer #main.splash .news h3 .title,
 body.home #outer #main .news h3 .title {
-  color: #a33a34;
+  color: #c96b63;
   float: left;
 }
 
@@ -5892,7 +5895,7 @@ body.home #outer #main .social h3.heading {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(184, 216, 236, 0.4);
-  color: #a33a34;
+  color: #c96b63;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1.45em;
   margin: 0 0 0.55em 0;
@@ -5910,7 +5913,7 @@ body.home #outer #main .social h3.heading {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 42em;
+  max-width: 48em;
   box-sizing: border-box;
 }
 
@@ -6235,7 +6238,7 @@ body.dashboard #outer #main {
   clear: both;
   display: block;
   width: 100%;
-  max-width: 42em;
+  max-width: 48em;
   margin: 0 auto 1em auto;
   padding: 0.85em 0.75em;
   box-sizing: border-box;
@@ -6252,7 +6255,7 @@ body.dashboard #outer #main {
   background-color: transparent;
   background-image: none;
   border: none;
-  color: #a33a34;
+  color: #c96b63;
   font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
   font-size: 1.35em;
   margin: 0 0 0.45em 0;
@@ -6739,4 +6742,266 @@ html body .caution a:hover,
 html body #outer .flash a:hover,
 html body #outer .notice a:hover {
   color: #e8a8a0;
+}
+
+/* ------------------------------------------------------------------
+ * Designer polish pass:
+ * - UI chrome uses sans; long-form reading keeps serif
+ * - Clearer focus rings
+ * - Wider desktop column + steadier lighthouse cover
+ * - Reading / chapter / comment surfaces stay navy + readable
+ * ------------------------------------------------------------------ */
+
+::selection {
+  background-color: #6b2a26;
+  color: #ffffff;
+}
+
+#outer #header,
+#outer #greeting,
+#outer #dashboard,
+#outer #footer,
+#outer #header a,
+#outer #greeting a,
+#outer #dashboard a,
+#outer #footer a,
+#outer .actions a,
+#outer .action,
+#outer a.tag,
+#outer .tags a.tag,
+#outer button,
+#outer input[type="submit"],
+#outer input[type="button"],
+#outer .pagination,
+#outer .pagination a,
+#outer #main ul.actions,
+#outer #main ul.navigation.actions,
+#outer #main dl.meta,
+#outer #main dl.stats,
+#outer #main li.blurb .stats,
+#outer #main li.blurb .datetime,
+#outer #main li.blurb .tags {
+  font-family: "lucida grande", "lucida sans unicode", "dejavu sans", "helvetica", "arial", sans-serif;
+}
+
+#outer #main .userstuff,
+#outer #main .userstuff p,
+#outer #main .userstuff li,
+#outer #main .userstuff blockquote,
+#outer #main.works-show h2.title,
+#outer #main.works-show > h2,
+#outer #main h2.heading,
+#outer #main h3.heading {
+  font-family: "source han serif sc", "songti sc", "stsong", "simsun", "noto serif sc", "georgia", "times new roman", serif;
+}
+
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+input:focus,
+select:focus,
+textarea:focus,
+#outer a:focus,
+#outer button:focus,
+#outer input:focus,
+#outer select:focus,
+#outer textarea:focus,
+#outer .actions a:focus,
+#outer a.tag:focus {
+  outline: 2px solid #d47a6e;
+  outline-offset: 2px;
+}
+
+#outer input::placeholder,
+#outer textarea::placeholder {
+  color: #9aa8b6;
+  opacity: 1;
+}
+
+/* Reading pages: work / chapter / preface / comments */
+#outer #main.works-show,
+#outer #main.works-chapters-show,
+#outer #main.chapters-show,
+#outer #main .preface,
+#outer #main .preface .module,
+#outer #main .preface blockquote,
+#outer #main .preface .notes,
+#outer #main .preface .summary,
+#outer #main .preface .endnotes,
+#outer #main dl.meta,
+#outer #main .wrapper,
+#outer #main #chapters,
+#outer #main #chapters > .userstuff,
+#outer #main #feedback,
+#outer #main #comments_placeholder,
+#outer #main .thread,
+#outer #main .comment,
+#outer #main .comment .userstuff,
+#outer #main .comment h4.byline,
+#outer #main ol.comment,
+#outer #main li.comment,
+#outer #main .kudos,
+#outer #main p.kudos {
+  background-color: #152538;
+  background-image: none;
+  color: #eef2f6;
+  border-color: #3d5570;
+  box-shadow: none;
+}
+
+#outer #main .preface .module,
+#outer #main .preface .notes,
+#outer #main .preface .summary,
+#outer #main .preface .endnotes,
+#outer #main dl.meta {
+  border: none;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.28);
+  padding: 0.75em 0;
+  margin: 0 0 0.75em 0;
+}
+
+#outer #main .comment,
+#outer #main li.comment,
+#outer #main .thread .even,
+#outer #main .thread .odd {
+  background-color: #121c2f;
+  color: #eef2f6;
+  border: none;
+  border-bottom: 1px solid rgba(184, 202, 217, 0.22);
+}
+
+#outer #main .comment h4.byline,
+#outer #main .comment h4.byline a,
+#outer #main .comment .posted,
+#outer #main .comment .datetime {
+  color: #c5d4e0;
+  background-color: transparent;
+  border-bottom: none;
+}
+
+#outer #main .comment .userstuff,
+#outer #main .comment .userstuff p {
+  color: #eef2f6;
+}
+
+#outer #main.works-show ul.work.navigation.actions,
+#outer #main.works-show ul.actions,
+#outer #main.works-chapters-show ul.actions,
+#outer #main #feedback ul.actions {
+  background-color: transparent;
+}
+
+#outer #main.works-show h2.title,
+#outer #main.works-show > h2.title,
+#outer #main.works-chapters-show h2.title {
+  color: #f7fafc;
+  text-shadow: 0 1px 2px rgba(8, 14, 24, 0.35);
+}
+
+#outer #main .userstuff a,
+#outer #main .userstuff a:link,
+#outer #main .userstuff a:visited,
+#outer #main .comment .userstuff a {
+  color: #b8d8ec;
+  border-bottom: 1px solid rgba(184, 216, 236, 0.4);
+}
+
+#outer #main .userstuff a:hover,
+#outer #main .comment .userstuff a:hover {
+  color: #e8a8a0;
+  border-bottom-color: #a64b3f;
+}
+
+/* Soften leftover wire borders on reading chrome */
+#outer #main.works-show .actions a,
+#outer #main.works-chapters-show .actions a,
+#outer #main #feedback .actions a,
+#outer #main .preface .actions a {
+  border: none;
+  background-color: #152538;
+  color: #f0f4f7;
+}
+
+#outer #main.works-show .actions a:hover,
+#outer #main.works-chapters-show .actions a:hover,
+#outer #main #feedback .actions a:hover {
+  background-color: #6b2a26;
+  color: #ffffff;
+}
+
+/* Desktop / tablet widths */
+@media only screen and (min-width: 900px) {
+  #outer,
+  #outer.wrapper,
+  body.javascript #outer,
+  body.javascript #outer.wrapper,
+  #outer:has(#main.docs.index),
+  #outer:has(#main .splash),
+  #outer:has(#main.splash),
+  body.home #outer {
+    background-size: 100% 48em, cover;
+    background-position: center top, center top;
+  }
+
+  #inner,
+  #outer #inner,
+  #outer #inner.wrapper {
+    max-width: 52em;
+  }
+
+  #outer #footer .module,
+  #outer #footer li.module,
+  #outer #footer .module.group {
+    max-width: 52em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #inner,
+  #outer #inner,
+  #outer #inner.wrapper {
+    max-width: 56em;
+  }
+
+  #outer #footer .module,
+  #outer #footer li.module,
+  #outer #footer .module.group {
+    max-width: 56em;
+  }
+
+  #outer,
+  #outer.wrapper,
+  body.javascript #outer {
+    background-size: 100% 42em, cover;
+  }
+}
+
+/* Phone: keep column fluid and avoid clipped focus rings */
+@media only screen and (max-width: 640px) {
+  #inner,
+  #outer #inner,
+  #outer #inner.wrapper {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  #header {
+    border-radius: 0;
+  }
+
+  #outer #main,
+  #outer #dashboard,
+  #outer #footer {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+  }
+
+  #outer,
+  #outer.wrapper,
+  body.javascript #outer,
+  #outer:has(#main.docs.index),
+  body.home #outer {
+    background-size: 100% 48em, cover;
+  }
 }
